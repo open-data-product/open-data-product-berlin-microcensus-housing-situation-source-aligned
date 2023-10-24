@@ -6,6 +6,24 @@ metadata:
   - schema:
 description:
 input_ports:
+  - id: berlin-microcensus-housing-situation-2018-00
+    metadata:
+      name: Ergebnisse des Mikrozensus 2018
+      author: Amt für Statistik Berlin-Brandenburg
+      url: https://www.statistik-berlin-brandenburg.de/f-i-2-4j
+      license: CC-BY-3.0-Namensnennung
+      updated: 2019-12-18
+    files:
+      - https://download.statistik-berlin-brandenburg.de/dbad6022b4074bc2/a5d78de25950/SB_F01-02-00_2018j04_BE.xlsx
+  - id: berlin-microcensus-housing-situation-2014-00
+    metadata:
+      name: Ergebnisse des Mikrozensus 2014
+      author: Amt für Statistik Berlin-Brandenburg
+      url: https://www.statistik-berlin-brandenburg.de/f-i-2-4j
+      license: CC-BY-3.0-Namensnennung
+      updated: 2017-04-03
+    files:
+      - https://download.statistik-berlin-brandenburg.de/7999ac608d606bf5/ececea9b1498/SB_F01-02-00_2014j04_BE.xlsx
 output_ports:
 metrics:
   - quality:
