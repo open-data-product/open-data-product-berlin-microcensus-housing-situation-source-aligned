@@ -26,6 +26,8 @@ def convert_data_to_csv(source_path, results_path, clean=False, quiet=False):
                 source_file_path, clean=clean, quiet=quiet)
             convert_file_to_csv_apartments_by_usage_type_year_of_construction_and_living_area(
                 source_file_path, clean=clean, quiet=quiet)
+            convert_file_to_csv_apartments_by_building_size_year_of_construction_living_area_and_gross_rent_per_sqm(
+                source_file_path, clean=clean, quiet=quiet)
             convert_file_to_csv_apartments_by_building_size_year_of_construction_living_area_and_gross_rent(
                 source_file_path, clean=clean, quiet=quiet)
 
@@ -212,10 +214,10 @@ def convert_file_to_csv_apartments_by_usage_type_year_of_construction_and_living
         print(f"✗️ Exception: {str(e)}")
 
 
-def convert_file_to_csv_apartments_by_building_size_year_of_construction_living_area_and_gross_rent(
+def convert_file_to_csv_apartments_by_building_size_year_of_construction_living_area_and_gross_rent_per_sqm(
         source_file_path, clean=False, quiet=False):
     source_file_name, source_file_extension = os.path.splitext(source_file_path)
-    file_path_csv = f"{source_file_name}-5-apartments-by-building-size-year-of-construction-living-area-and-gross-rent.csv"
+    file_path_csv = f"{source_file_name}-5-apartments-by-building-size-year-of-construction-living-area-and-gross-rent-per-sqm.csv"
 
     # Check if result needs to be generated
     if not clean and os.path.exists(file_path_csv):
@@ -244,7 +246,7 @@ def convert_file_to_csv_apartments_by_building_size_year_of_construction_living_
 
         dataframe.reset_index(drop=True, inplace=True)
         dataframe = dataframe.assign(type_index=lambda df: df.index) \
-            .assign(type_parent_index=lambda df: df.apply(lambda row: build_type_parent_index_5(row), axis=1)) \
+            .assign(type_parent_index=lambda df: df.apply(lambda row: build_type_parent_index_5_6(row), axis=1)) \
             .fillna(-1) \
             .assign(type_parent_index=lambda df: df["type_parent_index"].astype(int))
         dataframe.insert(0, "type_index", dataframe.pop("type_index"))
@@ -252,6 +254,54 @@ def convert_file_to_csv_apartments_by_building_size_year_of_construction_living_
 
         dataframe.at[13, "type"] = "build_before_1949"
         dataframe.at[20, "type"] = "build_after_1949"
+
+        # Write csv file
+        write_csv_file(dataframe, file_path_csv, quiet)
+    except Exception as e:
+        print(f"✗️ Exception: {str(e)}")
+
+
+def convert_file_to_csv_apartments_by_building_size_year_of_construction_living_area_and_gross_rent(
+        source_file_path, clean=False, quiet=False):
+    source_file_name, source_file_extension = os.path.splitext(source_file_path)
+    file_path_csv = f"{source_file_name}-6-apartments-by-building-size-year-of-construction-living-area-and-gross-rent.csv"
+
+    # Check if result needs to be generated
+    if not clean and os.path.exists(file_path_csv):
+        if not quiet:
+            print(f"✓ Already exists {os.path.basename(file_path_csv)}")
+        return
+
+    # Determine engine
+    engine = build_engine(source_file_extension)
+
+    try:
+        # Iterate over sheets
+        sheet = "Tab 6"
+        skiprows = 8
+        names = ["type", "apartments", "below_300_euros", "between_300_and_400_euros", "between_400_and_500_euros",
+                 "between_500_and_600_euros", "between_600_and_700_euros", "between_700_and_800_euros",
+                 "more_than_800_euros"]
+        drop_columns = []
+
+        dataframe = pd.read_excel(source_file_path, engine=engine, sheet_name=sheet, skiprows=skiprows, names=names,
+                                  index_col=False) \
+            .drop(columns=drop_columns, errors="ignore") \
+            .replace("–", 0) \
+            .replace("/", 0) \
+            .dropna() \
+            .assign(type=lambda df: df["type"].apply(lambda row: build_type_name(row)))
+
+        dataframe.reset_index(drop=True, inplace=True)
+        dataframe = dataframe.assign(type_index=lambda df: df.index) \
+            .assign(type_parent_index=lambda df: df.apply(lambda row: build_type_parent_index_5_6(row), axis=1)) \
+            .fillna(-1) \
+            .assign(type_parent_index=lambda df: df["type_parent_index"].astype(int))
+        dataframe.insert(0, "type_index", dataframe.pop("type_index"))
+        dataframe.insert(1, "type_parent_index", dataframe.pop("type_parent_index"))
+
+        dataframe.at[15, "type"] = "build_before_1949"
+        dataframe.at[22, "type"] = "build_after_1949"
 
         # Write csv file
         write_csv_file(dataframe, file_path_csv, quiet)
@@ -708,7 +758,7 @@ def build_type_parent_index_4(row):
         return None
 
 
-def build_type_parent_index_5(row):
+def build_type_parent_index_5_6(row):
     row_index = row.name
 
     if row_index == 0:
