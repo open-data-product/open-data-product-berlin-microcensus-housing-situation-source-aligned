@@ -26,10 +26,12 @@ def convert_data_to_csv(source_path, results_path, clean=False, quiet=False):
                 source_file_path, clean=clean, quiet=quiet)
             convert_file_to_csv_apartments_by_usage_type_year_of_construction_and_living_area(
                 source_file_path, clean=clean, quiet=quiet)
+            convert_file_to_csv_apartments_by_building_size_year_of_construction_living_area_and_gross_rent(
+                source_file_path, clean=clean, quiet=quiet)
 
 
-def convert_file_to_csv_apartments_by_size_year_of_construction_and_usage(source_file_path, clean=False,
-                                                                          quiet=False):
+def convert_file_to_csv_apartments_by_size_year_of_construction_and_usage(
+        source_file_path, clean=False, quiet=False):
     source_file_name, source_file_extension = os.path.splitext(source_file_path)
     file_path_csv = f"{source_file_name}-1-apartments-by-size-year-of-construction-and-usage.csv"
 
@@ -72,9 +74,8 @@ def convert_file_to_csv_apartments_by_size_year_of_construction_and_usage(source
         print(f"✗️ Exception: {str(e)}")
 
 
-def convert_file_to_csv_apartments_by_year_of_construction_heating_type_living_area_and_usage_type(source_file_path,
-                                                                                                   clean=False,
-                                                                                                   quiet=False):
+def convert_file_to_csv_apartments_by_year_of_construction_heating_type_living_area_and_usage_type(
+        source_file_path, clean=False, quiet=False):
     source_file_name, source_file_extension = os.path.splitext(source_file_path)
     file_path_csv = f"{source_file_name}-2-apartments-by-year-of-construction-heating-type-living-area-and-usage-type.csv"
 
@@ -117,8 +118,8 @@ def convert_file_to_csv_apartments_by_year_of_construction_heating_type_living_a
         print(f"✗️ Exception: {str(e)}")
 
 
-def convert_file_to_csv_apartments_by_usage_type_building_size_living_area_occupancy(source_file_path, clean=False,
-                                                                                     quiet=False):
+def convert_file_to_csv_apartments_by_usage_type_building_size_living_area_occupancy(
+        source_file_path, clean=False, quiet=False):
     source_file_name, source_file_extension = os.path.splitext(source_file_path)
     file_path_csv = f"{source_file_name}-3-apartments-by-usage-type-building-size-living-area-occupancy.csv"
 
@@ -163,8 +164,8 @@ def convert_file_to_csv_apartments_by_usage_type_building_size_living_area_occup
         print(f"✗️ Exception: {str(e)}")
 
 
-def convert_file_to_csv_apartments_by_usage_type_year_of_construction_and_living_area(source_file_path, clean=False,
-                                                                                      quiet=False):
+def convert_file_to_csv_apartments_by_usage_type_year_of_construction_and_living_area(
+        source_file_path, clean=False, quiet=False):
     source_file_name, source_file_extension = os.path.splitext(source_file_path)
     file_path_csv = f"{source_file_name}-4-apartments-by-usage-type-year-of-construction-and-living-area.csv"
 
@@ -204,6 +205,53 @@ def convert_file_to_csv_apartments_by_usage_type_year_of_construction_and_living
         dataframe.at[0, "type"] = "apartments"
         dataframe.at[7, "type"] = "condominiums"
         dataframe.at[14, "type"] = "rented_apartments"
+
+        # Write csv file
+        write_csv_file(dataframe, file_path_csv, quiet)
+    except Exception as e:
+        print(f"✗️ Exception: {str(e)}")
+
+
+def convert_file_to_csv_apartments_by_building_size_year_of_construction_living_area_and_gross_rent(
+        source_file_path, clean=False, quiet=False):
+    source_file_name, source_file_extension = os.path.splitext(source_file_path)
+    file_path_csv = f"{source_file_name}-5-apartments-by-building-size-year-of-construction-living-area-and-gross-rent.csv"
+
+    # Check if result needs to be generated
+    if not clean and os.path.exists(file_path_csv):
+        if not quiet:
+            print(f"✓ Already exists {os.path.basename(file_path_csv)}")
+        return
+
+    # Determine engine
+    engine = build_engine(source_file_extension)
+
+    try:
+        # Iterate over sheets
+        sheet = "Tab 5"
+        skiprows = 6
+        names = ["type", "apartments", "below_6_euros", "between_6_and_7_euros", "between_7_and_8_euros",
+                 "between_8_and_9_euros", "between_9_and_10_euros", "more_than_10_euros", "average"]
+        drop_columns = []
+
+        dataframe = pd.read_excel(source_file_path, engine=engine, sheet_name=sheet, skiprows=skiprows, names=names,
+                                  index_col=False) \
+            .drop(columns=drop_columns, errors="ignore") \
+            .replace("–", 0) \
+            .replace("/", 0) \
+            .dropna() \
+            .assign(type=lambda df: df["type"].apply(lambda row: build_type_name(row)))
+
+        dataframe.reset_index(drop=True, inplace=True)
+        dataframe = dataframe.assign(type_index=lambda df: df.index) \
+            .assign(type_parent_index=lambda df: df.apply(lambda row: build_type_parent_index_5(row), axis=1)) \
+            .fillna(-1) \
+            .assign(type_parent_index=lambda df: df["type_parent_index"].astype(int))
+        dataframe.insert(0, "type_index", dataframe.pop("type_index"))
+        dataframe.insert(1, "type_parent_index", dataframe.pop("type_parent_index"))
+
+        dataframe.at[13, "type"] = "build_before_1949"
+        dataframe.at[20, "type"] = "build_after_1949"
 
         # Write csv file
         write_csv_file(dataframe, file_path_csv, quiet)
@@ -288,6 +336,9 @@ def build_type_name(value):
         return "between_13_and_20_apartments"
     elif value == "21 und mehr Wohnungen":
         return "more_than_21_apartments"
+
+    elif value == "Insgesamt":
+        return "total"
 
     else:
         return value
@@ -653,6 +704,67 @@ def build_type_parent_index_4(row):
         return 14
     elif row_index == 20:
         return 14
+    else:
+        return None
+
+
+def build_type_parent_index_5(row):
+    row_index = row.name
+
+    if row_index == 0:
+        return -1
+    elif row_index == 1:
+        return 0
+    elif row_index == 2:
+        return 0
+    elif row_index == 3:
+        return 0
+    elif row_index == 4:
+        return 0
+    elif row_index == 5:
+        return 0
+    elif row_index == 6:
+        return 0
+    elif row_index == 7:
+        return 0
+    elif row_index == 8:
+        return 0
+    elif row_index == 9:
+        return 0
+    elif row_index == 10:
+        return 0
+    elif row_index == 11:
+        return 0
+    elif row_index == 12:
+        return 0
+    elif row_index == 13:
+        return -1
+    elif row_index == 14:
+        return 13
+    elif row_index == 15:
+        return 13
+    elif row_index == 16:
+        return 13
+    elif row_index == 17:
+        return 13
+    elif row_index == 18:
+        return 13
+    elif row_index == 19:
+        return 13
+    elif row_index == 20:
+        return -1
+    elif row_index == 21:
+        return 20
+    elif row_index == 22:
+        return 20
+    elif row_index == 23:
+        return 20
+    elif row_index == 24:
+        return 20
+    elif row_index == 25:
+        return 20
+    elif row_index == 26:
+        return 20
     else:
         return None
 
