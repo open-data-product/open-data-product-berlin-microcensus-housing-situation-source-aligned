@@ -33,4 +33,4 @@ def get_results_file_name(source_file_name):
     year = re.findall(r'\d{4}', source_file_name)[-1]
     month = re.findall(r'\d{2}', source_file_name)[-1]
 
-    return f"berlin-building-permits-{year}-{month}.xlsx"
+    return f"berlin-microcensus-housing-situation-{year}-{month}.xlsx"

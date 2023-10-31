@@ -314,7 +314,7 @@ def convert_file_to_csv_apartments_by_building_size_year_of_construction_living_
 def convert_file_to_csv_apartments_by_usage_type_year_of_construction_warm_water_and_energy_type(
         source_file_path, clean=False, quiet=False):
     source_file_name, source_file_extension = os.path.splitext(source_file_path)
-    file_path_csv = f"{source_file_name}-7-apartments_by_usage_type_year_of_construction_warm_water_and_energy_type.csv"
+    file_path_csv = f"{source_file_name}-7-apartments-by_usage-type-year-of-construction-warm-water-and-energy-type.csv"
 
     # Check if result needs to be generated
     if not clean and os.path.exists(file_path_csv):
@@ -329,9 +329,8 @@ def convert_file_to_csv_apartments_by_usage_type_year_of_construction_warm_water
         # Iterate over sheets
         sheet = "Tab 7"
         skiprows = 8
-        names = ["type", "apartments", "district_heating", "gas", "electricity", "heating_oil"
-                                                                                 "briquettes_lignite_coal_coke_hard_coal",
-                 "wood_or_other_renewable_renewable_energies"]
+        names = ["type", "apartments", "district_heating", "gas", "electricity", "heating_oil",
+                 "briquettes_lignite_coal_coke_hard_coal", "wood_or_other_renewable_renewable_energies"]
         drop_columns = []
 
         dataframe = pd.read_excel(source_file_path, engine=engine, sheet_name=sheet, skiprows=skiprows, names=names,
