@@ -32,6 +32,8 @@ def convert_data_to_csv(source_path, results_path, clean=False, quiet=False):
                 source_file_path, clean=clean, quiet=quiet)
             convert_file_to_csv_apartments_by_usage_type_year_of_construction_warm_water_and_energy_type(
                 source_file_path, clean=clean, quiet=quiet)
+            convert_file_to_csv_apartments_by_usage_type_year_of_construction_collective_heating_and_energy_type(
+                source_file_path, clean=clean, quiet=quiet)
 
 
 def convert_file_to_csv_apartments_by_size_year_of_construction_and_usage(
@@ -158,9 +160,9 @@ def convert_file_to_csv_apartments_by_usage_type_building_size_living_area_occup
         dataframe.insert(0, "type_index", dataframe.pop("type_index"))
         dataframe.insert(1, "type_parent_index", dataframe.pop("type_parent_index"))
 
-        dataframe.at[0, "type"] = "apartments"
-        dataframe.at[7, "type"] = "condominiums"
-        dataframe.at[14, "type"] = "rented_apartments"
+        dataframe.at[dataframe[dataframe["type"] == "Insgesamt"].first_valid_index(), "type"] = "total"
+        dataframe.at[dataframe[dataframe["type"] == "Zusammen"].first_valid_index(), "type"] = "condominiums"
+        dataframe.at[dataframe[dataframe["type"] == "Zusammen"].first_valid_index(), "type"] = "rented_apartments"
 
         # Write csv file
         write_csv_file(dataframe, file_path_csv, quiet)
@@ -206,9 +208,9 @@ def convert_file_to_csv_apartments_by_usage_type_year_of_construction_and_living
         dataframe.insert(0, "type_index", dataframe.pop("type_index"))
         dataframe.insert(1, "type_parent_index", dataframe.pop("type_parent_index"))
 
-        dataframe.at[0, "type"] = "apartments"
-        dataframe.at[7, "type"] = "condominiums"
-        dataframe.at[14, "type"] = "rented_apartments"
+        dataframe.at[dataframe[dataframe["type"] == "Insgesamt"].first_valid_index(), "type"] = "apartments"
+        dataframe.at[dataframe[dataframe["type"] == "Zusammen"].first_valid_index(), "type"] = "condominiums"
+        dataframe.at[dataframe[dataframe["type"] == "Zusammen"].first_valid_index(), "type"] = "rented_apartments"
 
         # Write csv file
         write_csv_file(dataframe, file_path_csv, quiet)
@@ -254,8 +256,9 @@ def convert_file_to_csv_apartments_by_building_size_year_of_construction_living_
         dataframe.insert(0, "type_index", dataframe.pop("type_index"))
         dataframe.insert(1, "type_parent_index", dataframe.pop("type_parent_index"))
 
-        dataframe.at[13, "type"] = "build_before_1949"
-        dataframe.at[20, "type"] = "build_after_1949"
+        dataframe.at[dataframe[dataframe["type"] == "Insgesamt"].first_valid_index(), "type"] = "total"
+        dataframe.at[dataframe[dataframe["type"] == "Zusammen"].first_valid_index(), "type"] = "build_before_1949"
+        dataframe.at[dataframe[dataframe["type"] == "Zusammen"].first_valid_index(), "type"] = "build_after_1949"
 
         # Write csv file
         write_csv_file(dataframe, file_path_csv, quiet)
@@ -302,8 +305,9 @@ def convert_file_to_csv_apartments_by_building_size_year_of_construction_living_
         dataframe.insert(0, "type_index", dataframe.pop("type_index"))
         dataframe.insert(1, "type_parent_index", dataframe.pop("type_parent_index"))
 
-        dataframe.at[15, "type"] = "build_before_1949"
-        dataframe.at[22, "type"] = "build_after_1949"
+        dataframe.at[dataframe[dataframe["type"] == "Insgesamt"].first_valid_index(), "type"] = "total"
+        dataframe.at[dataframe[dataframe["type"] == "Zusammen"].first_valid_index(), "type"] = "build_before_1949"
+        dataframe.at[dataframe[dataframe["type"] == "Zusammen"].first_valid_index(), "type"] = "build_after_1949"
 
         # Write csv file
         write_csv_file(dataframe, file_path_csv, quiet)
@@ -348,9 +352,58 @@ def convert_file_to_csv_apartments_by_usage_type_year_of_construction_warm_water
             .assign(type_parent_index=lambda df: df["type_parent_index"].astype(int))
         dataframe.insert(0, "type_index", dataframe.pop("type_index"))
         dataframe.insert(1, "type_parent_index", dataframe.pop("type_parent_index"))
-        #
-        dataframe.at[7, "type"] = "condominiums"
-        dataframe.at[14, "type"] = "rented_apartments"
+
+        dataframe.at[dataframe[dataframe["type"] == "Insgesamt"].first_valid_index(), "type"] = "total"
+        dataframe.at[dataframe[dataframe["type"] == "Zusammen"].first_valid_index(), "type"] = "condominiums"
+        dataframe.at[dataframe[dataframe["type"] == "Zusammen"].first_valid_index(), "type"] = "rented_apartments"
+
+        # Write csv file
+        write_csv_file(dataframe, file_path_csv, quiet)
+    except Exception as e:
+        print(f"✗️ Exception: {str(e)}")
+
+
+def convert_file_to_csv_apartments_by_usage_type_year_of_construction_collective_heating_and_energy_type(
+        source_file_path, clean=False, quiet=False):
+    source_file_name, source_file_extension = os.path.splitext(source_file_path)
+    file_path_csv = f"{source_file_name}-8-apartments-by_usage-type-year-of-construction-collective-heating-and-energy-type.csv"
+
+    # Check if result needs to be generated
+    if not clean and os.path.exists(file_path_csv):
+        if not quiet:
+            print(f"✓ Already exists {os.path.basename(file_path_csv)}")
+        return
+
+    # Determine engine
+    engine = build_engine(source_file_extension)
+
+    try:
+        # Iterate over sheets
+        sheet = "Tab 8"
+        skiprows = 8
+        names = ["type", "apartments", "apartments_with_collective_heating", "district_heating", "gas", "electricity",
+                 "heating_oil", "briquettes_lignite_coal_coke_hard_coal", "wood_or_other_renewable_renewable_energies"]
+        drop_columns = []
+
+        dataframe = pd.read_excel(source_file_path, engine=engine, sheet_name=sheet, skiprows=skiprows, names=names,
+                                  index_col=False) \
+            .drop(columns=drop_columns, errors="ignore") \
+            .replace("–", 0) \
+            .replace("/", 0) \
+            .dropna() \
+            .assign(type=lambda df: df["type"].apply(lambda row: build_type_name(row)))
+
+        dataframe.reset_index(drop=True, inplace=True)
+        dataframe = dataframe.assign(type_index=lambda df: df.index) \
+            .assign(type_parent_index=lambda df: df.apply(lambda row: build_type_parent_index_8(row), axis=1)) \
+            .fillna(-1) \
+            .assign(type_parent_index=lambda df: df["type_parent_index"].astype(int))
+        dataframe.insert(0, "type_index", dataframe.pop("type_index"))
+        dataframe.insert(1, "type_parent_index", dataframe.pop("type_parent_index"))
+
+        dataframe.at[dataframe[dataframe["type"] == "Insgesamt"].first_valid_index(), "type"] = "total"
+        dataframe.at[dataframe[dataframe["type"] == "Zusammen"].first_valid_index(), "type"] = "condominiums"
+        dataframe.at[dataframe[dataframe["type"] == "Zusammen"].first_valid_index(), "type"] = "rented_apartments"
 
         # Write csv file
         write_csv_file(dataframe, file_path_csv, quiet)
@@ -436,8 +489,15 @@ def build_type_name(value):
     elif value == "21 und mehr Wohnungen":
         return "more_than_21_apartments"
 
-    elif value == "Insgesamt":
-        return "total"
+
+    elif value == "Privatperson(en)":
+        return "private_individuals"
+    elif value == "privatwirtschaftliches Unternehmen":
+        return "private_company"
+    elif value == "öffentliche Einrichtung":
+        return "public_institution"
+    elif value == "Wohnungs-/Baugenossenschaft":
+        return "housing_building_cooperative"
 
     else:
         return value
@@ -914,7 +974,92 @@ def build_type_parent_index_7(row):
     elif row_index == 20:
         return 14
     else:
-        return 999
+        return None
+
+
+def build_type_parent_index_8(row):
+    row_index = row.name
+
+    if row_index == 0:
+        return -1
+    elif row_index == 1:
+        return 0
+    elif row_index == 2:
+        return 0
+    elif row_index == 3:
+        return 0
+    elif row_index == 4:
+        return 0
+    elif row_index == 5:
+        return 0
+    elif row_index == 6:
+        return 0
+    elif row_index == 7:
+        return 0
+    elif row_index == 8:
+        return 0
+    elif row_index == 9:
+        return 0
+    elif row_index == 10:
+        return 0
+    elif row_index == 11:
+        return 0
+    elif row_index == 12:
+        return 0
+    elif row_index == 13:
+        return -1
+    elif row_index == 14:
+        return 13
+    elif row_index == 15:
+        return 13
+    elif row_index == 16:
+        return 13
+    elif row_index == 17:
+        return 13
+    elif row_index == 18:
+        return 13
+    elif row_index == 19:
+        return 13
+    elif row_index == 20:
+        return 13
+    elif row_index == 21:
+        return 13
+    elif row_index == 22:
+        return 13
+    elif row_index == 23:
+        return 13
+    elif row_index == 24:
+        return 13
+    elif row_index == 25:
+        return 13
+    elif row_index == 26:
+        return -1
+    elif row_index == 27:
+        return 26
+    elif row_index == 28:
+        return 26
+    elif row_index == 29:
+        return 26
+    elif row_index == 30:
+        return 26
+    elif row_index == 31:
+        return 26
+    elif row_index == 32:
+        return 26
+    elif row_index == 33:
+        return 26
+    elif row_index == 34:
+        return 26
+    elif row_index == 35:
+        return 26
+    elif row_index == 36:
+        return 26
+    elif row_index == 37:
+        return 26
+    elif row_index == 38:
+        return 26
+    else:
+        return None
 
 
 #
