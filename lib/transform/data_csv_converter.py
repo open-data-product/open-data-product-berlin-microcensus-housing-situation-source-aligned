@@ -38,6 +38,8 @@ def convert_data_to_csv(source_path, results_path, clean=False, quiet=False):
                 source_file_path, clean=clean, quiet=quiet)
             convert_file_to_csv_households_by_structure_and_usage_type(
                 source_file_path, clean=clean, quiet=quiet)
+            convert_file_to_csv_households_in_buildings_with_living_space_by_structure_and_usage_type(
+                source_file_path, clean=clean, quiet=quiet)
 
 
 def convert_file_to_csv_apartments_by_size_year_of_construction_and_usage(
@@ -495,6 +497,50 @@ def convert_file_to_csv_households_by_structure_and_usage_type(source_file_path,
         dataframe.reset_index(drop=True, inplace=True)
         dataframe = dataframe.assign(type_index=lambda df: df.index) \
             .assign(type_parent_index=lambda df: df.apply(lambda row: build_type_parent_index_10(row), axis=1)) \
+            .fillna(-1) \
+            .assign(type_parent_index=lambda df: df["type_parent_index"].astype(int))
+        dataframe.insert(0, "type_index", dataframe.pop("type_index"))
+        dataframe.insert(1, "type_parent_index", dataframe.pop("type_parent_index"))
+
+        # Write csv file
+        write_csv_file(dataframe, file_path_csv, quiet)
+    except Exception as e:
+        print(f"✗️ Exception: {str(e)}")
+
+
+def convert_file_to_csv_households_in_buildings_with_living_space_by_structure_and_usage_type(source_file_path,
+                                                                                              clean=False, quiet=False):
+    source_file_name, source_file_extension = os.path.splitext(source_file_path)
+    file_path_csv = f"{source_file_name}-11-households-in-buildings-with-living-space-by-structure-and-usage-type.csv"
+
+    # Check if result needs to be generated
+    if not clean and os.path.exists(file_path_csv):
+        if not quiet:
+            print(f"✓ Already exists {os.path.basename(file_path_csv)}")
+        return
+
+    # Determine engine
+    engine = build_engine(source_file_extension)
+
+    try:
+        # Iterate over sheets
+        sheet = "Tab 11"
+        skiprows = 6
+        names = ["househould_structure", "households", "residential_buildings_with_1_apartment",
+                 "residential_buildings_with_2_apartments", "residential_buildings_with_3_apartments_or_more"]
+        drop_columns = []
+
+        dataframe = pd.read_excel(source_file_path, engine=engine, sheet_name=sheet, skiprows=skiprows, names=names,
+                                  index_col=False) \
+            .drop(columns=drop_columns, errors="ignore") \
+            .replace("–", 0) \
+            .replace("/", 0) \
+            .dropna() \
+            .assign(househould_structure=lambda df: df["househould_structure"].apply(lambda row: build_type_name(row)))
+
+        dataframe.reset_index(drop=True, inplace=True)
+        dataframe = dataframe.assign(type_index=lambda df: df.index) \
+            .assign(type_parent_index=lambda df: df.apply(lambda row: build_type_parent_index_11(row), axis=1)) \
             .fillna(-1) \
             .assign(type_parent_index=lambda df: df["type_parent_index"].astype(int))
         dataframe.insert(0, "type_index", dataframe.pop("type_index"))
@@ -1376,6 +1422,90 @@ def build_type_parent_index_10(row):
     elif row_index == 40:
         return -1
     elif row_index == 41:
+        return -1
+    else:
+        return None
+
+
+def build_type_parent_index_11(row):
+    row_index = row.name
+
+    if row_index == 0:
+        return -1
+    elif row_index == 1:
+        return 0
+    elif row_index == 2:
+        return 1
+    elif row_index == 3:
+        return 0
+    elif row_index == 4:
+        return 0
+    elif row_index == 5:
+        return 0
+    elif row_index == 6:
+        return 0
+    elif row_index == 7:
+        return 0
+    elif row_index == 8:
+        return 0
+    elif row_index == 9:
+        return -1
+    elif row_index == 10:
+        return -1
+    elif row_index == 11:
+        return -1
+    elif row_index == 12:
+        return -1
+    elif row_index == 13:
+        return -1
+    elif row_index == 14:
+        return -1
+    elif row_index == 15:
+        return -1
+    elif row_index == 16:
+        return -1
+    elif row_index == 17:
+        return -1
+    elif row_index == 18:
+        return -1
+    elif row_index == 19:
+        return -1
+    elif row_index == 20:
+        return -1
+    elif row_index == 21:
+        return -1
+
+    elif row_index == 22:
+        return -1
+    elif row_index == 23:
+        return 22
+    elif row_index == 24:
+        return 23
+    elif row_index == 25:
+        return 23
+    elif row_index == 26:
+        return 23
+    elif row_index == 27:
+        return 23
+    elif row_index == 28:
+        return 23
+    elif row_index == 29:
+        return -1
+    elif row_index == 30:
+        return 29
+    elif row_index == 31:
+        return -1
+    elif row_index == 32:
+        return -1
+    elif row_index == 33:
+        return -1
+    elif row_index == 34:
+        return -1
+    elif row_index == 35:
+        return -1
+    elif row_index == 36:
+        return -1
+    elif row_index == 37:
         return -1
     else:
         return None
