@@ -482,7 +482,7 @@ def convert_file_to_csv_households_by_structure_and_usage_type(source_file_path,
         # Iterate over sheets
         sheet = "Tab 10"
         skiprows = 5
-        names = ["househould_structure", "households", "owners", "owners_percentage", "main_tenants",
+        names = ["household_structure", "households", "owners", "owners_percentage", "main_tenants",
                  "main_tenants_percentage", "subtenants", "subtenants_percentage"]
         drop_columns = []
 
@@ -492,7 +492,7 @@ def convert_file_to_csv_households_by_structure_and_usage_type(source_file_path,
             .replace("–", 0) \
             .replace("/", 0) \
             .dropna() \
-            .assign(househould_structure=lambda df: df["househould_structure"].apply(lambda row: build_type_name(row)))
+            .assign(household_structure=lambda df: df["household_structure"].apply(lambda row: build_type_name(row)))
 
         dataframe.reset_index(drop=True, inplace=True)
         dataframe = dataframe.assign(type_index=lambda df: df.index) \
@@ -526,7 +526,7 @@ def convert_file_to_csv_households_in_buildings_with_living_space_by_structure_a
         # Iterate over sheets
         sheet = "Tab 11"
         skiprows = 6
-        names = ["househould_structure", "households", "residential_buildings_with_1_apartment",
+        names = ["household_structure", "households", "residential_buildings_with_1_apartment",
                  "residential_buildings_with_2_apartments", "residential_buildings_with_3_apartments_or_more"]
         drop_columns = []
 
@@ -536,7 +536,7 @@ def convert_file_to_csv_households_in_buildings_with_living_space_by_structure_a
             .replace("–", 0) \
             .replace("/", 0) \
             .dropna() \
-            .assign(househould_structure=lambda df: df["househould_structure"].apply(lambda row: build_type_name(row)))
+            .assign(household_structure=lambda df: df["household_structure"].apply(lambda row: build_type_name(row)))
 
         dataframe.reset_index(drop=True, inplace=True)
         dataframe = dataframe.assign(type_index=lambda df: df.index) \
