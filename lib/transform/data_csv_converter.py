@@ -1,4 +1,5 @@
 import os
+import re
 
 import pandas as pd
 
@@ -17,6 +18,8 @@ def convert_data_to_csv(source_path, results_path, clean=False, quiet=False):
                           if not file_name.startswith(f"~") and
                              (file_name.endswith(".xlsx") or file_name.endswith(".xls"))]:
             source_file_path = os.path.join(source_path, subdir, file_name)
+
+            year = re.search(r"\b\d{4}\b", file_name).group()
 
             convert_file_to_csv_apartments_by_size_year_of_construction_and_usage(
                 source_file_path, clean=clean, quiet=quiet)
@@ -40,6 +43,9 @@ def convert_data_to_csv(source_path, results_path, clean=False, quiet=False):
                 source_file_path, clean=clean, quiet=quiet)
             convert_file_to_csv_households_in_buildings_with_living_space_by_structure_and_usage_type(
                 source_file_path, clean=clean, quiet=quiet)
+
+            convert_file_to_csv_apartments_residential_buildings_by_district_occupancy_and_living_area(
+                source_file_path, year, clean=clean, quiet=quiet)
 
 
 def convert_file_to_csv_apartments_by_size_year_of_construction_and_usage(
@@ -545,6 +551,57 @@ def convert_file_to_csv_households_in_buildings_with_living_space_by_structure_a
             .assign(type_parent_index=lambda df: df["type_parent_index"].astype(int))
         dataframe.insert(0, "type_index", dataframe.pop("type_index"))
         dataframe.insert(1, "type_parent_index", dataframe.pop("type_parent_index"))
+
+        # Write csv file
+        write_csv_file(dataframe, file_path_csv, quiet)
+    except Exception as e:
+        print(f"✗️ Exception: {str(e)}")
+
+
+def convert_file_to_csv_apartments_residential_buildings_by_district_occupancy_and_living_area(source_file_path, year,
+                                                                                               clean=False,
+                                                                                               quiet=False):
+    tab_index = 19 if int(year) <= 2014 else 23
+
+    source_file_name, source_file_extension = os.path.splitext(source_file_path)
+    file_path_csv = f"{source_file_name}-{tab_index}-apartments-residential-buildings-by-district-occupancy-and-living-area.csv"
+
+    # Check if result needs to be generated
+    if not clean and os.path.exists(file_path_csv):
+        if not quiet:
+            print(f"✓ Already exists {os.path.basename(file_path_csv)}")
+        return
+
+    # Determine engine
+    engine = build_engine(source_file_extension)
+
+    try:
+        # Iterate over sheets
+        sheet = f"Tab {tab_index}"
+        skiprows = 7
+        names = ["district_name", "apartments", "uninhabited_apartments", "inhabited_apartments",
+                 "inhabited_apartments_living_area", "inhabited_apartments_living_area_per_apartment",
+                 "inhabited_apartments_living_area_per_person", "inhabited_apartments_persons_per_apartment"]
+        drop_columns = []
+
+        dataframe = pd.read_excel(source_file_path, engine=engine, sheet_name=sheet, skiprows=skiprows, names=names,
+                                  index_col=False) \
+            .drop(columns=drop_columns, errors="ignore") \
+            .replace("-", 0) \
+            .replace("…", None) \
+            .replace("–", 0) \
+            .replace("—", 0) \
+            .assign(district_id=lambda df: df["district_name"].apply(lambda row: build_district_id(row))) \
+            .head(12) \
+            .drop("district_name", axis=1) \
+            .astype(str) \
+            .apply(lambda x: x.str.replace('"', '')) \
+            .apply(lambda x: x.str.replace(',', '.')) \
+            .apply(lambda x: x.str.replace('— ', '-')) \
+            .apply(lambda x: x.str.replace('– ', '-'))
+
+        dataframe.reset_index(drop=True, inplace=True)
+        dataframe.insert(0, "district_id", dataframe.pop("district_id"))
 
         # Write csv file
         write_csv_file(dataframe, file_path_csv, quiet)
@@ -1507,6 +1564,40 @@ def build_type_parent_index_11(row):
         return -1
     elif row_index == 37:
         return -1
+    else:
+        return None
+
+
+def build_district_id(value):
+    value = str(value).lstrip().rstrip() \
+        .replace(" ", "") \
+        .replace("—", "-") \
+        .replace("–", "-")
+
+    if value == "Mitte":
+        return "01"
+    elif value == "Friedrichshain-Kreuzberg":
+        return "02"
+    elif value == "Pankow":
+        return "03"
+    elif value == "Charlottenburg-Wilmersdorf":
+        return "04"
+    elif value == "Spandau":
+        return "05"
+    elif value == "Steglitz-Zehlendorf":
+        return "06"
+    elif value == "Tempelhof-Schöneberg":
+        return "07"
+    elif value == "Neukölln":
+        return "08"
+    elif value == "Treptow-Köpenick":
+        return "09"
+    elif value == "Marzahn-Hellersdorf":
+        return "10"
+    elif value == "Lichtenberg":
+        return "11"
+    elif value == "Reinickendorf":
+        return "12"
     else:
         return None
 
