@@ -48,6 +48,8 @@ def convert_data_to_csv(source_path, results_path, clean=False, quiet=False):
                 source_file_path, year, clean=clean, quiet=quiet)
             convert_file_to_csv_apartments_residential_buildings_by_district_year_of_construction_and_usage_type(
                 source_file_path, year, clean=clean, quiet=quiet)
+            convert_file_to_csv_apartments_residential_buildings_by_district_usage_type_living_area_and_occupancy(
+                source_file_path, year, clean=clean, quiet=quiet)
 
 
 def convert_file_to_csv_apartments_by_size_year_of_construction_and_usage(
@@ -649,7 +651,55 @@ def convert_file_to_csv_apartments_residential_buildings_by_district_year_of_con
                 .replace("/", 0)
 
             dataframe.reset_index(drop=True, inplace=True)
-            dataframe = dataframe.assign(district_id=lambda df: df.apply(lambda row: str(row.name + 1).zfill(2), axis=1))
+            dataframe = dataframe.assign(
+                district_id=lambda df: df.apply(lambda row: str(row.name + 1).zfill(2), axis=1))
+
+            # Write csv file
+            write_csv_file(dataframe, file_path_csv, quiet)
+        except Exception as e:
+            print(f"✗️ Exception: {str(e)}")
+
+
+def convert_file_to_csv_apartments_residential_buildings_by_district_usage_type_living_area_and_occupancy(
+        source_file_path, year, clean=False, quiet=False):
+    tab_index = 21 if int(year) <= 2014 else 25
+
+    types = ["total", "owners-apartments", "rental-apartments", "_"]
+    for type_index, type in enumerate(types):
+
+        if type == "_":
+            continue
+
+        source_file_name, source_file_extension = os.path.splitext(source_file_path)
+        file_path_csv = f"{source_file_name}-{tab_index}-apartments-residential-buildings-by-district-usage-type-living-area-and-occupancy-{type}.csv"
+
+        # Check if result needs to be generated
+        if not clean and os.path.exists(file_path_csv):
+            if not quiet:
+                print(f"✓ Already exists {os.path.basename(file_path_csv)}")
+            return
+
+        # Determine engine
+        engine = build_engine(source_file_extension)
+
+        try:
+            # Iterate over sheets
+            sheet = f"Tab {tab_index}"
+            skiprows = 6
+            names = ["district_id", "apartments", "living_area", "living_area_per_apartment", "persons_per_apartment",
+                     "living_area_per_person"]
+            drop_columns = []
+
+            dataframe = pd.read_excel(source_file_path, engine=engine, sheet_name=sheet, skiprows=skiprows, names=names,
+                                      index_col=False) \
+                            .drop(columns=drop_columns, errors="ignore") \
+                            .iloc[type_index::len(types)] \
+                .head(12) \
+                .replace("/", 0)
+
+            dataframe.reset_index(drop=True, inplace=True)
+            dataframe = dataframe.assign(
+                district_id=lambda df: df.apply(lambda row: str(row.name + 1).zfill(2), axis=1))
 
             # Write csv file
             write_csv_file(dataframe, file_path_csv, quiet)
