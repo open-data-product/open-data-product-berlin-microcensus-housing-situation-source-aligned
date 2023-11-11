@@ -44,11 +44,11 @@ def convert_data_to_csv(source_path, results_path, clean=False, quiet=False):
             convert_file_to_csv_households_in_buildings_with_living_space_by_structure_and_usage_type(
                 source_file_path, clean=clean, quiet=quiet)
 
-            convert_file_to_csv_apartments_residential_buildings_by_district_occupancy_and_living_area(
+            convert_file_to_csv_apartments_in_residential_buildings_by_district_occupancy_and_living_area(
                 source_file_path, year, clean=clean, quiet=quiet)
-            convert_file_to_csv_apartments_residential_buildings_by_district_year_of_construction_and_usage_type(
+            convert_file_to_csv_apartments_in_residential_buildings_by_district_year_of_construction_and_usage_type(
                 source_file_path, year, clean=clean, quiet=quiet)
-            convert_file_to_csv_apartments_residential_buildings_by_district_usage_type_living_area_and_occupancy(
+            convert_file_to_csv_apartments_in_residential_buildings_by_district_usage_type_living_area_and_occupancy(
                 source_file_path, year, clean=clean, quiet=quiet)
 
 
@@ -562,13 +562,14 @@ def convert_file_to_csv_households_in_buildings_with_living_space_by_structure_a
         print(f"✗️ Exception: {str(e)}")
 
 
-def convert_file_to_csv_apartments_residential_buildings_by_district_occupancy_and_living_area(source_file_path, year,
-                                                                                               clean=False,
-                                                                                               quiet=False):
+def convert_file_to_csv_apartments_in_residential_buildings_by_district_occupancy_and_living_area(source_file_path,
+                                                                                                  year,
+                                                                                                  clean=False,
+                                                                                                  quiet=False):
     tab_index = 19 if int(year) <= 2014 else 23
 
     source_file_name, source_file_extension = os.path.splitext(source_file_path)
-    file_path_csv = f"{source_file_name}-{tab_index}-apartments-residential-buildings-by-district-occupancy-and-living-area.csv"
+    file_path_csv = f"{source_file_name}-{tab_index}-apartments-in-residential-buildings-by-district-occupancy-and-living-area.csv"
 
     # Check if result needs to be generated
     if not clean and os.path.exists(file_path_csv):
@@ -613,7 +614,7 @@ def convert_file_to_csv_apartments_residential_buildings_by_district_occupancy_a
         print(f"✗️ Exception: {str(e)}")
 
 
-def convert_file_to_csv_apartments_residential_buildings_by_district_year_of_construction_and_usage_type(
+def convert_file_to_csv_apartments_in_residential_buildings_by_district_year_of_construction_and_usage_type(
         source_file_path, year, clean=False, quiet=False):
     tab_index = 20 if int(year) <= 2014 else 24
 
@@ -624,7 +625,7 @@ def convert_file_to_csv_apartments_residential_buildings_by_district_year_of_con
             continue
 
         source_file_name, source_file_extension = os.path.splitext(source_file_path)
-        file_path_csv = f"{source_file_name}-{tab_index}-apartments-residential-buildings-by-district-year-of-construction-and-usage-type-{type}.csv"
+        file_path_csv = f"{source_file_name}-{tab_index}-apartments-in-residential-buildings-by-district-year-of-construction-and-usage-type-{type}.csv"
 
         # Check if result needs to be generated
         if not clean and os.path.exists(file_path_csv):
@@ -660,7 +661,7 @@ def convert_file_to_csv_apartments_residential_buildings_by_district_year_of_con
             print(f"✗️ Exception: {str(e)}")
 
 
-def convert_file_to_csv_apartments_residential_buildings_by_district_usage_type_living_area_and_occupancy(
+def convert_file_to_csv_apartments_in_residential_buildings_by_district_usage_type_living_area_and_occupancy(
         source_file_path, year, clean=False, quiet=False):
     tab_index = 21 if int(year) <= 2014 else 25
 
@@ -671,7 +672,7 @@ def convert_file_to_csv_apartments_residential_buildings_by_district_usage_type_
             continue
 
         source_file_name, source_file_extension = os.path.splitext(source_file_path)
-        file_path_csv = f"{source_file_name}-{tab_index}-apartments-residential-buildings-by-district-usage-type-living-area-and-occupancy-{type}.csv"
+        file_path_csv = f"{source_file_name}-{tab_index}-apartments-in-residential-buildings-by-district-usage-type-living-area-and-occupancy-{type}.csv"
 
         # Check if result needs to be generated
         if not clean and os.path.exists(file_path_csv):
