@@ -54,7 +54,8 @@ def convert_data_to_csv(source_path, results_path, clean=False, quiet=False):
                 source_file_path, year, clean=clean, quiet=quiet)
             convert_file_to_csv_apartments_in_residential_buildings_by_district_and_gross_rent(
                 source_file_path, year, clean=clean, quiet=quiet)
-
+            convert_file_to_csv_apartments_in_residential_buildings_by_district_and_gross_rent_per_sqm(
+                source_file_path, year, clean=clean, quiet=quiet)
 
 
 def convert_file_to_csv_apartments_by_size_year_of_construction_and_usage(
@@ -805,6 +806,54 @@ def convert_file_to_csv_apartments_in_residential_buildings_by_district_and_gros
         write_csv_file(dataframe, file_path_csv, quiet)
     except Exception as e:
         print(f"✗️ Exception: {str(e)}")
+
+
+def convert_file_to_csv_apartments_in_residential_buildings_by_district_and_gross_rent_per_sqm(
+        source_file_path, year, clean=False, quiet=False):
+    tab_index = 24 if int(year) <= 2014 else 30
+
+    source_file_name, source_file_extension = os.path.splitext(source_file_path)
+    file_path_csv = f"{source_file_name}-{tab_index}-apartments-in-residential-buildings-by-district-and-gross-rent-per-sqm.csv"
+
+    # Check if result needs to be generated
+    if not clean and os.path.exists(file_path_csv):
+        if not quiet:
+            print(f"✓ Already exists {os.path.basename(file_path_csv)}")
+        return
+
+    # Determine engine
+    engine = build_engine(source_file_extension)
+
+    try:
+        # Iterate over sheets
+        sheet = f"Tab {tab_index}"
+        skiprows = 8
+        names = ["district_name", "apartments", "gross_rent_per_sqm_below_6_euros",
+                 "gross_rent_per_sqm_between_6_and_7_euros",
+                 "gross_rent_per_sqm_between_7_and_8_euros", "gross_rent_between_per_sqm_8_and_9_euros",
+                 "gross_rent_per_sqm_above_9_euros", "average_gross_rent_per_sqm"]
+        drop_columns = []
+
+        dataframe = pd.read_excel(source_file_path, engine=engine, sheet_name=sheet, skiprows=skiprows, names=names,
+                                  index_col=False) \
+            .drop(columns=drop_columns, errors="ignore") \
+            .replace("/", 0) \
+            .assign(district_id=lambda df: df["district_name"].apply(lambda row: build_district_id(row))) \
+            .head(12) \
+            .drop("district_name", axis=1)
+
+        dataframe.reset_index(drop=True, inplace=True)
+        dataframe = dataframe.assign(
+            district_id=lambda df: df.apply(lambda row: str(row.name + 1).zfill(2), axis=1))
+
+        dataframe.reset_index(drop=True, inplace=True)
+        dataframe.insert(0, "district_id", dataframe.pop("district_id"))
+
+        # Write csv file
+        write_csv_file(dataframe, file_path_csv, quiet)
+    except Exception as e:
+        print(f"✗️ Exception: {str(e)}")
+
 
 #
 # Transformers
