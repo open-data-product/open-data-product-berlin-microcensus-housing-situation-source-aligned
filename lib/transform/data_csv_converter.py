@@ -726,6 +726,7 @@ def convert_file_to_csv_inhabited_apartments_in_residential_buildings_by_distric
         print(f"⚠ Does exist in year {year}")
         return
     tab_index = 26
+    sheet = "Tab 26-27"
 
     source_file_name, source_file_extension = os.path.splitext(source_file_path)
     file_path_csv = f"{source_file_name}-{tab_index}-apartments-in-residential-buildings-by-district-and-building-type.csv"
@@ -741,7 +742,7 @@ def convert_file_to_csv_inhabited_apartments_in_residential_buildings_by_distric
 
     try:
         # Iterate over sheets
-        sheet = f"Tab {tab_index}"
+        sheet = sheet
         skiprows = 7
         names = ["district_name", "apartments", "single_family_houses", "single_family_houses_detached",
                  "single_family_houses_semi_detached", "single_family_houses_terraced", "multi_family_houses",
@@ -775,6 +776,7 @@ def convert_file_to_csv_inhabited_apartments_in_residential_buildings_by_distric
         print(f"⚠ Does exist in year {year}")
         return
     tab_index = 27
+    sheet = "Tab 26-27"
 
     source_file_name, source_file_extension = os.path.splitext(source_file_path)
     file_path_csv = f"{source_file_name}-{tab_index}-apartments-in-residential-buildings-by-district-and-owner.csv"
@@ -790,7 +792,7 @@ def convert_file_to_csv_inhabited_apartments_in_residential_buildings_by_distric
 
     try:
         # Iterate over sheets
-        sheet = f"Tab {tab_index}"
+        sheet = sheet
         skiprows = 7
         names = ["district_name", "apartments", "inhabited_by_owner", "rented_out_owned_by_private_person",
                  "rented_out_owned_by_private_company", "rented_out_owned_by_public_institution",
