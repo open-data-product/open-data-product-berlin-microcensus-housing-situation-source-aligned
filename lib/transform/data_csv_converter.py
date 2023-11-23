@@ -718,8 +718,8 @@ def convert_file_to_csv_apartments_in_residential_buildings_by_district_usage_ty
 
 def convert_file_to_csv_apartments_in_residential_buildings_by_district_and_living_area(
         source_file_path, year, clean=False, quiet=False):
-    tab_index = 22 if int(year) <= 2014 else 26
-    sheet = "Tab 22-23" if int(year) <= 2014 else "Tab 26-27"
+    tab_index = 22 if int(year) <= 2014 else 28
+    sheet = "Tab 22-23" if int(year) <= 2014 else "Tab 28-29"
 
     source_file_name, source_file_extension = os.path.splitext(source_file_path)
     file_path_csv = f"{source_file_name}-{tab_index}-apartments-in-residential-buildings-by-district-and-living-area.csv"
@@ -765,8 +765,8 @@ def convert_file_to_csv_apartments_in_residential_buildings_by_district_and_livi
 
 def convert_file_to_csv_apartments_in_residential_buildings_by_district_and_gross_rent(
         source_file_path, year, clean=False, quiet=False):
-    tab_index = 23 if int(year) <= 2014 else 27
-    sheet = "Tab 22-23" if int(year) <= 2014 else "Tab 26-27"
+    tab_index = 23 if int(year) <= 2014 else 29
+    sheet = "Tab 22-23" if int(year) <= 2014 else "Tab 28-29"
 
     source_file_name, source_file_extension = os.path.splitext(source_file_path)
     file_path_csv = f"{source_file_name}-{tab_index}-apartments-in-residential-buildings-by-district-and-gross-rent.csv"
