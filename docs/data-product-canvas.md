@@ -1,12 +1,15 @@
-# Data Product Canvas
-
-## Domain
-
-## Data Product Name
+# Data Product Canvas - Berlin Microcensus Housing Situation
 
 ## Input Ports
 
 **Input ports define the format and protocol in which data can be read (database, file, API, visualizations)**
+
+This data product uses statistical population data provided
+by [Amt für Statistik Berlin-Brandenburg](https://www.statistik-berlin-brandenburg.de/) available under the following
+URLs
+
+* [SB_F01-02-00_2018j04_BE.xlsx](https://download.statistik-berlin-brandenburg.de/dbad6022b4074bc2/a5d78de25950/SB_F01-02-00_2018j04_BE.xlsx)
+* [SB_F01-02-00_2014j04_BE.xlsx](https://download.statistik-berlin-brandenburg.de/7999ac608d606bf5/ececea9b1498/SB_F01-02-00_2014j04_BE.xlsx)
 
 ## Data Product Design
 
@@ -14,15 +17,73 @@
 **Ingestion, storage, transport, wrangling, cleaning, transformations, enrichment, augmentation, analytics, SQL
 statements, or used data platform services.**
 
+* [converts Excel data into csv](../lib/transform/data_csv_converter.py)
+
 ## Output Port
 
 **Output ports define the format and protocol in which data can be exposed (db, file, API, visualizations)**
+
+The data of this data product is available under the following URLs
+
+- [berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-1-apartments-by-size-year-of-construction-and-usage.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-1-apartments-by-size-year-of-construction-and-usage.csv)
+- [berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-2-apartments-by-year-of-construction-heating-type-living-area-and-usage-type.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-2-apartments-by-year-of-construction-heating-type-living-area-and-usage-type.csv)
+- [berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-3-apartments-by-usage-type-building-size-living-area-occupancy.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-3-apartments-by-usage-type-building-size-living-area-occupancy.csv)
+- [berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-4-apartments-by-usage-type-year-of-construction-and-living-area.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-4-apartments-by-usage-type-year-of-construction-and-living-area.csv)
+- [berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-5-apartments-by-building-size-year-of-construction-living-area-and-gross-rent-per-sqm.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-5-apartments-by-building-size-year-of-construction-living-area-and-gross-rent-per-sqm.csv)
+- [berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-6-apartments-by-building-size-year-of-construction-living-area-and-gross-rent.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-6-apartments-by-building-size-year-of-construction-living-area-and-gross-rent.csv)
+- [berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-7-apartments-by-usage-type-year-of-construction-warm-water-and-energy-type.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-7-apartments-by-usage-type-year-of-construction-warm-water-and-energy-type.csv)
+- [berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-8-apartments-by-usage-type-year-of-construction-collective-heating-and-energy-type.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-8-apartments-by-usage-type-year-of-construction-collective-heating-and-energy-type.csv)
+- [berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-8-apartments-by-usage-type-year-of-construction-collective-heating-and-energy-type.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-8-apartments-by-usage-type-year-of-construction-collective-heating-and-energy-type.csv)
+- [berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-9-apartments-by-usage-type-building-size-heating-and-energy-type.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-9-apartments-by-usage-type-building-size-heating-and-energy-type.csv)
+- [berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-10-households-by-structure-and-usage-type.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-10-households-by-structure-and-usage-type.csv)
+- [berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-11-households-in-buildings-with-living-space-by-structure-and-usage-type.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-11-households-in-buildings-with-living-space-by-structure-and-usage-type.csv)
+- [berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-12-households-in-buildings-with-living-space-by-structure-and-living-area.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-12-households-in-buildings-with-living-space-by-structure-and-living-area.csv)
+- [berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-19-apartments-in-residential-buildings-by-district-occupancy-and-living-area.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-19-apartments-in-residential-buildings-by-district-occupancy-and-living-area.csv)
+- [berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-20-apartments-in-residential-buildings-by-district-year-of-construction-and-usage-type-1949-and-later.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-20-apartments-in-residential-buildings-by-district-year-of-construction-and-usage-type-1949-and-later.csv)
+- [berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-20-apartments-in-residential-buildings-by-district-year-of-construction-and-usage-type-before-1948.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-20-apartments-in-residential-buildings-by-district-year-of-construction-and-usage-type-before-1948.csv)
+- [berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-20-apartments-in-residential-buildings-by-district-year-of-construction-and-usage-type-total.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-20-apartments-in-residential-buildings-by-district-year-of-construction-and-usage-type-total.csv)
+- [berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-21-apartments-in-residential-buildings-by-district-usage-type-living-area-and-occupancy-owners-apartments.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-21-apartments-in-residential-buildings-by-district-usage-type-living-area-and-occupancy-owners-apartments.csv)
+- [berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-21-apartments-in-residential-buildings-by-district-usage-type-living-area-and-occupancy-rental-apartments.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-21-apartments-in-residential-buildings-by-district-usage-type-living-area-and-occupancy-rental-apartments.csv)
+- [berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-21-apartments-in-residential-buildings-by-district-usage-type-living-area-and-occupancy-total.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-21-apartments-in-residential-buildings-by-district-usage-type-living-area-and-occupancy-total.csv)
+- [berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-22-apartments-in-residential-buildings-by-district-and-living-area.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-22-apartments-in-residential-buildings-by-district-and-living-area.csv)
+- [berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-23-apartments-in-residential-buildings-by-district-and-gross-rent.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-23-apartments-in-residential-buildings-by-district-and-gross-rent.csv)
+- [berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-24-apartments-in-residential-buildings-by-district-and-gross-rent-per-sqm.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-24-apartments-in-residential-buildings-by-district-and-gross-rent-per-sqm.csv)
+- [berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-25-main-tenant-households-in-residential-buildings-by-district-and-rental-burden.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-04-25-main-tenant-households-in-residential-buildings-by-district-and-rental-burden.csv)
+- [berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-1-apartments-by-size-year-of-construction-and-usage.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-1-apartments-by-size-year-of-construction-and-usage.csv)
+- [berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-2-apartments-by-year-of-construction-heating-type-living-area-and-usage-type.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-2-apartments-by-year-of-construction-heating-type-living-area-and-usage-type.csv)
+- [berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-3-apartments-by-usage-type-building-size-living-area-occupancy.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-3-apartments-by-usage-type-building-size-living-area-occupancy.csv)
+- [berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-4-apartments-by-usage-type-year-of-construction-and-living-area.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-4-apartments-by-usage-type-year-of-construction-and-living-area.csv)
+- [berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-5-apartments-by-building-size-year-of-construction-living-area-and-gross-rent-per-sqm.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-5-apartments-by-building-size-year-of-construction-living-area-and-gross-rent-per-sqm.csv)
+- [berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-6-apartments-by-building-size-year-of-construction-living-area-and-gross-rent.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-6-apartments-by-building-size-year-of-construction-living-area-and-gross-rent.csv)
+- [berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-7-apartments-by-usage-type-year-of-construction-warm-water-and-energy-type.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-7-apartments-by-usage-type-year-of-construction-warm-water-and-energy-type.csv)
+- [berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-8-apartments-by-usage-type-year-of-construction-collective-heating-and-energy-type.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-8-apartments-by-usage-type-year-of-construction-collective-heating-and-energy-type.csv)
+- [berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-8-apartments-by-usage-type-year-of-construction-collective-heating-and-energy-type.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-8-apartments-by-usage-type-year-of-construction-collective-heating-and-energy-type.csv)
+- [berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-9-apartments-by-usage-type-building-size-heating-and-energy-type.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-9-apartments-by-usage-type-building-size-heating-and-energy-type.csv)
+- [berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-10-households-by-structure-and-usage-type.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-10-households-by-structure-and-usage-type.csv)
+- [berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-11-households-in-buildings-with-living-space-by-structure-and-usage-type.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-11-households-in-buildings-with-living-space-by-structure-and-usage-type.csv)
+- [berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-23-apartments-in-residential-buildings-by-district-occupancy-and-living-area.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-23-apartments-in-residential-buildings-by-district-occupancy-and-living-area.csv)
+- [berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-24-apartments-in-residential-buildings-by-district-year-of-construction-and-usage-type-1949-and-later.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-24-apartments-in-residential-buildings-by-district-year-of-construction-and-usage-type-1949-and-later.csv)
+- [berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-24-apartments-in-residential-buildings-by-district-year-of-construction-and-usage-type-before-1948.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-24-apartments-in-residential-buildings-by-district-year-of-construction-and-usage-type-before-1948.csv)
+- [berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-24-apartments-in-residential-buildings-by-district-year-of-construction-and-usage-type-total.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-24-apartments-in-residential-buildings-by-district-year-of-construction-and-usage-type-total.csv)
+- [berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-25-apartments-in-residential-buildings-by-district-usage-type-living-area-and-occupancy-owners-apartments.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-25-apartments-in-residential-buildings-by-district-usage-type-living-area-and-occupancy-owners-apartments.csv)
+- [berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-25-apartments-in-residential-buildings-by-district-usage-type-living-area-and-occupancy-rental-apartments.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-25-apartments-in-residential-buildings-by-district-usage-type-living-area-and-occupancy-rental-apartments.csv)
+- [berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-25-apartments-in-residential-buildings-by-district-usage-type-living-area-and-occupancy-total.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-25-apartments-in-residential-buildings-by-district-usage-type-living-area-and-occupancy-total.csv)
+- [berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-26-apartments-in-residential-buildings-by-district-and-building-type.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-26-apartments-in-residential-buildings-by-district-and-building-type.csv)
+- [berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-27-apartments-in-residential-buildings-by-district-and-owner.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-27-apartments-in-residential-buildings-by-district-and-owner.csv)
+- [berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-28-apartments-in-residential-buildings-by-district-and-living-area.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-28-apartments-in-residential-buildings-by-district-and-living-area.csv)
+- [berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-29-apartments-in-residential-buildings-by-district-and-gross-rent.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-29-apartments-in-residential-buildings-by-district-and-gross-rent.csv)
+- [berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-30-apartments-in-residential-buildings-by-district-and-gross-rent-per-sqm.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-30-apartments-in-residential-buildings-by-district-and-gross-rent-per-sqm.csv)
+- [berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-31-main-tenant-households-in-residential-buildings-by-district-and-rental-burden.csv](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-04-31-main-tenant-households-in-residential-buildings-by-district-and-rental-burden.csv)
 
 ## Metadata
 
 ### Ownership
 
 **Domain, data product owner, organizational unit, license, version and expiration date**
+
+* ownership: Open Lifeworlds
+* domain: statistics
+* license: CC-BY-4.0
 
 ### Schema
 
@@ -31,6 +92,172 @@ statements, or used data platform services.**
 ### Semantics
 
 **Description, logical model**
+
+#### 1 apartments by size year of construction and usage
+- `type`: type
+- `apartments`: number of apartments in 1000
+- `inhabited_by_owner`: number of apartments inhabited by owner in 1000
+- `inhabited_by_owner_percentage`: percentage of apartments inhabited by owner
+- `rented_out`: number of rented out apartments in 1000
+- `rented_out_percentage`: percentage of rented out apartments
+- `uninhabited`: number of uninhabited apartments in 1000
+- `uninhabited_percentage`: percentage of uninhabited apartments
+#### 2 apartments by year of construction heating type living area and usage type
+- `type`: type
+- `apartments`: number of apartments in 1000
+- `condominium`: number of condominiums in 1000
+- `condominium_percentage`: percentage of condominiums
+- `rented_apartments`: number of rented apartments in 1000
+- `rented_apartments_percentage`: percentage of rented apartments
+#### 3 apartments by usage type building size living area occupancy
+- `type`: type
+- `apartments`: number of apartments in 1000
+- `living_area`: living area in 10 000 sqm
+- `living_area_per_apartment`: living area per apartment in sqm
+- `persons_per_apartment`: persons per apartment
+- `living_area_per_person`: living area in person in sqm
+#### 4 apartments by usage type year of construction and living area
+- `type`: type
+- `apartments`: number of apartments in 1000
+- `below_40sqm`: number of apartments with a living area below 40 sqm in 1000
+- `between_40_and_60sqm`: number of apartments with a living area between 40 and 60 sqm in 1000
+- `between_60_and_80sqm`: number of apartments with a living area between 60 and 80 sqm in 1000
+- `between_80_and_100sqm`: number of apartments with a living area between 80 and 100 sqm in 1000
+- `between_100_and_120sqm`: number of apartments with a living area between 100 and 120 sqm in 1000
+- `more_than_120sqm`: number of apartments with a living area of more than 120 sqm in 1000
+#### 6 apartments by building size year of construction living area and gross rent per sqm
+- `type`: type
+- `apartments`: number of apartments
+- `below_6_euros`: number of apartments with gross rent per sqm below 6 Euros in 1000
+- `between_6_and_7_euros`: number of apartments with gross rent per sqm between 6 and 7 Euros in 1000
+- `between_7_and_8_euros`: number of apartments with gross rent per sqm between 7 and 8 Euros in 1000
+- `between_8_and_9_euros`: number of apartments with gross rent per sqm between 8 and 9 Euros in 1000
+- `between_9_and_10_euros`: number of apartments with gross rent per sqm between 9 and 10 Euros in 1000
+- `more_than_10_euros`: number of apartments with gross rent per sqm of more than 10 Euros in 1000
+- `average`: average gross rent per sqm in Euros
+#### 7 apartments by building size year of construction living area and gross rent
+- `type`: type
+- `apartments`: number of apartments
+- `below_300_euros`: numer of apartments with a gross rent below 300 Euros in 1000
+- `between_300_and_400_euros`: numer of apartments with a gross rent between 300 and 400 Euros in 1000
+- `between_400_and_500_euros`: numer of apartments with a gross rent between 400 and 500 Euros in 1000
+- `between_500_and_600_euros`: numer of apartments with a gross rent between 500 and 600 Euros in 1000
+- `between_600_and_700_euros`: numer of apartments with a gross rent between 600 and 700 Euros in 1000
+- `between_700_and_800_euros`: numer of apartments with a gross rent between 700 and 800 Euros in 1000
+- `more_than_800_euros`: numer of apartments with a gross rent between 300 and 400 Euros in 1000
+#### 9 apartments by usage type year of construction warm water and energy type
+- `type`: type
+- `apartments`: number of apartments in 1000
+- `district_heating`: number of apartments with district heating in 1000
+- `gas`: number of apartments with gas heating in 1000
+- `electricity`: number of apartments with electric heating in 1000
+- `heating_oil`: number of apartments with oil heating in 1000
+- `briquettes_lignite_coal_coke_hard_coal`: number of apartments with briquette, lignite, coal coke or hard coke heating in 1000
+- `wood_or_other_renewable_energies`: number of apartments with wood or other renewable energies in 1000
+#### 10 apartments by usage type year of construction collective heating and energy type
+- `type`: type
+- `apartments`: number of apartments in 1000
+- `collective_heating`: numer of apartments with collective heating in 1000
+- `district_heating`: numer of apartments with district heating in 1000
+- `gas`: number of apartments with gas heating in 1000
+- `electricity`: number of apartments with electric heating in 1000
+- `heating_oil`: number of apartments with oil heating in 1000
+- `briquettes_lignite_coal_coke_hard_coal`: number of apartments with briquette, lignite, coal coke or hard coke heating in 1000
+- `wood_or_other_renewable_energies`: number of apartments with wood or other renewable energies in 1000
+#### 11 apartments by usage type building size heating and energy type
+- `type`: type
+- `apartments`: number of apartments in 1000
+- `collective_heating`: number of apartments with collective heating in 1000
+- `district_heating`: number of apartments with district heating in 1000
+- `central_heating`: number of apartments with central heating in 1000
+- `floor_heating`: number of apartments with floor heating in 1000
+- `single_or_more_space_ovens`: number of apartments with single or more space ovens in 1000
+#### 13 households by structure and usage type
+- `household_structure`: household structure
+- `households`: number of households in 1000
+- `owners`: number of households used by owners in 1000
+- `owners_percentage`: percentage of households used by owners in 1000
+- `main_tenants`: number of households used by main tenants in 1000
+- `main_tenants_percentage`:  percentage of households used by main tenants in 1000
+- `subtenants`: number of households used by subtenants in 1000
+- `subtenants_percentage`:  percentage of households used by subtenants in 1000
+#### 23 apartments in residential buildings by district occupancy and living area
+- `district_id`: district ID
+- `apartments`: number of apartments in 1000
+- `uninhabited_apartments`: number of uninhabited apartments in 1000
+- `inhabited_apartments`: number of inhabited apartments in 1000
+- `inhabited_apartments_living_area`: living area in 10000 sqm
+- `inhabited_apartments_living_area_per_apartment`: living area per apartment in sqm
+- `inhabited_apartments_living_area_per_person`: living area per person in sqm
+- `inhabited_apartments_persons_per_apartment`: persons per apartment
+#### 24 apartments in residential buildings by district year of construction and usage type
+- `district_id`: district ID
+- `apartments`: number of apartments in 1000
+- `inhabited_by_owner`: number of apartments inhabitants by owner in 1000
+- `inhabited_by_owner_percentage`: percentage of apartments inhabitants by owner
+- `rented_out`: number of rented out apartments in 1000
+- `rented_out_percentage`: percentage of rented out apartments
+#### 25 apartments in residential buildings by district usage type living area and occupancy
+- `district_id`: district ID
+- `apartments`: number of apartments in 1000
+- `living_area`: living area in 10000 sqm
+- `living_area_per_apartment`: living area per apartment in sqm
+- `persons_per_apartment`: persons per apartments
+- `living_area_per_person`: living area per person in sqm
+#### 26 apartments in residential buildings by district and building type
+- `district_id`: district ID
+- `apartments`: number of apartments in 1000
+- `single_family_houses`: number of single-family houses in 1000
+- `single_family_houses_detached`: number of single-family houses (detached) in 1000
+- `single_family_houses_semi_detached`: number of single-family houses (semi-detached) in 1000
+- `single_family_houses_terraced`: number of single-family houses (terraced) in 1000
+- `multi_family_houses`: number of multi-family-houses in 1000
+- `multi_family_houses_detached`: number of multi-family-houses (detached) in 1000
+- `multi_family_houses_terraced`: number of multi-family-houses (terraced) in 1000
+#### 27 apartments in residential buildings by district and owner
+- `district_id`: district ID
+- `apartments`: number of apartments
+- `inhabited_by_owner`: inhabited by owner
+- `rented_out_owned_by_private_person`: rented out, owned by private person
+- `rented_out_owned_by_private_company`: rented out, owned by private company
+- `rented_out_owned_by_public_institution`: rented out, owned by public institution
+- `rented_out_owned_by_housing_cooperative`: rented out, owned by housing cooperative
+#### 28 apartments in residential buildings by district and living area
+- `district_id`: district ID
+- `apartments`: number of apartments in 1000
+- `living_area_below_40sqm`: number of apartments with living area below 40 sqm in 1000
+- `living_area_between_40_and_60sqm`: number of apartments with living area between 40 and 60 sqm in 1000
+- `living_area_between_60_and_80sqm`: number of apartments with living area between 60 and 80 sqm in 1000
+- `living_area_between_80_and_100sqm`: number of apartments with living area between 80 and 100 sqm in 1000
+- `living_area_between_100_and_120sqm`: number of apartments with living area between 100 and 120 sqm in 1000
+- `living_area_between_above_120sqm`: number of apartments with living area between above 120 sqm in 1000
+#### 29 apartments in residential buildings by district and gross rent
+- `district_id`: district ID
+- `apartments`: number of apartments in 1000
+- `gross_rent_below_300_euros`: number of apartments with gross rent below 300 Euros in 1000
+- `gross_rent_between_300_and_400_euros`: number of apartments with gross rent between 300 and 400 Euros in 1000
+- `gross_rent_between_400_and_500_euros`: number of apartments with gross rent between 400 and 500 Euros in 1000
+- `gross_rent_between_500_and_600_euros`: number of apartments with gross rent between 500 and 600 Euros in 1000
+- `gross_rent_above_600_euros`: number of apartments with gross rent above 600 Euros in 1000
+- `average_gross_rent`: average gross rent in Euros
+#### 30 apartments in residential buildings by district and gross rent per sqm
+- `district_id`: district ID
+- `apartments`: number of apartments in 1000
+- `gross_rent_per_sqm_below_6_euros`: number of apartments with gross rent per sqm below 6 Euros in 1000
+- `gross_rent_per_sqm_between_6_and_7_euros`: number of apartments with gross rent per sqm between 6 and 7 Euros in 1000
+- `gross_rent_per_sqm_between_7_and_8_euros`: number of apartments with gross rent per sqm between 7 and 8 Euros in 1000
+- `gross_rent_per_sqm_between_8_and_9_euros`: number of apartments with gross rent per sqm between 8 and 9 Euros in 1000
+- `gross_rent_per_sqm_above_9_euros`: number of apartments with gross rent per sqm above 9 Euros in 1000
+- `average_gross_rent_per_sqm`: average gross rent per sqm in Euros
+#### 31 main tenant households in residential buildings by district and rental burden
+- `district_id`: district ID
+- `apartments`: number of apartments in 1000
+- `percentage_of_household_net_income_below_15%`: percentage of household net income below 15%
+- `percentage_of_household_net_income_between_15_and_25%`: percentage of household net income between 15 and 25%
+- `percentage_of_household_net_income_between_25_and_35%`: percentage of household net income between 25 and 35%
+- `percentage_of_household_net_income_between_35_and_45%`: percentage of household net income between 35 and 45%
+- `percentage_of_household_net_income_above_45%`: percentage of household net income above 45%
+- `average_percentage_of_household_net_income`: average percentage of household net income
 
 ### Security
 
@@ -61,9 +288,13 @@ attributes**
 **We help achieving ...**
 **We know, we are getting there based on ..., ..., ...**
 
+We believe that this data product can be used to derive any kind of data based product.
+
 ## Classification
 
 **The nature of the exposed data (source-aligned, aggregate, consumer-aligned)**
+
+This data product is source-aligned since the contained csv files represent the source data.
 
 ## Ubiquitous Language
 
