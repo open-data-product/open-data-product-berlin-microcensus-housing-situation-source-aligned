@@ -767,6 +767,8 @@ def convert_file_to_csv_inhabited_apartments_in_residential_buildings_by_distric
         dataframe = pd.read_excel(source_file_path, engine=engine, sheet_name=sheet, skiprows=skiprows, names=names,
                                   index_col=False) \
             .drop(columns=drop_columns, errors="ignore") \
+            .replace("-", 0) \
+            .replace("–", 0) \
             .replace("/", 0) \
             .assign(district_id=lambda df: df["district_name"].apply(lambda row: build_district_id(row))) \
             .head(12) \
@@ -808,7 +810,7 @@ def convert_file_to_csv_inhabited_apartments_in_residential_buildings_by_distric
     try:
         # Iterate over sheets
         sheet = sheet
-        skiprows = 7
+        skiprows = 34
         names = ["district_name", "apartments", "inhabited_by_owner", "rented_out_owned_by_private_person",
                  "rented_out_owned_by_private_company", "rented_out_owned_by_public_institution",
                  "rented_out_owned_by_housing_cooperative"]
@@ -817,9 +819,10 @@ def convert_file_to_csv_inhabited_apartments_in_residential_buildings_by_distric
         dataframe = pd.read_excel(source_file_path, engine=engine, sheet_name=sheet, skiprows=skiprows, names=names,
                                   index_col=False) \
             .drop(columns=drop_columns, errors="ignore") \
+            .replace("-", 0) \
             .replace("/", 0) \
             .assign(district_id=lambda df: df["district_name"].apply(lambda row: build_district_id(row))) \
-            .head(34) \
+            .head(12) \
             .drop("district_name", axis=1)
 
         dataframe.reset_index(drop=True, inplace=True)
