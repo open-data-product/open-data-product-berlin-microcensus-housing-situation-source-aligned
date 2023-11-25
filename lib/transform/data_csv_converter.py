@@ -1058,6 +1058,10 @@ def build_type_name(value):
         return "with_7_to_12_apartments"
     elif value == "mit 13 und mehr Wohnungen":
         return "with_13_or_more_apartments"
+    elif value == "mit 3 – 9 Wohnungen":
+        return "with_3_to_9_apartments"
+    elif value == "mit 10 und mehr Wohnungen":
+        return "with_10_or_more_apartments"
 
     elif value == "Bewohnte Wohnungen":
         return "inhabited_apartments"
