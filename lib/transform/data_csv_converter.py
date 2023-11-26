@@ -620,9 +620,7 @@ def convert_file_to_csv_apartments_in_residential_buildings_by_district_occupanc
                                   index_col=False) \
             .drop(columns=drop_columns, errors="ignore") \
             .replace("-", 0) \
-            .replace("…", None) \
-            .replace("–", 0) \
-            .replace("—", 0) \
+            .replace("/", 0) \
             .assign(district_id=lambda df: df["district_name"].apply(lambda row: build_district_id(row))) \
             .head(12) \
             .drop("district_name", axis=1) \
