@@ -30,19 +30,19 @@ def convert_data_to_csv(source_path, results_path, clean=False, quiet=False):
             convert_file_to_csv_apartments_by_usage_type_year_of_construction_and_living_area(
                 source_file_path, clean=clean, quiet=quiet)
             convert_file_to_csv_apartments_by_building_size_year_of_construction_living_area_and_gross_rent_per_sqm(
-                source_file_path, clean=clean, quiet=quiet)
+                source_file_path, year, clean=clean, quiet=quiet)
             convert_file_to_csv_apartments_by_building_size_year_of_construction_living_area_and_gross_rent(
-                source_file_path, clean=clean, quiet=quiet)
+                source_file_path, year, clean=clean, quiet=quiet)
             convert_file_to_csv_apartments_by_usage_type_year_of_construction_warm_water_and_energy_type(
-                source_file_path, clean=clean, quiet=quiet)
+                source_file_path, year, clean=clean, quiet=quiet)
             convert_file_to_csv_apartments_by_usage_type_year_of_construction_collective_heating_and_energy_type(
-                source_file_path, clean=clean, quiet=quiet)
+                source_file_path, year, clean=clean, quiet=quiet)
             convert_file_to_csv_apartments_by_usage_type_building_size_heating_and_energy_type(
-                source_file_path, clean=clean, quiet=quiet)
+                source_file_path, year, clean=clean, quiet=quiet)
             convert_file_to_csv_households_by_structure_and_usage_type(
-                source_file_path, clean=clean, quiet=quiet)
+                source_file_path, year, clean=clean, quiet=quiet)
             convert_file_to_csv_households_in_buildings_with_living_space_by_structure_and_usage_type(
-                source_file_path, clean=clean, quiet=quiet)
+                source_file_path, year, clean=clean, quiet=quiet)
 
             convert_file_to_csv_apartments_in_residential_buildings_by_district_occupancy_and_living_area(
                 source_file_path, year, clean=clean, quiet=quiet)
@@ -247,9 +247,11 @@ def convert_file_to_csv_apartments_by_usage_type_year_of_construction_and_living
 
 
 def convert_file_to_csv_apartments_by_building_size_year_of_construction_living_area_and_gross_rent_per_sqm(
-        source_file_path, clean=False, quiet=False):
+        source_file_path, year, clean=False, quiet=False):
+    tab_index = 5 if int(year) <= 2014 else 6
+
     source_file_name, source_file_extension = os.path.splitext(source_file_path)
-    file_path_csv = f"{source_file_name}-5-apartments-by-building-size-year-of-construction-living-area-and-gross-rent-per-sqm.csv"
+    file_path_csv = f"{source_file_name}-{tab_index}-apartments-by-building-size-year-of-construction-living-area-and-gross-rent-per-sqm.csv"
 
     # Check if result needs to be generated
     if not clean and os.path.exists(file_path_csv):
@@ -262,7 +264,7 @@ def convert_file_to_csv_apartments_by_building_size_year_of_construction_living_
 
     try:
         # Iterate over sheets
-        sheet = "Tab 5"
+        sheet = f"Tab {tab_index}"
         skiprows = 6
         names = ["type", "apartments", "below_6_euros", "between_6_and_7_euros", "between_7_and_8_euros",
                  "between_8_and_9_euros", "between_9_and_10_euros", "more_than_10_euros", "average"]
@@ -295,9 +297,11 @@ def convert_file_to_csv_apartments_by_building_size_year_of_construction_living_
 
 
 def convert_file_to_csv_apartments_by_building_size_year_of_construction_living_area_and_gross_rent(
-        source_file_path, clean=False, quiet=False):
+        source_file_path, year, clean=False, quiet=False):
+    tab_index = 6 if int(year) <= 2014 else 7
+
     source_file_name, source_file_extension = os.path.splitext(source_file_path)
-    file_path_csv = f"{source_file_name}-6-apartments-by-building-size-year-of-construction-living-area-and-gross-rent.csv"
+    file_path_csv = f"{source_file_name}-{tab_index}-apartments-by-building-size-year-of-construction-living-area-and-gross-rent.csv"
 
     # Check if result needs to be generated
     if not clean and os.path.exists(file_path_csv):
@@ -310,7 +314,7 @@ def convert_file_to_csv_apartments_by_building_size_year_of_construction_living_
 
     try:
         # Iterate over sheets
-        sheet = "Tab 6"
+        sheet = f"Tab {tab_index}"
         skiprows = 8
         names = ["type", "apartments", "below_300_euros", "between_300_and_400_euros", "between_400_and_500_euros",
                  "between_500_and_600_euros", "between_600_and_700_euros", "between_700_and_800_euros",
@@ -344,9 +348,11 @@ def convert_file_to_csv_apartments_by_building_size_year_of_construction_living_
 
 
 def convert_file_to_csv_apartments_by_usage_type_year_of_construction_warm_water_and_energy_type(
-        source_file_path, clean=False, quiet=False):
+        source_file_path, year, clean=False, quiet=False):
+    tab_index = 7 if int(year) <= 2014 else 9
+
     source_file_name, source_file_extension = os.path.splitext(source_file_path)
-    file_path_csv = f"{source_file_name}-7-apartments-by_usage-type-year-of-construction-warm-water-and-energy-type.csv"
+    file_path_csv = f"{source_file_name}-{tab_index}-apartments-by-usage-type-year-of-construction-warm-water-and-energy-type.csv"
 
     # Check if result needs to be generated
     if not clean and os.path.exists(file_path_csv):
@@ -359,10 +365,10 @@ def convert_file_to_csv_apartments_by_usage_type_year_of_construction_warm_water
 
     try:
         # Iterate over sheets
-        sheet = "Tab 7"
+        sheet = f"Tab {tab_index}"
         skiprows = 8
         names = ["type", "apartments", "district_heating", "gas", "electricity", "heating_oil",
-                 "briquettes_lignite_coal_coke_hard_coal", "wood_or_other_renewable_renewable_energies"]
+                 "briquettes_lignite_coal_coke_hard_coal", "wood_or_other_renewable_energies"]
         drop_columns = []
 
         dataframe = pd.read_excel(source_file_path, engine=engine, sheet_name=sheet, skiprows=skiprows, names=names,
@@ -392,9 +398,11 @@ def convert_file_to_csv_apartments_by_usage_type_year_of_construction_warm_water
 
 
 def convert_file_to_csv_apartments_by_usage_type_year_of_construction_collective_heating_and_energy_type(
-        source_file_path, clean=False, quiet=False):
+        source_file_path, year, clean=False, quiet=False):
+    tab_index = 8 if int(year) <= 2014 else 10
+
     source_file_name, source_file_extension = os.path.splitext(source_file_path)
-    file_path_csv = f"{source_file_name}-8-apartments-by_usage-type-year-of-construction-collective-heating-and-energy-type.csv"
+    file_path_csv = f"{source_file_name}-{tab_index}-apartments-by-usage-type-year-of-construction-collective-heating-and-energy-type.csv"
 
     # Check if result needs to be generated
     if not clean and os.path.exists(file_path_csv):
@@ -407,10 +415,10 @@ def convert_file_to_csv_apartments_by_usage_type_year_of_construction_collective
 
     try:
         # Iterate over sheets
-        sheet = "Tab 8"
+        sheet = f"Tab {tab_index}"
         skiprows = 8
-        names = ["type", "apartments", "apartments_with_collective_heating", "district_heating", "gas", "electricity",
-                 "heating_oil", "briquettes_lignite_coal_coke_hard_coal", "wood_or_other_renewable_renewable_energies"]
+        names = ["type", "apartments", "collective_heating", "district_heating", "gas", "electricity",
+                 "heating_oil", "briquettes_lignite_coal_coke_hard_coal", "wood_or_other_renewable_energies"]
         drop_columns = []
 
         dataframe = pd.read_excel(source_file_path, engine=engine, sheet_name=sheet, skiprows=skiprows, names=names,
@@ -440,9 +448,11 @@ def convert_file_to_csv_apartments_by_usage_type_year_of_construction_collective
 
 
 def convert_file_to_csv_apartments_by_usage_type_building_size_heating_and_energy_type(
-        source_file_path, clean=False, quiet=False):
+        source_file_path, year, clean=False, quiet=False):
+    tab_index = 9 if int(year) <= 2014 else 11
+
     source_file_name, source_file_extension = os.path.splitext(source_file_path)
-    file_path_csv = f"{source_file_name}-9-apartments-by_usage-type-building-size-heating-and-energy-type.csv"
+    file_path_csv = f"{source_file_name}-{tab_index}-apartments-by-usage-type-building-size-heating-and-energy-type.csv"
 
     # Check if result needs to be generated
     if not clean and os.path.exists(file_path_csv):
@@ -455,10 +465,10 @@ def convert_file_to_csv_apartments_by_usage_type_building_size_heating_and_energ
 
     try:
         # Iterate over sheets
-        sheet = "Tab 9"
+        sheet = f"Tab {tab_index}"
         skiprows = 9
-        names = ["type", "apartments", "apartments_with_collective_heating", "district_heating", "central_heating",
-                 "floor_heating", "singles_or_more_space_ovens"]
+        names = ["type", "apartments", "collective_heating", "district_heating", "central_heating",
+                 "floor_heating", "single_or_more_space_ovens"]
         drop_columns = []
 
         dataframe = pd.read_excel(source_file_path, engine=engine, sheet_name=sheet, skiprows=skiprows, names=names,
@@ -487,9 +497,11 @@ def convert_file_to_csv_apartments_by_usage_type_building_size_heating_and_energ
         print(f"✗️ Exception: {str(e)}")
 
 
-def convert_file_to_csv_households_by_structure_and_usage_type(source_file_path, clean=False, quiet=False):
+def convert_file_to_csv_households_by_structure_and_usage_type(source_file_path, year, clean=False, quiet=False):
+    tab_index = 10 if int(year) <= 2014 else 13
+
     source_file_name, source_file_extension = os.path.splitext(source_file_path)
-    file_path_csv = f"{source_file_name}-10-households-by-structure-and-usage-type.csv"
+    file_path_csv = f"{source_file_name}-{tab_index}-households-by-structure-and-usage-type.csv"
 
     # Check if result needs to be generated
     if not clean and os.path.exists(file_path_csv):
@@ -502,7 +514,7 @@ def convert_file_to_csv_households_by_structure_and_usage_type(source_file_path,
 
     try:
         # Iterate over sheets
-        sheet = "Tab 10"
+        sheet = f"Tab {tab_index}"
         skiprows = 5
         names = ["household_structure", "households", "owners", "owners_percentage", "main_tenants",
                  "main_tenants_percentage", "subtenants", "subtenants_percentage"]
@@ -530,8 +542,11 @@ def convert_file_to_csv_households_by_structure_and_usage_type(source_file_path,
         print(f"✗️ Exception: {str(e)}")
 
 
-def convert_file_to_csv_households_in_buildings_with_living_space_by_structure_and_usage_type(source_file_path,
+def convert_file_to_csv_households_in_buildings_with_living_space_by_structure_and_usage_type(source_file_path, year,
                                                                                               clean=False, quiet=False):
+    if int(year) >= 2018:
+        print(f"⚠ Does exist in year {year}")
+        return
     source_file_name, source_file_extension = os.path.splitext(source_file_path)
     file_path_csv = f"{source_file_name}-11-households-in-buildings-with-living-space-by-structure-and-usage-type.csv"
 
@@ -936,7 +951,7 @@ def convert_file_to_csv_apartments_in_residential_buildings_by_district_and_gros
         skiprows = 8
         names = ["district_name", "apartments", "gross_rent_per_sqm_below_6_euros",
                  "gross_rent_per_sqm_between_6_and_7_euros",
-                 "gross_rent_per_sqm_between_7_and_8_euros", "gross_rent_between_per_sqm_8_and_9_euros",
+                 "gross_rent_per_sqm_between_7_and_8_euros", "gross_rent_per_sqm_between_8_and_9_euros",
                  "gross_rent_per_sqm_above_9_euros", "average_gross_rent_per_sqm"]
         drop_columns = []
 
@@ -981,7 +996,7 @@ def convert_file_to_csv_main_tenant_households_in_residential_buildings_by_distr
         # Iterate over sheets
         sheet = f"Tab {tab_index}"
         skiprows = 8
-        names = ["district_name", "total", "percentage_of_household_net_income_below_15%",
+        names = ["district_name", "apartments", "percentage_of_household_net_income_below_15%",
                  "percentage_of_household_net_income_between_15_and_25%",
                  "percentage_of_household_net_income_between_25_and_35%",
                  "percentage_of_household_net_income_between_35_and_45%",
