@@ -1,12 +1,12 @@
-[![Issues](https://img.shields.io/github/issues/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned)](https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/issues)
+[![Issues](https://img.shields.io/github/issues/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned)](https://github.com/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned/issues)
 
 <br />
 <p align="center">
-  <a href="https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned">
-    <img src="logo_with_text.png" alt="Logo" height="80">
+  <a href="https://github.com/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned">
+    <img src="logo-with-text.png" alt="Logo" height="80">
   </a>
 
-  <h1 align="center">Open Lifeworlds Data Product - Berlin Microcensus Housing Situation</h1>
+  <h1 align="center">Berlin Microcensus Housing Situation</h1>
 
   <p align="center">
     Source-aligned data product providing Berlin housing situation data</a>
@@ -48,7 +48,7 @@ Examples:
 ## Roadmap
 
 See
-the [open issues](https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-microcensus-housing-situation-source-aligned/issues)
+the [open issues](https://github.com/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned/issues)
 for a list of proposed features (and
 known issues).
 
@@ -60,4 +60,4 @@ Data product distributed under the [CC-BY 4.0 License](https://creativecommons.o
 
 ## Contact
 
-openlifeworlds@gmail.com
+opendataproduct@gmail.com
