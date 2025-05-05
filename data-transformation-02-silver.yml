@@ -1,0 +1,744 @@
+---
+input_ports:
+  - id: berlin-microcensus-housing-situation-2014-00
+    files:
+      - source_file_name: SB_F01-02-00_2014j04_BE.xlsx
+        target_file_name: berlin-microcensus-housing-situation-2014-00.xlsx
+        datasets:
+          - target_file_name: berlin-microcensus-housing-situation-2014-00-1-apartments-by-size-year-of-construction-and-usage-type.csv
+            sheet_name: "Tab 1"
+            names:
+              - name: type
+              - { name: apartments, type: float }
+              - { name: inhabited_by_owner, type: float }
+              - { name: inhabited_by_owner_percentage, type: float }
+              - { name: rented_out, type: float }
+              - { name: rented_out_percentage, type: float }
+              - { name: uninhabited, type: float }
+              - { name: uninhabited_percentage, type: float }
+            skip_rows: 7
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2014-00-2-apartments-by-year-of-construction-heating-type-living-area-and-usage-type.csv
+            sheet_name: "Tab 2"
+            names:
+              - name: type
+              - { name: apartments, type: float }
+              - { name: condominium, type: float }
+              - { name: condominium_percentage, type: float }
+              - { name: rented_apartments, type: float }
+              - { name: rented_apartments_percentage, type: float }
+            skip_rows: 7
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2014-00-3-apartments-by-usage-type-building-size-living-area-and-occupancy.csv
+            sheet_name: "Tab 3"
+            names:
+              - name: type
+              - { name: apartments, type: float }
+              - { name: living_area, type: float }
+              - { name: living_area_per_apartment, type: float }
+              - { name: persons_per_apartment, type: float }
+              - { name: living_area_per_person, type: float }
+            skip_rows: 8
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2014-00-4-apartments-by-usage-type-year-of-construction-and-living-area.csv
+            sheet_name: "Tab 4"
+            names:
+              - name: type
+              - { name: apartments, type: float }
+              - { name: below_40sqm, type: float }
+              - { name: between_40_and_60sqm, type: float }
+              - { name: between_60_and_80sqm, type: float }
+              - { name: between_80_and_100sqm, type: float }
+              - { name: between_100_and_120sqm, type: float }
+              - { name: more_than_120sqm, type: float }
+            skip_rows: 8
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2014-00-5-apartments-by-building-size-year-of-construction-living-area-and-gross-rent-per-sqm.csv
+            sheet_name: "Tab 5"
+            names:
+              - name: type
+              - { name: apartments, type: float }
+              - { name: below_6_euros, type: float }
+              - { name: between_6_and_7_euros, type: float }
+              - { name: between_7_and_8_euros, type: float }
+              - { name: between_8_and_9_euros, type: float }
+              - { name: between_9_and_10_euros, type: float }
+              - { name: more_than_10_euros, type: float }
+              - { name: average, type: float }
+            skip_rows: 10
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2014-00-6-apartments-by-building-size-year-of-construction-living-area-and-gross-rent.csv
+            sheet_name: "Tab 6"
+            names:
+              - name: type
+              - { name: apartments, type: float }
+              - { name: below_300_euros, type: float }
+              - { name: between_300_and_400_euros, type: float }
+              - { name: between_400_and_500_euros, type: float }
+              - { name: between_500_and_600_euros, type: float }
+              - { name: between_600_and_700_euros, type: float }
+              - { name: between_700_and_800_euros, type: float }
+              - { name: more_than_800_euros, type: float }
+            skip_rows: 10
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2014-00-7-apartments-by-usage-type-year-of-construction-warm-water-and-energy-type.csv
+            sheet_name: "Tab 7"
+            names:
+              - name: type
+              - { name: apartments, type: float }
+              - { name: district_heating, type: float }
+              - { name: gas, type: float }
+              - { name: electricity, type: float }
+              - { name: heating_oil, type: float }
+              - { name: briquettes_lignite_coal_coke_hard_coal, type: float }
+              - { name: wood_or_other_renewable_energies, type: float }
+            skip_rows: 10
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2014-00-8-apartments-by-usage-type-year-of-construction-collective-heating-and-energy-type.csv
+            sheet_name: "Tab 8"
+            names:
+              - name: type
+              - { name: apartments, type: float }
+              - { name: collective_heating, type: float }
+              - { name: district_heating, type: float }
+              - { name: gas, type: float }
+              - { name: electricity, type: float }
+              - { name: heating_oil, type: float }
+              - { name: briquettes_lignite_coal_coke_hard_coal, type: float }
+              - { name: wood_or_other_renewable_energies, type: float }
+            skip_rows: 11
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2014-00-9-apartments-by-usage-type-building-size-heating-and-energy-type.csv
+            sheet_name: "Tab 9"
+            names:
+              - name: type
+              - { name: apartments, type: float }
+              - { name: collective_heating, type: float }
+              - { name: district_heating, type: float }
+              - { name: central_heating, type: float }
+              - { name: floor_heating, type: float }
+              - { name: single_or_more_space_ovens, type: float }
+            skip_rows: 11
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2014-00-10-households-by-usage-type.csv
+            sheet_name: "Tab 10"
+            names:
+              - name: household_structure
+              - { name: households, type: float }
+              - { name: owners, type: float }
+              - { name: owners_percentage, type: float }
+              - { name: main_tenants, type: float }
+              - { name: main_tenants_percentage, type: float }
+              - { name: subtenants, type: float }
+              - { name: subtenants_percentage, type: float }
+            skip_rows: 6
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2014-00-11-households-by-building-size.csv
+            sheet_name: "Tab 11"
+            names:
+              - name: household_structure
+              - { name: households, type: float }
+              - { name: residential_buildings_with_1_apartment, type: float }
+              - { name: residential_buildings_with_2_apartments, type: float }
+              - { name: residential_buildings_with_3_apartments_or_more, type: float }
+            skip_rows: 7
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2014-00-12-households-by-living-area.csv
+            sheet_name: "Tab 12"
+            names:
+              - name: household_structure
+              - { name: households, type: float }
+              - { name: living_area_below_40sqm, type: float }
+              - { name: living_area_between_40_and_60sqm, type: float }
+              - { name: living_area_between_60_and_80sqm, type: float }
+              - { name: living_area_between_80_and_100sqm, type: float }
+              - { name: living_area_between_100_and_120sqm, type: float }
+              - { name: living_area_more_than_120sqm, type: float }
+              - { name: living_area_average, type: float }
+            skip_rows: 8
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2014-00-13-households-by-gross-rent.csv
+            sheet_name: "Tab 13"
+            names:
+              - name: household_structure
+              - { name: households, type: float }
+              - { name: gross_rent_below_300_euros, type: float }
+              - { name: gross_rent_between_300_and_400_euros, type: float }
+              - { name: gross_rent_between_400_and_500_euros, type: float }
+              - { name: gross_rent_between_500_and_600_euros, type: float }
+              - { name: gross_rent_between_600_and_700_euros, type: float }
+              - { name: gross_rent_between_700_and_800_euros, type: float }
+              - { name: gross_rent_more_than_800_euros, type: float }
+              - { name: gross_rent_average, type: float }
+            skip_rows: 9
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2014-00-14-households-by-gross-rent-per-sqm.csv
+            sheet_name: "Tab 14"
+            names:
+              - name: household_structure
+              - { name: households, type: float }
+              - { name: gross_rent_per_sqm_below_6_euros, type: float }
+              - { name: gross_rent_per_sqm_between_6_and_7_euros, type: float }
+              - { name: gross_rent_per_sqm_between_7_and_8_euros, type: float }
+              - { name: gross_rent_per_sqm_between_8_and_9_euros, type: float }
+              - { name: gross_rent_per_sqm_between_9_and_10_euros, type: float }
+              - { name: gross_rent_per_sqm_more_than_10_euros, type: float }
+              - { name: gross_rent_per_sqm_average, type: float }
+            skip_rows: 9
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2014-00-15-households-by-percentage-of-household-net-income.csv
+            sheet_name: "Tab 15"
+            names:
+              - name: household_structure
+              - { name: households, type: float }
+              - { name: percentage_of_household_net_income_below_15%, type: float }
+              - { name: percentage_of_household_net_income_between_15_and_20%, type: float }
+              - { name: percentage_of_household_net_income_between_20_and_25%, type: float }
+              - { name: percentage_of_household_net_income_between_25_and_30%, type: float }
+              - { name: percentage_of_household_net_income_between_30_and_35%, type: float }
+              - { name: percentage_of_household_net_income_between_35_and_40%, type: float }
+              - { name: percentage_of_household_net_income_between_40_and_45%, type: float }
+              - { name: percentage_of_household_net_income_above_45%, type: float }
+              - { name: percentage_of_household_net_income_average, type: float }
+            skip_rows: 8
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2014-00-16-families-by-usage-type.csv
+            sheet_name: "Tab 16"
+            names:
+              - name: family_structure
+              - { name: households, type: float }
+              - { name: owners, type: float }
+              - { name: owners_percentage, type: float }
+              - { name: main_tenants, type: float }
+              - { name: main_tenants_percentage, type: float }
+            skip_rows: 6
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2014-00-17-families-by-building-size.csv
+            sheet_name: "Tab 17"
+            names:
+              - name: family_structure
+              - { name: households, type: float }
+              - { name: residential_buildings_with_1_apartment, type: float }
+              - { name: residential_buildings_with_2_apartments, type: float }
+              - { name: residential_buildings_with_3_apartments_or_more, type: float }
+            skip_rows: 6
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2014-00-18-families-by-living-area.csv
+            sheet_name: "Tab 18"
+            names:
+              - name: family_structure
+              - { name: households, type: float }
+              - { name: living_area_below_60sqm, type: float }
+              - { name: living_area_between_60_and_80sqm, type: float }
+              - { name: living_area_between_80_and_100sqm, type: float }
+              - { name: living_area_between_100_and_120sqm, type: float }
+              - { name: living_area_above_120sqm, type: float }
+              - { name: living_area_average, type: float }
+          - target_file_name: berlin-microcensus-housing-situation-2014-00-19-apartments-by-district-occupancy-and-living-area.csv
+            sheet_name: "Tab 19"
+            names:
+              - name: district_name
+              - { name: apartments, type: float }
+              - { name: uninhabited_apartments, type: float }
+              - { name: inhabited_apartments, type: float }
+              - { name: inhabited_apartments_living_area, type: float }
+              - { name: inhabited_apartments_living_area_per_apartment, type: float }
+              - { name: inhabited_apartments_living_area_per_person, type: float }
+              - { name: inhabited_apartments_persons_per_apartment, type: float }
+            skip_rows: 8
+            head: 12
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2014-00-20-apartments-by-district-year-of-construction-and-usage-type.csv
+            sheet_name: "Tab 20"
+            names:
+              - name: type
+              - { name: apartments, type; float }
+              - { name: inhabited_by_owner, type; float }
+              - { name: inhabited_by_owner_percentage, type; float }
+              - { name: rented_out, type; float }
+              - { name: rented_out_percentage, type; float }
+            skip_rows: 7
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2014-00-21-apartments-by-district-usage-type-living-area-and-occupancy.csv
+            sheet_name: "Tab 21"
+            names:
+              - name: type
+              - { name: apartments, type: float }
+              - { name: living_area, type: float }
+              - { name: living_area_per_apartment, type: float }
+              - { name: persons_per_apartment, type: float }
+              - { name: living_area_per_person, type: float }
+            skip_rows: 7
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2014-00-22-apartments-by-district-and-living-area.csv
+            sheet_name: "Tab 22-23"
+            names:
+              - name: district_name
+              - { name: apartments, type: float }
+              - { name: living_area_below_40sqm, type: float }
+              - { name: living_area_between_40_and_60sqm, type: float }
+              - { name: living_area_between_60_and_80sqm, type: float }
+              - { name: living_area_between_80_and_100sqm, type: float }
+              - { name: living_area_between_100_and_120sqm, type: float }
+              - { name: living_area_above_120sqm, type: float }
+            skip_rows: 8
+            head: 12
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2014-00-23-apartments-by-district-and-gross-rent.csv
+            sheet_name: "Tab 22-23"
+            names:
+              - name: district_name
+              - { name: apartments, type: float }
+              - { name: gross_rent_below_300_euros, type: float }
+              - { name: gross_rent_between_300_and_400_euros, type: float }
+              - { name: gross_rent_between_400_and_500_euros, type: float }
+              - { name: gross_rent_between_500_and_600_euros, type: float }
+              - { name: gross_rent_above_600_euros, type: float }
+              - { name: gross_rent_average, type: float }
+            skip_rows: 35
+            head: 12
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2014-00-24-apartments-by-district-and-gross-rent-per-sqm.csv
+            sheet_name: "Tab 24"
+            names:
+              - name: district_name
+              - { name: apartments, type: float }
+              - { name: gross_rent_per_sqm_below_6_euros, type: float }
+              - { name: gross_rent_per_sqm_between_6_and_7_euros, type: float }
+              - { name: gross_rent_per_sqm_between_7_and_8_euros, type: float }
+              - { name: gross_rent_per_sqm_between_8_and_9_euros, type: float }
+              - { name: gross_rent_per_sqm_above_9_euros, type: float }
+              - { name: gross_rent_per_sqm_average, type: float }
+            skip_rows: 9
+            head: 12
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2014-00-25-households-by-percentage-of-household-net-income.csv
+            sheet_name: "Tab 25"
+            names:
+              - name: district_name
+              - { name: apartments, type: float }
+              - { name: percentage_of_household_net_income_below_15%, type: float }
+              - { name: percentage_of_household_net_income_between_15_and_25%, type: float }
+              - { name: percentage_of_household_net_income_between_25_and_35%, type: float }
+              - { name: percentage_of_household_net_income_between_35_and_45%, type: float }
+              - { name: percentage_of_household_net_income_above_45%, type: float }
+              - { name: percentage_of_household_net_income_average, type: float }
+            skip_rows: 8
+            head: 12
+            dropna: True
+  - id: berlin-microcensus-housing-situation-2018-00
+    files:
+      - source_file_name: SB_F01-02-00_2018j04_BE.xlsx
+        target_file_name: berlin-microcensus-housing-situation-2018-00.xlsx
+        datasets:
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-1-apartments-by-size-year-of-construction-and-usage-type.csv
+            sheet_name: "Tab 1"
+            names:
+              - name: type
+              - { name: apartments, type: float }
+              - { name: inhabited_by_owner, type: float }
+              - { name: inhabited_by_owner_percentage, type: float }
+              - { name: rented_out, type: float }
+              - { name: rented_out_percentage, type: float }
+              - { name: uninhabited, type: float }
+              - { name: uninhabited_percentage, type: float }
+            skip_rows: 7
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-2-apartments-by-year-of-construction-heating-type-living-area-and-usage-type.csv
+            sheet_name: "Tab 2"
+            names:
+              - name: type
+              - { name: apartments, type: float }
+              - { name: condominium, type: float }
+              - { name: condominium_percentage, type: float }
+              - { name: rented_apartments, type: float }
+              - { name: rented_apartments_percentage, type: float }
+            skip_rows: 7
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-3-apartments-by-usage-type-building-size-living-area-and-occupancy.csv
+            sheet_name: "Tab 3"
+            names:
+              - name: type
+              - { name: apartments, type: float }
+              - { name: living_area, type: float }
+              - { name: living_area_per_apartment, type: float }
+              - { name: persons_per_apartment, type: float }
+              - { name: living_area_per_person, type: float }
+            skip_rows: 8
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-4-apartments-by-usage-type-year-of-construction-and-living-area.csv
+            sheet_name: "Tab 4"
+            names:
+              - name: type
+              - { name: apartments, type: float }
+              - { name: below_40sqm, type: float }
+              - { name: between_40_and_60sqm, type: float }
+              - { name: between_60_and_80sqm, type: float }
+              - { name: between_80_and_100sqm, type: float }
+              - { name: between_100_and_120sqm, type: float }
+              - { name: more_than_120sqm, type: float }
+            skip_rows: 8
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-5-apartments-by-usage-type-year-of-construction-and-room-count.csv
+            sheet_name: "Tab 5"
+            names:
+              - name: type
+              - { name: apartments, type: float }
+              - { name: with_1_room, type: float }
+              - { name: with_2_rooms, type: float }
+              - { name: with_3_rooms, type: float }
+              - { name: with_4_rooms_or_more, type: float }
+              - { name: total_rooms, type: float }
+              - { name: rooms_per_apartment, type: float }
+              - { name: rooms_per_person, type: float }
+            skip_rows: 8
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-6-apartments-by-building-size-year-of-construction-living-area-and-gross-rent-per-sqm.csv
+            sheet_name: "Tab 6"
+            names:
+              - name: type
+              - { name: apartments, type: float }
+              - { name: below_6_euros, type: float }
+              - { name: between_6_and_7_euros, type: float }
+              - { name: between_7_and_8_euros, type: float }
+              - { name: between_8_and_9_euros, type: float }
+              - { name: between_9_and_10_euros, type: float }
+              - { name: more_than_10_euros, type: float }
+              - { name: average, type: float }
+            skip_rows: 10
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-7-apartments-by-building-size-year-of-construction-living-area-and-gross-rent.csv
+            sheet_name: "Tab 7"
+            names:
+              - name: type
+              - { name: apartments, type: float }
+              - { name: below_300_euros, type: float }
+              - { name: between_300_and_400_euros, type: float }
+              - { name: between_400_and_500_euros, type: float }
+              - { name: between_500_and_600_euros, type: float }
+              - { name: between_600_and_700_euros, type: float }
+              - { name: between_700_and_800_euros, type: float }
+              - { name: more_than_800_euros, type: float }
+            skip_rows: 9
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-8-apartments-by-building-size-year-of-construction-living-area-and-warm-rent.csv
+            sheet_name: "Tab 8"
+            names:
+              - name: type
+              - { name: apartments, type: float }
+              - { name: below_300_euros, type: float }
+              - { name: between_300_and_400_euros, type: float }
+              - { name: between_400_and_500_euros, type: float }
+              - { name: between_500_and_600_euros, type: float }
+              - { name: between_600_and_700_euros, type: float }
+              - { name: between_700_and_800_euros, type: float }
+              - { name: more_than_800_euros, type: float }
+            skip_rows: 9
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-9-apartments-by-usage-type-year-of-construction-warm-water-and-energy-type.csv
+            sheet_name: "Tab 9"
+            names:
+              - name: type
+              - { name: apartments, type: float }
+              - { name: district_heating, type: float }
+              - { name: gas, type: float }
+              - { name: electricity, type: float }
+              - { name: heating_oil, type: float }
+              - { name: briquettes_lignite_coal_coke_hard_coal, type: float }
+              - { name: wood_or_other_renewable_energies, type: float }
+            skip_rows: 11
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-10-apartments-by-usage-type-year-of-construction-collective-heating-and-energy-type.csv
+            sheet_name: "Tab 10"
+            names:
+              - name: type
+              - { name: apartments, type: float }
+              - { name: collective_heating, type: float }
+              - { name: district_heating, type: float }
+              - { name: gas, type: float }
+              - { name: electricity, type: float }
+              - { name: heating_oil, type: float }
+              - { name: briquettes_lignite_coal_coke_hard_coal, type: float }
+              - { name: wood_or_other_renewable_energies, type: float }
+            skip_rows: 11
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-11-apartments-by-usage-type-building-size-heating-and-energy-type.csv
+            sheet_name: "Tab 11"
+            names:
+              - name: type
+              - { name: apartments, type: float }
+              - { name: collective_heating, type: float }
+              - { name: district_heating, type: float }
+              - { name: central_heating, type: float }
+              - { name: floor_heating, type: float }
+              - { name: single_or_more_space_ovens, type: float }
+            skip_rows: 10
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-12-apartments-by-usage-type-barrier-reduction-year-of-construction.csv
+            sheet_name: "Tab 12"
+            names:
+              - name: feature
+              - { name: apartments, type: float }
+              - { name: constructed_before_1918, type: float }
+              - { name: constructed_between_1919_and_1948, type: float }
+              - { name: constructed_between_1949_and_1978, type: float }
+              - { name: constructed_between_1979_and_1990, type: float }
+              - { name: constructed_between_1990_and_2000, type: float }
+              - { name: constructed_after_2021, type: float }
+            skip_rows: 8
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-13-households-by-usage-type.csv
+            sheet_name: "Tab 13"
+            names:
+              - name: household_structure
+              - { name: households, type: float }
+              - { name: inhabited_by_owner, type: float }
+              - { name: inhabited_by_owner_percentage, type: float }
+              - { name: inhabited_by_owner_with_open_credits, type: float }
+              - { name: inhabited_by_main_tenant, type: float }
+              - { name: inhabited_by_main_tenant_percentage, type: float }
+              - { name: inhabited_by_sub_tenant, type: float }
+              - { name: inhabited_by_sub_tenant_percentage, type: float }
+            skip_rows: 8
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-14-households-by-building-type.csv
+            sheet_name: "Tab 14"
+            names:
+              - name: household_structure
+              - { name: households, type: float }
+              - { name: single_family_house_total, type: float }
+              - { name: single_family_house_detached, type: float }
+              - { name: single_family_house_semi_detached, type: float }
+              - { name: single_family_house_terraced, type: float }
+              - { name: multi_family_house_total, type: float }
+              - { name: multi_family_house_detached, type: float }
+              - { name: multi_family_house_terraced, type: float }
+            skip_rows: 8
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-15-households-by-living-area.csv
+            sheet_name: "Tab 15"
+            names:
+              - name: household_structure
+              - { name: households, type: float }
+              - { name: living_area_below_40sqm, type: float }
+              - { name: living_area_between_40_and_60sqm, type: float }
+              - { name: living_area_between_60_and_80sqm, type: float }
+              - { name: living_area_between_80_and_100sqm, type: float }
+              - { name: living_area_between_100_and_120sqm, type: float }
+              - { name: living_area_more_than_120sqm, type: float }
+              - { name: living_area_average, type: float }
+            skip_rows: 8
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-16-apartments-by-room-count.csv
+            sheet_name: "Tab 16"
+            names:
+              - name: household_structure
+              - { name: apartments, type: float }
+              - { name: with_1_room, type: float }
+              - { name: with_2_rooms, type: float }
+              - { name: with_3_rooms, type: float }
+              - { name: with_4_rooms_or_more, type: float }
+              - { name: total_rooms, type: float }
+              - { name: rooms_per_apartment, type: float }
+              - { name: rooms_per_person, type: float }
+            skip_rows: 7
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-17-households-by-gross-rent.csv
+            sheet_name: "Tab 17"
+            names:
+              - name: household_structure
+              - { name: households, type: float }
+              - { name: gross_rent_below_300_euros, type: float }
+              - { name: gross_rent_between_300_and_400_euros, type: float }
+              - { name: gross_rent_between_400_and_500_euros, type: float }
+              - { name: gross_rent_between_500_and_600_euros, type: float }
+              - { name: gross_rent_between_600_and_700_euros, type: float }
+              - { name: gross_rent_between_700_and_800_euros, type: float }
+              - { name: gross_rent_more_than_800_euros, type: float }
+              - { name: gross_rent_average, type: float }
+            skip_rows: 9
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-18-households-by-gross-rent-per-sqm.csv
+            sheet_name: "Tab 18"
+            names:
+              - name: household_structure
+              - { name: households, type: float }
+              - { name: gross_rent_per_sqm_below_6_euros, type: float }
+              - { name: gross_rent_per_sqm_between_6_and_7_euros, type: float }
+              - { name: gross_rent_per_sqm_between_7_and_8_euros, type: float }
+              - { name: gross_rent_per_sqm_between_8_and_9_euros, type: float }
+              - { name: gross_rent_per_sqm_between_9_and_10_euros, type: float }
+              - { name: gross_rent_per_sqm_more_than_10_euros, type: float }
+              - { name: gross_rent_per_sqm_average, type: float }
+            skip_rows: 9
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-19-households-by-percentage-of-household-net-income.csv
+            sheet_name: "Tab 19"
+            names:
+              - name: household_structure
+              - { name: households, type: float }
+              - { name: percentage_of_household_net_income_below_15%, type: float }
+              - { name: percentage_of_household_net_income_between_15_and_20%, type: float }
+              - { name: percentage_of_household_net_income_between_20_and_25%, type: float }
+              - { name: percentage_of_household_net_income_between_25_and_30%, type: float }
+              - { name: percentage_of_household_net_income_between_30_and_35%, type: float }
+              - { name: percentage_of_household_net_income_between_35_and_40%, type: float }
+              - { name: percentage_of_household_net_income_between_40_and_45%, type: float }
+              - { name: percentage_of_household_net_income_above_45%, type: float }
+              - { name: percentage_of_household_net_income_average, type: float }
+            skip_rows: 8
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-20-families-by-usage-type.csv
+            sheet_name: "Tab 20"
+            names:
+              - name: family_structure
+              - { name: households, type: float }
+              - { name: condominium, type: float }
+              - { name: condominium_percentage, type: float }
+              - { name: rented_out, type: float }
+              - { name: rented_out_percentage, type: float }
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-21-families-by-living-area.csv
+            sheet_name: "Tab 21"
+            names:
+              - name: family_structure
+              - { name: households, type: float }
+              - { name: living_area_below_60sqm, type: float }
+              - { name: living_area_between_60_and_80sqm, type: float }
+              - { name: living_area_between_80_and_100sqm, type: float }
+              - { name: living_area_between_100_and_120sqm, type: float }
+              - { name: living_area_above_120sqm, type: float }
+              - { name: living_area_average, type: float }
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-22-apartments-by-room-count.csv
+            sheet_name: "Tab 22"
+            names:
+              - name: family_structure
+              - { name: apartments, type: float }
+              - { name: with_1_room, type: float }
+              - { name: with_2_rooms, type: float }
+              - { name: with_3_rooms, type: float }
+              - { name: with_4_rooms_or_more, type: float }
+              - { name: total_rooms, type: float }
+              - { name: rooms_per_apartment, type: float }
+              - { name: rooms_per_person, type: float }
+            skip_rows: 7
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-23-apartments-by-district-occupancy-and-living-area.csv
+            sheet_name: "Tab 23"
+            names:
+              - name: district_name
+              - { name: apartments, type: float }
+              - { name: uninhabited_apartments, type: float }
+              - { name: inhabited_apartments, type: float }
+              - { name: inhabited_apartments_living_area, type: float }
+              - { name: inhabited_apartments_living_area_per_apartment, type: float }
+              - { name: inhabited_apartments_living_area_per_person, type: float }
+              - { name: inhabited_apartments_persons_per_apartment, type: float }
+            skip_rows: 8
+            head: 12
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-24-apartments-by-district-year-of-construction-and-usage-type.csv
+            sheet_name: "Tab 24"
+            names:
+              - name: type
+              - { name: apartments, type; float }
+              - { name: inhabited_by_owner, type; float }
+              - { name: inhabited_by_owner_percentage, type; float }
+              - { name: rented_out, type; float }
+              - { name: rented_out_percentage, type; float }
+            skip_rows: 7
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-25-apartments-by-district-usage-type-living-area-and-occupancy.csv
+            sheet_name: "Tab 25"
+            names:
+              - name: type
+              - { name: apartments, type: float }
+              - { name: living_area, type: float }
+              - { name: living_area_per_apartment, type: float }
+              - { name: persons_per_apartment, type: float }
+              - { name: living_area_per_person, type: float }
+            skip_rows: 7
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-26-apartments-by-district-and-building-type.csv
+            sheet_name: "Tab 26-27"
+            names:
+              - name: district_name
+              - { name: apartments, type: float }
+              - { name: single_family_house_total, type: float }
+              - { name: single_family_house_detached, type: float }
+              - { name: single_family_house_semi_detached, type: float }
+              - { name: single_family_house_terraced, type: float }
+              - { name: multi_family_house_total, type: float }
+              - { name: multi_family_house_detached, type: float }
+              - { name: multi_family_house_terraced, type: float }
+            skip_rows: 8
+            head: 12
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-27-apartments-by-district-and-owner.csv
+            sheet_name: "Tab 26-27"
+            names:
+              - name: district_name
+              - { name: apartments, type: float }
+              - { name: inhabited_by_owner, type: float }
+              - { name: rented_out_owner_is_private_person, type: float }
+              - { name: rented_out_owner_is_private_organization, type: float }
+              - { name: rented_out_owner_is_public_institution, type: float }
+              - { name: rented_out_owner_is_housing_cooperative, type: float }
+            skip_rows: 35
+            head: 12
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-28-apartments-by-district-and-living-area.csv
+            sheet_name: "Tab 28-29"
+            names:
+              - name: district_name
+              - { name: apartments, type: float }
+              - { name: living_area_below_40sqm, type: float }
+              - { name: living_area_between_40_and_60sqm, type: float }
+              - { name: living_area_between_60_and_80sqm, type: float }
+              - { name: living_area_between_80_and_100sqm, type: float }
+              - { name: living_area_between_100_and_120sqm, type: float }
+              - { name: living_area_above_120sqm, type: float }
+            skip_rows: 8
+            head: 12
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-29-apartments-by-district-and-gross-rent.csv
+            sheet_name: "Tab 28-29"
+            names:
+              - name: district_name
+              - { name: apartments, type: float }
+              - { name: gross_rent_below_300_euros, type: float }
+              - { name: gross_rent_between_300_and_400_euros, type: float }
+              - { name: gross_rent_between_400_and_500_euros, type: float }
+              - { name: gross_rent_between_500_and_600_euros, type: float }
+              - { name: gross_rent_above_600_euros, type: float }
+              - { name: gross_rent_average, type: float }
+            skip_rows: 35
+            head: 12
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-30-apartments-by-district-and-gross-rent-per-sqm.csv
+            sheet_name: "Tab 30"
+            names:
+              - name: district_name
+              - { name: apartments, type: float }
+              - { name: gross_rent_per_sqm_below_6_euros, type: float }
+              - { name: gross_rent_per_sqm_between_6_and_7_euros, type: float }
+              - { name: gross_rent_per_sqm_between_7_and_8_euros, type: float }
+              - { name: gross_rent_per_sqm_between_8_and_9_euros, type: float }
+              - { name: gross_rent_per_sqm_above_9_euros, type: float }
+              - { name: gross_rent_per_sqm_average, type: float }
+            skip_rows: 9
+            head: 12
+            dropna: True
+          - target_file_name: berlin-microcensus-housing-situation-2018-00-31-households-by-district-and-percentage-of-household-net-income.csv
+            sheet_name: "Tab 31"
+            names:
+              - name: district_name
+              - { name: apartments, type: float }
+              - { name: percentage_of_household_net_income_below_15%, type: float }
+              - { name: percentage_of_household_net_income_between_15_and_25%, type: float }
+              - { name: percentage_of_household_net_income_between_25_and_35%, type: float }
+              - { name: percentage_of_household_net_income_between_35_and_45%, type: float }
+              - { name: percentage_of_household_net_income_above_45%, type: float }
+              - { name: percentage_of_household_net_income_average, type: float }
+            skip_rows: 8
+            head: 12
+            dropna: True
