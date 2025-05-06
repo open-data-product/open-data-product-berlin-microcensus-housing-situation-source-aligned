@@ -1,0 +1,42 @@
+household_structure,households,below_40sqm,between_40_and_60sqm,between_60_and_80sqm,between_80_and_100sqm,between_100_and_120sqm,more_than_120sqm
+Haushalte,1887,155,492,586,318,153,180
+Eigentümerhaushalte,301,/,24,48,61,53,112
+Mieterhaushalte,1586,152,468,538,256,100,69
+mit 1 Person,904,144,365,261,79,25,28
+darunter weiblich,478,57,186,155,47,16,16
+mit 2 Personen,576,/,105,220,120,58,63
+mit 3 Personen,199,/,14,61,61,29,33
+mit 4 Personen,154,/,/,35,45,27,40
+mit 5 und mehr Personen,55,/,/,/,/,14,17
+mit Kindern unter 18 Jahren,379,/,34,105,104,60,73
+mit 1 Kind,197,/,24,64,56,26,25
+mit 2 Kindern,139,/,/,33,38,25,35
+mit 3 Kindern,33,/,/,/,/,/,11
+mit 4 und mehr Kindern,/,/,/,/,/,/,/
+ohne Kinder unter 18 Jahren,1508,153,458,481,214,93,107
+unter 1000,154,46,67,29,/,/,/
+1000  –  1500,227,40,101,63,15,/,/
+1500  –  2000,258,28,96,89,29,/,/
+2000  –  3500,621,34,163,243,112,37,31
+3500  –  4500,245,/,37,82,64,31,24
+4500  –  6000,198,/,16,55,52,34,38
+6000 und mehr,185,/,/,25,39,36,73
+1 Einkommensbezieher,1009,145,385,298,102,35,41
+2 und mehr Einkommensbezieher,876,/,106,287,216,118,139
+Erwerbspersonen,1274,107,315,366,227,117,140
+Erwerbstätige,1226,98,299,353,221,115,138
+Selbstständige,154,/,31,33,29,20,34
+Beamte,66,/,10,16,14,/,14
+Angestellte,933,80,235,281,167,82,87
+Arbeiter,59,/,16,20,/,/,/
+Erwerbslose,48,/,16,12,/,/,/
+Nichterwerbspersonen,613,48,177,220,91,36,40
+darunter Rentner,458,21,124,175,73,29,36
+unter 25,75,22,26,20,/,/,/
+25 – 45,705,79,190,211,121,54,47
+45 – 65,626,31,148,179,117,64,87
+65 und mehr,481,24,128,176,74,33,45
+ohne Migrationshintergrund,1327,85,341,418,225,115,143
+mit Migrationshintergrund,560,70,150,168,93,39,37
+davon deutsch,197,15,45,64,35,18,20
+ausländisch,363,56,105,105,58,21,17

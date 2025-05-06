@@ -1,0 +1,13 @@
+district_name,apartments,living_area_below_40sqm,living_area_between_40_and_60sqm,living_area_between_60_and_80sqm,living_area_between_80_and_100sqm,living_area_between_100_and_120sqm,living_area_above_120sqm
+Mitte,195,20,60,59,29,15,11
+Friedrichshain-Kreuzberg,141,14,42,40,22,11,12
+Pankow,206,/,62,58,37,21,19
+Charlottenburg-Wilmersdorf,173,15,37,51,29,17,23
+Spandau,124,/,32,45,22,/,10
+Steglitz-Zehlendorf,142,10,31,36,27,11,26
+Tempelhof-Schöneberg,174,14,44,49,30,14,21
+Neukölln,164,17,45,51,26,15,10
+Treptow-Köpenick,148,/,42,41,23,12,18
+Marzahn-Hellersdorf,142,15,30,52,25,11,9
+Lichtenberg,153,15,41,63,23,/,/
+Reinickendorf,127,/,26,41,25,11,17

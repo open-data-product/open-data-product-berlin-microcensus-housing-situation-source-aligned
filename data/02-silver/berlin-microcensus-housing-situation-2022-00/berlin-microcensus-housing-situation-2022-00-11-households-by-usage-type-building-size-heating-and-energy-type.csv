@@ -1,0 +1,22 @@
+type,households,collective_heating,district_heating,central_heating,floor_heating,single_or_more_space_ovens
+Insgesamt,1887,1843,875,693,300,44
+1 Wohnung,172,164,17,87,63,9
+2 Wohnungen,35,34,/,20,10,/
+3 –    6 Wohnungen,165,164,58,78,30,/
+7 –  9 Wohnungen,290,281,119,114,53,/
+10 –  20 Wohnungen,705,691,345,247,105,14
+21 und mehr Wohnungen,519,510,332,147,40,/
+Zusammen,301,291,66,151,76,10
+1 Wohnung,136,128,/,72,49,/
+2 Wohnungen,17,16,/,11,/,/
+3 –    6 Wohnungen,24,23,/,16,/,/
+7 –  9 Wohnungen,24,23,/,12,/,/
+10 –  20 Wohnungen,62,62,26,25,11,/
+21 und mehr Wohnungen,39,38,21,15,/,/
+Zusammen,1586,1552,809,542,224,34
+1 Wohnung,37,35,/,15,13,/
+2 Wohnungen,18,17,/,/,/,/
+3 –    6 Wohnungen,142,140,54,62,26,/
+7 –  9 Wohnungen,266,258,112,102,49,/
+10 –  20 Wohnungen,643,629,320,222,94,14
+21 und mehr Wohnungen,480,472,312,132,37,/

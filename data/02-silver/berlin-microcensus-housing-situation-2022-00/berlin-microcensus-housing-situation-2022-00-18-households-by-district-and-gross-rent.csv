@@ -1,0 +1,13 @@
+district_name,households,gross_rent_below_400_euros,gross_rent_between_400_and_500_euros,gross_rent_between_500_and_600_euros,gross_rent_between_600_and_700_euros,gross_rent_between_700_and_800_euros,gross_rent_more_than_800_euros,gross_rent_average
+Mitte,172.0,31.0,30.0,26.0,22.0,16,47,711.0
+Friedrichshain-Kreuzberg,121.0,17.0,20.0,19.0,16.0,14,34,707.0
+Pankow,171.0,25.0,35.0,27.0,18.0,15,50,701.0
+Charlottenburg-Wilmersdorf,135.0,15.0,21.0,21.0,22.0,14,42,748.0
+Spandau,98.0,17.0,24.0,21.0,14.0,/,15,585.0
+Steglitz-Zehlendorf,96.0,13.0,16.0,17.0,15.0,11,25,680.0
+Tempelhof-Schöneberg,140.0,24.0,25.0,25.0,23.0,13,30,645.0
+Neukölln,129.0,29.0,27.0,26.0,18.0,/,17,570.0
+Treptow-Köpenick,109.0,22.0,25.0,21.0,14.0,/,18,598.0
+Marzahn-Hellersdorf,114.0,26.0,35.0,30.0,12.0,/,/,507.0
+Lichtenberg,139.0,28.0,41.0,31.0,17.0,/,15,552.0
+Reinickendorf,90.0,14.0,15.0,20.0,14.0,/,16,629.0

@@ -1,0 +1,39 @@
+household_structure,households,below_6_euros,between_6_and_7_euros,between_7_and_8_euros,between_8_and_9_euros,between_9_and_10_euros,more_than_10_euros,average
+mit 1 Person,778,116,145,157,108,81,170,9.6
+darunter weiblich,405,67,85,81,56,38,79,9.3
+mit 2 Personen,431,71,82,81,56,40,102,9.6
+mit 3 Personen,153,17,29,31,20,15,42,9.8
+mit 4 Personen,112,14,17,24,18,/,28,9.7
+mit 5 und mehr Personen,39,/,/,/,/,/,/,9.4
+mit Kindern unter 18 Jahren,299,31,49,63,47,31,79,9.8
+mit 1 Kind,162,16,27,37,21,16,46,9.9
+mit 2 Kindern,105,/,16,19,20,/,26,9.7
+mit 3 Kindern,24,/,/,/,/,/,/,9.6
+mit 4 und mehr Kindern,/,/,/,/,/,/,/,/
+ohne Kinder unter 18 Jahren,1215,191,230,239,162,121,271,9.6
+unter 1000,134,23,24,30,23,14,19,9
+1000  –  1500,200,33,44,46,30,19,28,9.1
+1500  –  2000,223,37,43,49,35,20,38,9.1
+2000  –  3500,522,80,108,110,67,54,102,9.3
+3500  –  4500,189,26,31,31,26,19,55,10.2
+4500  –  6000,141,14,18,23,19,13,54,10.7
+6000 und mehr,105,/,/,12,/,13,53,11.6
+1 Einkommensbezieher,867,127,159,175,124,90,193,9.6
+2 und mehr Einkommensbezieher,646,96,119,127,84,63,157,9.6
+Erwerbspersonen,1040,126,165,198,142,113,296,10
+Erwerbstätige,997,121,159,188,135,108,287,10.1
+Selbstständige,110,16,15,21,12,/,34,9.9
+Beamte,46,/,/,/,/,/,15,10.1
+Angestellte,779,88,122,147,110,86,226,10.2
+Arbeiter,50,/,13,/,/,/,/,8.7
+Erwerbslose,43,/,/,/,/,/,/,9.7
+Nichterwerbspersonen,474,96,114,104,66,40,54,8.7
+darunter Rentner,342,84,89,75,42,25,27,8.3
+vor 1999,274,92,80,56,22,14,9,7.7
+1999 – 2008,304,58,79,71,46,28,23,8.4
+2009 – 2018,570,56,90,117,99,68,139,9.7
+2019 und später,367,16,30,58,41,43,179,11.9
+ohne Migrationshintergrund,1049,178,214,218,140,104,196,9.1
+mit Migrationshintergrund,465,44,65,84,69,49,154,10.7
+davon deutsch,157,18,27,31,24,18,39,9.7
+ausländisch,308,26,38,53,45,31,115,11.2

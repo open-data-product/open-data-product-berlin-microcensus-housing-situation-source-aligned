@@ -31,6 +31,17 @@
 
 * [SB_F01-02-00_2018j04_BE.xlsx](https://download.statistik-berlin-brandenburg.de/dbad6022b4074bc2/a5d78de25950/SB_F01-02-00_2018j04_BE.xlsx)
 
+### Ergebnisse des Mikrozensus 2022
+
+* owner: Amt für Statistik Berlin-Brandenburg
+* url: https://www.statistik-berlin-brandenburg.de/f-i-2-4j
+* license: CC-BY-3.0-Namensnennung
+* updated: 2024-07-16
+
+**Files**
+
+* [SB_F01-02-00_2022j04_BE.xlsx](https://download.statistik-berlin-brandenburg.de/167555afd12b0012/354695ab2b73/SB_F01-02-00_2022j04_BE.xlsx)
+
 ## Transformation Steps
 
 * [Data extractor](../lib/extract/data_extractor.py) extracts data from inout ports
@@ -114,6 +125,35 @@
 * [berlin-microcensus-housing-situation-2018-00-8-apartments-by-building-size-year-of-construction-living-area-and-warm-rent.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/02-silver/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-00-8-apartments-by-building-size-year-of-construction-living-area-and-warm-rent.csv)
 * [berlin-microcensus-housing-situation-2018-00-9-apartments-by-usage-type-year-of-construction-warm-water-and-energy-type.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/02-silver/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-00-9-apartments-by-usage-type-year-of-construction-warm-water-and-energy-type.csv)
 
+### Berlin Microcensus Housing Situation 2022 00
+
+* owner: Open Data Product
+* url: https://github.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/tree/main/data/02-silver/berlin-microcensus-housing-situation-2022-00
+* updated: 2025-06-16
+
+**Files**
+
+* [berlin-microcensus-housing-situation-2022-00-1-households-by-usage-type.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/02-silver/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-1-households-by-usage-type.csv)
+* [berlin-microcensus-housing-situation-2022-00-10-households-by-usage-type-year-of-construction-collective-heating-and-energy-type.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/02-silver/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-10-households-by-usage-type-year-of-construction-collective-heating-and-energy-type.csv)
+* [berlin-microcensus-housing-situation-2022-00-11-households-by-usage-type-building-size-heating-and-energy-type.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/02-silver/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-11-households-by-usage-type-building-size-heating-and-energy-type.csv)
+* [berlin-microcensus-housing-situation-2022-00-12-households-by-year-of-construction.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/02-silver/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-12-households-by-year-of-construction.csv)
+* [berlin-microcensus-housing-situation-2022-00-13-households-by-district-year-of-construction-and-usage-type.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/02-silver/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-13-households-by-district-year-of-construction-and-usage-type.csv)
+* [berlin-microcensus-housing-situation-2022-00-14-households-by-district-usage-type-living-area-and-occupancy.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/02-silver/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-14-households-by-district-usage-type-living-area-and-occupancy.csv)
+* [berlin-microcensus-housing-situation-2022-00-15-households-by-district-and-building-type.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/02-silver/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-15-households-by-district-and-building-type.csv)
+* [berlin-microcensus-housing-situation-2022-00-16-apartments-by-district-and-owner.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/02-silver/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-16-apartments-by-district-and-owner.csv)
+* [berlin-microcensus-housing-situation-2022-00-17-apartments-by-district-and-living-area.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/02-silver/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-17-apartments-by-district-and-living-area.csv)
+* [berlin-microcensus-housing-situation-2022-00-18-households-by-district-and-gross-rent.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/02-silver/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-18-households-by-district-and-gross-rent.csv)
+* [berlin-microcensus-housing-situation-2022-00-19-households-by-district-and-gross-rent-per-sqm.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/02-silver/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-19-households-by-district-and-gross-rent-per-sqm.csv)
+* [berlin-microcensus-housing-situation-2022-00-2-households-by-building-type.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/02-silver/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-2-households-by-building-type.csv)
+* [berlin-microcensus-housing-situation-2022-00-20-households-by-district-and-percentage-of-household-net-income.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/02-silver/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-20-households-by-district-and-percentage-of-household-net-income.csv)
+* [berlin-microcensus-housing-situation-2022-00-3-households-by-usage-type-year-of-construction-and-living-area.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/02-silver/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-3-households-by-usage-type-year-of-construction-and-living-area.csv)
+* [berlin-microcensus-housing-situation-2022-00-4-households-by-usage-type-year-of-construction-and-room-count.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/02-silver/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-4-households-by-usage-type-year-of-construction-and-room-count.csv)
+* [berlin-microcensus-housing-situation-2022-00-5-households-by-gross-rent.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/02-silver/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-5-households-by-gross-rent.csv)
+* [berlin-microcensus-housing-situation-2022-00-6-households-by-gross-rent-per-sqm.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/02-silver/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-6-households-by-gross-rent-per-sqm.csv)
+* [berlin-microcensus-housing-situation-2022-00-7-households-by-percentage-of-household-net-income.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/02-silver/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-7-households-by-percentage-of-household-net-income.csv)
+* [berlin-microcensus-housing-situation-2022-00-8-households-by-warm-rent.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/02-silver/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-8-households-by-warm-rent.csv)
+* [berlin-microcensus-housing-situation-2022-00-9-apartments-by-usage-type-year-of-construction-warm-water-and-energy-type.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/02-silver/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-9-apartments-by-usage-type-year-of-construction-warm-water-and-energy-type.csv)
+
 ### Berlin Microcensus Housing Situation 2014 00
 
 * owner: Open Data Product
@@ -155,6 +195,23 @@
 * [berlin-microcensus-housing-situation-2018-00-30-apartments-by-district-and-gross-rent-per-sqm-districts.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/03-gold/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-00-30-apartments-by-district-and-gross-rent-per-sqm-districts.csv)
 * [berlin-microcensus-housing-situation-2018-00-31-households-by-district-and-percentage-of-household-net-income-city.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/03-gold/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-00-31-households-by-district-and-percentage-of-household-net-income-city.csv)
 * [berlin-microcensus-housing-situation-2018-00-31-households-by-district-and-percentage-of-household-net-income-districts.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/03-gold/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-00-31-households-by-district-and-percentage-of-household-net-income-districts.csv)
+
+### Berlin Microcensus Housing Situation 2022 00
+
+* owner: Open Data Product
+* url: https://github.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/tree/main/data/03-gold/berlin-microcensus-housing-situation-2022-00
+* updated: 2025-06-16
+
+**Files**
+
+* [berlin-microcensus-housing-situation-2022-00-15-households-by-district-and-building-type-city.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/03-gold/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-15-households-by-district-and-building-type-city.csv)
+* [berlin-microcensus-housing-situation-2022-00-15-households-by-district-and-building-type-districts.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/03-gold/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-15-households-by-district-and-building-type-districts.csv)
+* [berlin-microcensus-housing-situation-2022-00-16-apartments-by-district-and-owner-city.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/03-gold/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-16-apartments-by-district-and-owner-city.csv)
+* [berlin-microcensus-housing-situation-2022-00-16-apartments-by-district-and-owner-districts.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/03-gold/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-16-apartments-by-district-and-owner-districts.csv)
+* [berlin-microcensus-housing-situation-2022-00-17-apartments-by-district-and-living-area-city.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/03-gold/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-17-apartments-by-district-and-living-area-city.csv)
+* [berlin-microcensus-housing-situation-2022-00-17-apartments-by-district-and-living-area-districts.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/03-gold/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-17-apartments-by-district-and-living-area-districts.csv)
+* [berlin-microcensus-housing-situation-2022-00-18-households-by-district-and-gross-rent-city.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/03-gold/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-18-households-by-district-and-gross-rent-city.csv)
+* [berlin-microcensus-housing-situation-2022-00-18-households-by-district-and-gross-rent-districts.csv](https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation/main/data/03-gold/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-18-households-by-district-and-gross-rent-districts.csv)
 
 ## Classification
 

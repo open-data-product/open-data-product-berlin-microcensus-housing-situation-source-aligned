@@ -468,3 +468,163 @@ input_ports:
           - name: percentage_of_household_net_income_between_35_and_45
           - name: percentage_of_household_net_income_above_45
           - name: percentage_of_household_net_income_average
+  - id: berlin-microcensus-housing-situation-2022-00
+    files:
+      - source_file_name: berlin-microcensus-housing-situation-2022-00-15-households-by-district-and-building-type.csv
+        target_file_name: berlin-microcensus-housing-situation-2022-00-15-households-by-district-and-building-type-districts.csv
+        names:
+          - name: id
+            key: "district_name"
+            mapping:
+              "Mitte": "01"
+              "Friedrichshain-Kreuzberg": "02"
+              "Pankow": "03"
+              "Charlottenburg-Wilmersdorf": "04"
+              "Spandau": "05"
+              "Steglitz-Zehlendorf": "06"
+              "Tempelhof-Schöneberg": "07"
+              "Neukölln": "08"
+              "Treptow-Köpenick": "09"
+              "Marzahn-Hellersdorf": "10"
+              "Lichtenberg": "11"
+              "Reinickendorf": "12"
+          - { name: district_name, remove: True }
+          - name: households
+          - name: single_family_house_total
+          - name: single_family_house_detached
+          - name: single_family_house_semi_detached
+          - name: single_family_house_terraced
+          - name: multi_family_house_total
+          - name: multi_family_house_detached
+          - name: multi_family_house_terraced
+      - source_file_name: berlin-microcensus-housing-situation-2022-00-15-households-by-district-and-building-type.csv
+        target_file_name: berlin-microcensus-housing-situation-2022-00-15-households-by-district-and-building-type-city.csv
+        aggregate_by: "total"
+        names:
+          - name: id
+          - { name: district_name, remove: True }
+          - name: households
+          - name: single_family_house_total
+          - name: single_family_house_detached
+          - name: single_family_house_semi_detached
+          - name: single_family_house_terraced
+          - name: multi_family_house_total
+          - name: multi_family_house_detached
+          - name: multi_family_house_terraced
+      - source_file_name: berlin-microcensus-housing-situation-2022-00-16-apartments-by-district-and-owner.csv
+        target_file_name: berlin-microcensus-housing-situation-2022-00-16-apartments-by-district-and-owner-districts.csv
+        names:
+          - name: id
+            key: "district_name"
+            mapping:
+              "Mitte": "01"
+              "Friedrichshain-Kreuzberg": "02"
+              "Pankow": "03"
+              "Charlottenburg-Wilmersdorf": "04"
+              "Spandau": "05"
+              "Steglitz-Zehlendorf": "06"
+              "Tempelhof-Schöneberg": "07"
+              "Neukölln": "08"
+              "Treptow-Köpenick": "09"
+              "Marzahn-Hellersdorf": "10"
+              "Lichtenberg": "11"
+              "Reinickendorf": "12"
+          - { name: district_name, remove: True }
+          - name: apartments
+          - name: inhabited_by_owner
+          - name: rented_out_owner_is_private_person
+          - name: rented_out_owner_is_private_organization
+          - name: rented_out_owner_is_public_institution
+          - name: rented_out_owner_is_housing_cooperative
+      - source_file_name: berlin-microcensus-housing-situation-2022-00-16-apartments-by-district-and-owner.csv
+        target_file_name: berlin-microcensus-housing-situation-2022-00-16-apartments-by-district-and-owner-city.csv
+        aggregate_by: "total"
+        names:
+          - name: id
+          - { name: district_name, remove: True }
+          - name: apartments
+          - name: inhabited_by_owner
+          - name: rented_out_owner_is_private_person
+          - name: rented_out_owner_is_private_organization
+          - name: rented_out_owner_is_public_institution
+          - name: rented_out_owner_is_housing_cooperative
+      - source_file_name: berlin-microcensus-housing-situation-2022-00-17-apartments-by-district-and-living-area.csv
+        target_file_name: berlin-microcensus-housing-situation-2022-00-17-apartments-by-district-and-living-area-districts.csv
+        names:
+          - name: id
+            key: "district_name"
+            mapping:
+              "Mitte": "01"
+              "Friedrichshain-Kreuzberg": "02"
+              "Pankow": "03"
+              "Charlottenburg-Wilmersdorf": "04"
+              "Spandau": "05"
+              "Steglitz-Zehlendorf": "06"
+              "Tempelhof-Schöneberg": "07"
+              "Neukölln": "08"
+              "Treptow-Köpenick": "09"
+              "Marzahn-Hellersdorf": "10"
+              "Lichtenberg": "11"
+              "Reinickendorf": "12"
+          - { name: district_name, remove: True }
+          - name: apartments
+          - name: living_area_below_40sqm
+          - name: living_area_between_40_and_60sqm
+          - name: living_area_between_60_and_80sqm
+          - name: living_area_between_80_and_100sqm
+          - name: living_area_between_100_and_120sqm
+          - name: living_area_above_120sqm
+      - source_file_name: berlin-microcensus-housing-situation-2022-00-17-apartments-by-district-and-living-area.csv
+        target_file_name: berlin-microcensus-housing-situation-2022-00-17-apartments-by-district-and-living-area-city.csv
+        aggregate_by: "total"
+        names:
+          - name: id
+          - { name: district_name, remove: True }
+          - name: apartments
+          - name: living_area_below_40sqm
+          - name: living_area_between_40_and_60sqm
+          - name: living_area_between_60_and_80sqm
+          - name: living_area_between_80_and_100sqm
+          - name: living_area_between_100_and_120sqm
+          - name: living_area_above_120sqm
+      - source_file_name: berlin-microcensus-housing-situation-2022-00-18-households-by-district-and-gross-rent.csv
+        target_file_name: berlin-microcensus-housing-situation-2022-00-18-households-by-district-and-gross-rent-districts.csv
+        names:
+          - name: id
+            key: "district_name"
+            mapping:
+              "Mitte": "01"
+              "Friedrichshain-Kreuzberg": "02"
+              "Pankow": "03"
+              "Charlottenburg-Wilmersdorf": "04"
+              "Spandau": "05"
+              "Steglitz-Zehlendorf": "06"
+              "Tempelhof-Schöneberg": "07"
+              "Neukölln": "08"
+              "Treptow-Köpenick": "09"
+              "Marzahn-Hellersdorf": "10"
+              "Lichtenberg": "11"
+              "Reinickendorf": "12"
+          - { name: district_name, remove: True }
+          - name: households
+          - name: gross_rent_below_400_euros
+          - name: gross_rent_between_400_and_500_euros
+          - name: gross_rent_between_500_and_600_euros
+          - name: gross_rent_between_600_and_700_euros
+          - name: gross_rent_between_700_and_800_euros
+          - name: gross_rent_more_than_800_euros
+          - name: gross_rent_average
+      - source_file_name: berlin-microcensus-housing-situation-2022-00-18-households-by-district-and-gross-rent.csv
+        target_file_name: berlin-microcensus-housing-situation-2022-00-18-households-by-district-and-gross-rent-city.csv
+        aggregate_by: "total"
+        names:
+          - name: id
+          - { name: district_name, remove: True }
+          - name: households
+          - name: gross_rent_below_400_euros
+          - name: gross_rent_between_400_and_500_euros
+          - name: gross_rent_between_500_and_600_euros
+          - name: gross_rent_between_600_and_700_euros
+          - name: gross_rent_between_700_and_800_euros
+          - name: gross_rent_more_than_800_euros
+          - name: gross_rent_average
