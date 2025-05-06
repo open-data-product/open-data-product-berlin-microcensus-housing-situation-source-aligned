@@ -1,5 +1,5 @@
 
-# Open Data Product Specification (ODPS) Canvas - Berlin Microservice Housing Situation source-aligned
+# Open Data Product Specification (ODPS) Canvas - Berlin Microcensus Housing Situation source-aligned
 
 * schema version: 3.1
 ## Product

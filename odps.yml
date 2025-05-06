@@ -5,7 +5,7 @@ product:
   dataHolder:
     URL: "https://opendataproduct.de"
   en:
-    name: "Berlin Microservice Housing Situation source-aligned"
+    name: "Berlin Microcensus Housing Situation source-aligned"
     productID: "berlin-microcensus-housing-situation-source-aligned"
     valueProposition: "Providing Berlin microcensus housing situation data"
     description: "Data product providing Berlin microcensus housing situation data"
