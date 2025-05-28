@@ -6,7 +6,7 @@ metadata:
   description: Source-aligned data product providing Berlin microcensus housing situation data
   url:
   license:
-  updated: 2025-06-16
+  updated: 2025-06-24
   schema:
     - name: type
       description: type
@@ -336,16 +336,16 @@ input_ports:
       - https://download.statistik-berlin-brandenburg.de/167555afd12b0012/354695ab2b73/SB_F01-02-00_2022j04_BE.xlsx
 transformation_steps:
   - name: Data extractor
-    path: lib/extract/data_extractor.py
+    path: https://github.com/open-data-product/open-data-product-python-lib/blob/main/opendataproduct/extract/data_extractor.py
     description: extracts data from inout ports
   - name: Data copier
-    path: lib/transform/data_copier.py
+    path: https://github.com/open-data-product/open-data-product-python-lib/blob/main/opendataproduct/transform/data_copier.py
     description: copies and renames extracted data
   - name: Data CSV converter
-    path: lib/transform/convert_data_to_csv.py
+    path: https://github.com/open-data-product/open-data-product-python-lib/blob/main/opendataproduct/transform/data_csv_converter.py
     description: converts Excel files to CSV format
-  - name: Data aggregator
-    path: lib/transform/aggregate_data.py
+  - name: Data CSV aggregator
+    path: https://github.com/open-data-product/open-data-product-python-lib/blob/main/opendataproduct/transform/data_csv_aggregator.py
     description: aggregates data to be used as output ports
 output_ports:
   - id: berlin-microcensus-housing-situation-2014-00
@@ -355,7 +355,7 @@ output_ports:
       description:
       url: https://github.com/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned/tree/main/data/02-silver/berlin-microcensus-housing-situation-2014-00
       license:
-      updated: 2025-06-16
+      updated: 2025-06-24
       schema:
     files:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/02-silver/berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-00-1-apartments-by-size-year-of-construction-and-usage-type.csv
@@ -390,7 +390,7 @@ output_ports:
       description:
       url: https://github.com/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned/tree/main/data/02-silver/berlin-microcensus-housing-situation-2018-00
       license:
-      updated: 2025-06-16
+      updated: 2025-06-24
       schema:
     files:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/02-silver/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-00-1-apartments-by-size-year-of-construction-and-usage-type.csv
@@ -431,7 +431,7 @@ output_ports:
       description:
       url: https://github.com/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned/tree/main/data/02-silver/berlin-microcensus-housing-situation-2022-00
       license:
-      updated: 2025-06-16
+      updated: 2025-06-24
       schema:
     files:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/02-silver/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-1-households-by-usage-type.csv
@@ -461,7 +461,7 @@ output_ports:
       description:
       url: https://github.com/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned/tree/main/data/03-gold/berlin-microcensus-housing-situation-2014-00
       license:
-      updated: 2025-06-16
+      updated: 2025-06-24
       schema:
     files:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/03-gold/berlin-microcensus-housing-situation-2014-00/berlin-microcensus-housing-situation-2014-00-19-apartments-by-district-occupancy-and-living-area-city.csv
@@ -481,7 +481,7 @@ output_ports:
       description:
       url: https://github.com/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned/tree/main/data/03-gold/berlin-microcensus-housing-situation-2018-00
       license:
-      updated: 2025-06-16
+      updated: 2025-06-24
       schema:
     files:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/03-gold/berlin-microcensus-housing-situation-2018-00/berlin-microcensus-housing-situation-2018-00-23-apartments-by-district-occupancy-and-living-area-city.csv
@@ -505,7 +505,7 @@ output_ports:
       description:
       url: https://github.com/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned/tree/main/data/03-gold/berlin-microcensus-housing-situation-2022-00
       license:
-      updated: 2025-06-16
+      updated: 2025-06-24
       schema:
     files:
       - https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned/main/data/03-gold/berlin-microcensus-housing-situation-2022-00/berlin-microcensus-housing-situation-2022-00-15-households-by-district-and-building-type-city.csv

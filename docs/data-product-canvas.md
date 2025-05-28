@@ -5,7 +5,7 @@
 
 * owner: Open Data Product
 * description: Source-aligned data product providing Berlin microcensus housing situation data
-* updated: 2025-06-16
+* updated: 2025-06-24
 
 ## Input Ports
 
@@ -44,10 +44,10 @@
 
 ## Transformation Steps
 
-* [Data extractor](../lib/extract/data_extractor.py) extracts data from inout ports
-* [Data copier](../lib/transform/data_copier.py) copies and renames extracted data
-* [Data CSV converter](../lib/transform/convert_data_to_csv.py) converts Excel files to CSV format
-* [Data aggregator](../lib/transform/aggregate_data.py) aggregates data to be used as output ports
+* [Data extractor](https://github.com/open-data-product/open-data-product-python-lib/blob/main/opendataproduct/extract/data_extractor.py) extracts data from inout ports
+* [Data copier](https://github.com/open-data-product/open-data-product-python-lib/blob/main/opendataproduct/transform/data_copier.py) copies and renames extracted data
+* [Data CSV converter](https://github.com/open-data-product/open-data-product-python-lib/blob/main/opendataproduct/transform/data_csv_converter.py) converts Excel files to CSV format
+* [Data CSV aggregator](https://github.com/open-data-product/open-data-product-python-lib/blob/main/opendataproduct/transform/data_csv_aggregator.py) aggregates data to be used as output ports
 
 ## Output Ports
 
@@ -55,7 +55,7 @@
 
 * owner: Open Data Product
 * url: https://github.com/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned/tree/main/data/02-silver/berlin-microcensus-housing-situation-2014-00
-* updated: 2025-06-16
+* updated: 2025-06-24
 
 **Files**
 
@@ -89,7 +89,7 @@
 
 * owner: Open Data Product
 * url: https://github.com/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned/tree/main/data/02-silver/berlin-microcensus-housing-situation-2018-00
-* updated: 2025-06-16
+* updated: 2025-06-24
 
 **Files**
 
@@ -129,7 +129,7 @@
 
 * owner: Open Data Product
 * url: https://github.com/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned/tree/main/data/02-silver/berlin-microcensus-housing-situation-2022-00
-* updated: 2025-06-16
+* updated: 2025-06-24
 
 **Files**
 
@@ -158,7 +158,7 @@
 
 * owner: Open Data Product
 * url: https://github.com/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned/tree/main/data/03-gold/berlin-microcensus-housing-situation-2014-00
-* updated: 2025-06-16
+* updated: 2025-06-24
 
 **Files**
 
@@ -177,7 +177,7 @@
 
 * owner: Open Data Product
 * url: https://github.com/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned/tree/main/data/03-gold/berlin-microcensus-housing-situation-2018-00
-* updated: 2025-06-16
+* updated: 2025-06-24
 
 **Files**
 
@@ -200,7 +200,7 @@
 
 * owner: Open Data Product
 * url: https://github.com/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned/tree/main/data/03-gold/berlin-microcensus-housing-situation-2022-00
-* updated: 2025-06-16
+* updated: 2025-06-24
 
 **Files**
 
