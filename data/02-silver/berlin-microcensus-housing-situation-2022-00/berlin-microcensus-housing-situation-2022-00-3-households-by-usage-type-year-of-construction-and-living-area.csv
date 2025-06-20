@@ -1,4 +1,4 @@
-household_structure,households,below_40sqm,between_40_and_60sqm,between_60_and_80sqm,between_80_and_100sqm,between_100_and_120sqm,more_than_120sqm
+household_structure,total,below_40sqm,between_40_and_60sqm,between_60_and_80sqm,between_80_and_100sqm,between_100_and_120sqm,more_than_120sqm
 Haushalte,1887,155,492,586,318,153,180
 Eigentümerhaushalte,301,/,24,48,61,53,112
 Mieterhaushalte,1586,152,468,538,256,100,69

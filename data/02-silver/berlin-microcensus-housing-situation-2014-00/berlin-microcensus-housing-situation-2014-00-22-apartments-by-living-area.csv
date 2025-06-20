@@ -1,4 +1,4 @@
-district_name,apartments,living_area_below_40sqm,living_area_between_40_and_60sqm,living_area_between_60_and_80sqm,living_area_between_80_and_100sqm,living_area_between_100_and_120sqm,living_area_above_120sqm
+district_name,total,living_area_below_40sqm,living_area_between_40_and_60sqm,living_area_between_60_and_80sqm,living_area_between_80_and_100sqm,living_area_between_100_and_120sqm,living_area_above_120sqm
 Mitte,168.236686,16.280752,50.7086699999999,59.6135409999998,23.9486740000001,9.32705599999999,8.35799299999999
 Friedrichshain-Kreuzberg,132.78086,14.596195,40.008549,44.6026650000001,22.7001829999999,6.22921900000001,/
 Pankow,195.638282999999,13.240656,70.0846559999998,64.9838699999996,21.213675,11.594178,14.521248

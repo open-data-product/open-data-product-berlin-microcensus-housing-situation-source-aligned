@@ -1,4 +1,4 @@
-household_structure,households,inhabited_by_owner,inhabited_by_owner_percentage,inhabited_by_owner_with_open_credits,inhabited_by_main_tenant,inhabited_by_main_tenant_percentage,inhabited_by_sub_tenant,inhabited_by_sub_tenant_percentage
+household_structure,total,inhabited_by_owner,inhabited_by_owner_percentage,inhabited_by_owner_with_open_credits,inhabited_by_main_tenant,inhabited_by_main_tenant_percentage,inhabited_by_sub_tenant,inhabited_by_sub_tenant_percentage
 Haushalte,1917.689121,307.506943999998,16.0352864618456,115.406563,1522.73883500001,79.4048846773433,87.4433420000001,4.55982886081149
 mit 1 Person,1006.702266,94.0432469999999,9.34171404755729,23.742936,836.654698000001,83.1084548288876,76.004321,7.54983112355483
 darunter weiblich,506.452808000001,55.302458,10.9195678504363,11.326026,419.391123000001,82.8095167753518,31.759227,6.27091537421191

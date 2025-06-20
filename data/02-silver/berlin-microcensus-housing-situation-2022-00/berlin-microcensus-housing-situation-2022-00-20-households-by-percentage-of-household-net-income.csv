@@ -1,4 +1,4 @@
-household_structure,households,percentage_of_household_net_income_below_15%,percentage_of_household_net_income_between_15_and_25%,percentage_of_household_net_income_between_25_and_35%,percentage_of_household_net_income_between_35_and_45%,percentage_of_household_net_income_above_45%,percentage_of_household_net_income_average
+household_structure,total,percentage_of_household_net_income_below_15%,percentage_of_household_net_income_between_15_and_25%,percentage_of_household_net_income_between_25_and_35%,percentage_of_household_net_income_between_35_and_45%,percentage_of_household_net_income_above_45%,percentage_of_household_net_income_average
 Mitte,172.0,32.0,60.0,41.0,18,22,28.7
 Friedrichshain-Kreuzberg,121.0,19.0,47.0,26.0,14,14,27.8
 Pankow,171.0,31.0,66.0,42.0,16,15,26.2

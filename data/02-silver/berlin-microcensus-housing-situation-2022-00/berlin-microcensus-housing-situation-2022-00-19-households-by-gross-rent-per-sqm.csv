@@ -1,4 +1,4 @@
-household_structure,households,gross_rent_per_sqm_below_6_euros,gross_rent_per_sqm_between_6_and_7_euros,gross_rent_per_sqm_between_7_and_8_euros,gross_rent_per_sqm_between_8_and_9_euros,gross_rent_per_sqm_between_9_and_10_euros,gross_rent_per_sqm_more_than_10_euros,gross_rent_per_sqm_average
+household_structure,total,gross_rent_per_sqm_below_6_euros,gross_rent_per_sqm_between_6_and_7_euros,gross_rent_per_sqm_between_7_and_8_euros,gross_rent_per_sqm_between_8_and_9_euros,gross_rent_per_sqm_between_9_and_10_euros,gross_rent_per_sqm_more_than_10_euros,gross_rent_per_sqm_average
 Mitte,172.0,25.0,23.0,27.0,21,16,59,10.9
 Friedrichshain-Kreuzberg,121.0,14.0,12.0,22.0,16,13,43,10.6
 Pankow,171.0,26.0,24.0,30.0,22,19,49,9.9

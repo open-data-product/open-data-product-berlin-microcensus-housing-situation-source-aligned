@@ -1,4 +1,4 @@
-district_name,households,single_family_house_total,single_family_house_detached,single_family_house_semi_detached,single_family_house_terraced,multi_family_house_total,multi_family_house_detached,multi_family_house_terraced
+district_name,total,single_family_house_total,single_family_house_detached,single_family_house_semi_detached,single_family_house_terraced,multi_family_house_total,multi_family_house_detached,multi_family_house_terraced
 Mitte,195,/,/,/,/,188.0,16.0,172.0
 Friedrichshain-Kreuzberg,141,/,/,/,/,140.0,13.0,127.0
 Pankow,206,15,11,/,/,191.0,22.0,169.0

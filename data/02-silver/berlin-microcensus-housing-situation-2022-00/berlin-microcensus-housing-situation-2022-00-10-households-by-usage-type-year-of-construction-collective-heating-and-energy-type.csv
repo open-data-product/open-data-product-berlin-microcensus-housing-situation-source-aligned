@@ -1,4 +1,4 @@
-type,households,collective_heating,district_heating,gas,electricity,heating_oil,briquettes_lignite_coal_coke_hard_coal,wood_or_other_renewable_energies
+type,total,collective_heating,district_heating,gas,electricity,heating_oil,briquettes_lignite_coal_coke_hard_coal,wood_or_other_renewable_energies
 Insgesamt,1887,1843,865,683,60,212,/,22
 bis 1918,395,380,107,229,/,33,/,/
 1919 – 1948,304,297,108,149,/,32,/,/

@@ -1,4 +1,4 @@
-household_structure,households,single_family_house_total,single_family_house_detached,single_family_house_semi_detached,single_family_house_terraced,multi_family_house_total,multi_family_house_detached,multi_family_house_terraced
+household_structure,total,single_family_house_total,single_family_house_detached,single_family_house_semi_detached,single_family_house_terraced,multi_family_house_total,multi_family_house_detached,multi_family_house_terraced
 Haushalte,1977,194,121,38,35,1781,219,1562
 Eigentümerhaushalte,304,149,96,30,23,155,33,121
 Mieterhaushalte,1672,45,24,/,12,1626,186,1440

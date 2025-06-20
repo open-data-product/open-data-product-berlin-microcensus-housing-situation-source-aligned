@@ -1,4 +1,4 @@
-feature,households,constructed_before_1918,constructed_between_1919_and_1948,constructed_between_1949_and_1978,constructed_between_1979_and_1990,constructed_between_1990_and_2000,constructed_after_2021
+feature,total,constructed_before_1918,constructed_between_1919_and_1948,constructed_between_1949_and_1978,constructed_between_1979_and_1990,constructed_between_1990_and_2000,constructed_after_2021
 Insgesamt,1887,395,304,627,262,132,166
 Zugang zur Wohnung schwellenlos,345,12,13,107,50,51,112
 ausreichende Breite der Haustür,1604,350,233,532,219,117,154

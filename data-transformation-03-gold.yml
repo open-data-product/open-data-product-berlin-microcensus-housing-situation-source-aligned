@@ -21,7 +21,7 @@ input_ports:
               "Lichtenberg": "11"
               "Reinickendorf": "12"
           - { name: district_name, remove: True }
-          - name: apartments
+          - name: total
           - name: uninhabited_apartments
           - name: inhabited_apartments
           - name: inhabited_apartments_living_area
@@ -34,7 +34,7 @@ input_ports:
         names:
           - name: id
           - { name: district_name, remove: True }
-          - name: apartments
+          - name: total
           - name: uninhabited_apartments
           - name: inhabited_apartments
           - name: inhabited_apartments_living_area
@@ -60,7 +60,7 @@ input_ports:
               "Lichtenberg": "11"
               "Reinickendorf": "12"
           - { name: district_name, remove: True }
-          - name: apartments
+          - name: total
           - name: living_area_below_40sqm
           - name: living_area_between_40_and_60sqm
           - name: living_area_between_60_and_80sqm
@@ -73,7 +73,7 @@ input_ports:
         names:
           - name: id
           - { name: district_name, remove: True }
-          - name: apartments
+          - name: total
           - name: living_area_below_40sqm
           - name: living_area_between_40_and_60sqm
           - name: living_area_between_60_and_80sqm
@@ -99,7 +99,7 @@ input_ports:
               "Lichtenberg": "11"
               "Reinickendorf": "12"
           - { name: district_name, remove: True }
-          - name: apartments
+          - name: total
           - name: gross_rent_below_300_euros
           - name: gross_rent_between_300_and_400_euros
           - name: gross_rent_between_400_and_500_euros
@@ -137,7 +137,7 @@ input_ports:
               "Lichtenberg": "11"
               "Reinickendorf": "12"
           - { name: district_name, remove: True }
-          - name: apartments
+          - name: total
           - name: gross_rent_per_sqm_below_6_euros
           - name: gross_rent_per_sqm_between_6_and_7_euros
           - name: gross_rent_per_sqm_between_7_and_8_euros
@@ -214,7 +214,7 @@ input_ports:
               "Lichtenberg": "11"
               "Reinickendorf": "12"
           - { name: district_name, remove: True }
-          - name: apartments
+          - name: total
           - name: uninhabited_apartments
           - name: inhabited_apartments
           - name: inhabited_apartments_living_area
@@ -227,7 +227,7 @@ input_ports:
         names:
           - name: id
           - { name: district_name, remove: True }
-          - name: apartments
+          - name: total
           - name: uninhabited_apartments
           - name: inhabited_apartments
           - name: inhabited_apartments_living_area
@@ -253,7 +253,7 @@ input_ports:
               "Lichtenberg": "11"
               "Reinickendorf": "12"
           - { name: district_name, remove: True }
-          - name: apartments
+          - name: total
           - name: single_family_house_total
           - name: single_family_house_detached
           - name: single_family_house_semi_detached
@@ -267,7 +267,7 @@ input_ports:
         names:
           - name: id
           - { name: district_name, remove: True }
-          - name: apartments
+          - name: total
           - name: single_family_house_total
           - name: single_family_house_detached
           - name: single_family_house_semi_detached
@@ -294,7 +294,7 @@ input_ports:
               "Lichtenberg": "11"
               "Reinickendorf": "12"
           - { name: district_name, remove: True }
-          - name: apartments
+          - name: total
           - name: inhabited_by_owner
           - name: rented_out_owner_is_private_person
           - name: rented_out_owner_is_private_organization
@@ -306,7 +306,7 @@ input_ports:
         names:
           - name: id
           - { name: district_name, remove: True }
-          - name: apartments
+          - name: total
           - name: inhabited_by_owner
           - name: rented_out_owner_is_private_person
           - name: rented_out_owner_is_private_organization
@@ -331,7 +331,7 @@ input_ports:
               "Lichtenberg": "11"
               "Reinickendorf": "12"
           - { name: district_name, remove: True }
-          - name: apartments
+          - name: total
           - name: living_area_below_40sqm
           - name: living_area_between_40_and_60sqm
           - name: living_area_between_60_and_80sqm
@@ -344,7 +344,7 @@ input_ports:
         names:
           - name: id
           - { name: district_name, remove: True }
-          - name: apartments
+          - name: total
           - name: living_area_below_40sqm
           - name: living_area_between_40_and_60sqm
           - name: living_area_between_60_and_80sqm
@@ -370,7 +370,7 @@ input_ports:
               "Lichtenberg": "11"
               "Reinickendorf": "12"
           - { name: district_name, remove: True }
-          - name: apartments
+          - name: total
           - name: gross_rent_below_300_euros
           - name: gross_rent_between_300_and_400_euros
           - name: gross_rent_between_400_and_500_euros
@@ -383,7 +383,7 @@ input_ports:
         names:
           - name: id
           - { name: district_name, remove: True }
-          - name: apartments
+          - name: total
           - name: gross_rent_below_300_euros
           - name: gross_rent_between_300_and_400_euros
           - name: gross_rent_between_400_and_500_euros
@@ -409,7 +409,7 @@ input_ports:
               "Lichtenberg": "11"
               "Reinickendorf": "12"
           - { name: district_name, remove: True }
-          - name: apartments
+          - name: total
           - name: gross_rent_per_sqm_below_6_euros
           - name: gross_rent_per_sqm_between_6_and_7_euros
           - name: gross_rent_per_sqm_between_7_and_8_euros
@@ -422,7 +422,7 @@ input_ports:
         names:
           - name: id
           - { name: district_name, remove: True }
-          - name: apartments
+          - name: total
           - name: gross_rent_per_sqm_below_6_euros
           - name: gross_rent_per_sqm_between_6_and_7_euros
           - name: gross_rent_per_sqm_between_7_and_8_euros
@@ -448,7 +448,7 @@ input_ports:
               "Lichtenberg": "11"
               "Reinickendorf": "12"
           - { name: district_name, remove: True }
-          - name: apartments
+          - name: total
           - name: percentage_of_household_net_income_below_15
           - name: percentage_of_household_net_income_between_15_and_25
           - name: percentage_of_household_net_income_between_25_and_35
@@ -461,7 +461,7 @@ input_ports:
         names:
           - name: id
           - { name: district_name, remove: True }
-          - name: apartments
+          - name: total
           - name: percentage_of_household_net_income_below_15
           - name: percentage_of_household_net_income_between_15_and_25
           - name: percentage_of_household_net_income_between_25_and_35
@@ -489,7 +489,7 @@ input_ports:
               "Lichtenberg": "11"
               "Reinickendorf": "12"
           - { name: district_name, remove: True }
-          - name: households
+          - name: total
           - name: single_family_house_total
           - name: single_family_house_detached
           - name: single_family_house_semi_detached
@@ -503,7 +503,7 @@ input_ports:
         names:
           - name: id
           - { name: district_name, remove: True }
-          - name: households
+          - name: total
           - name: single_family_house_total
           - name: single_family_house_detached
           - name: single_family_house_semi_detached
@@ -530,7 +530,7 @@ input_ports:
               "Lichtenberg": "11"
               "Reinickendorf": "12"
           - { name: district_name, remove: True }
-          - name: apartments
+          - name: total
           - name: inhabited_by_owner
           - name: rented_out_owner_is_private_person
           - name: rented_out_owner_is_private_organization
@@ -542,7 +542,7 @@ input_ports:
         names:
           - name: id
           - { name: district_name, remove: True }
-          - name: apartments
+          - name: total
           - name: inhabited_by_owner
           - name: rented_out_owner_is_private_person
           - name: rented_out_owner_is_private_organization
@@ -567,7 +567,7 @@ input_ports:
               "Lichtenberg": "11"
               "Reinickendorf": "12"
           - { name: district_name, remove: True }
-          - name: apartments
+          - name: total
           - name: living_area_below_40sqm
           - name: living_area_between_40_and_60sqm
           - name: living_area_between_60_and_80sqm
@@ -580,7 +580,7 @@ input_ports:
         names:
           - name: id
           - { name: district_name, remove: True }
-          - name: apartments
+          - name: total
           - name: living_area_below_40sqm
           - name: living_area_between_40_and_60sqm
           - name: living_area_between_60_and_80sqm
@@ -606,7 +606,7 @@ input_ports:
               "Lichtenberg": "11"
               "Reinickendorf": "12"
           - { name: district_name, remove: True }
-          - name: households
+          - name: total
           - name: gross_rent_below_400_euros
           - name: gross_rent_between_400_and_500_euros
           - name: gross_rent_between_500_and_600_euros
@@ -620,7 +620,7 @@ input_ports:
         names:
           - name: id
           - { name: district_name, remove: True }
-          - name: households
+          - name: total
           - name: gross_rent_below_400_euros
           - name: gross_rent_between_400_and_500_euros
           - name: gross_rent_between_500_and_600_euros

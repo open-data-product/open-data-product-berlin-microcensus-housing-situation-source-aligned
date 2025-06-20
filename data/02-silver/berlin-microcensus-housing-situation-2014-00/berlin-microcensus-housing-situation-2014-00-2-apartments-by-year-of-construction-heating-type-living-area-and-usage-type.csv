@@ -1,4 +1,4 @@
-type,apartments,condominium,condominium_percentage,rented_apartments,rented_apartments_percentage
+type,total,condominium,condominium_percentage,rented_apartments,rented_apartments_percentage
 Bewohnte Wohnungen,1711.32630200004,255.400308999999,14.9241152141185,1455.92599300004,85.0758847858815
 bis 1990 errichtet,1659.14386600004,223.158396999999,13.4502137863428,1435.98546900004,86.5497862136572
 1991 und später errichtet,52.1824359999999,32.2419119999999,61.786904697205,19.940524,38.213095302795

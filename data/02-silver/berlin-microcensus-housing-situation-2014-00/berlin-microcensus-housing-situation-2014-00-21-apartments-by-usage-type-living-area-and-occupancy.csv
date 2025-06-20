@@ -1,4 +1,4 @@
-type,apartments,living_area,living_area_per_apartment,persons_per_apartment,living_area_per_person
+type,total,living_area,living_area_per_apartment,persons_per_apartment,living_area_per_person
 Mitte,168.236686000003,1145.61421010002,68.0953861692211,1.90709843749538,35.7062775735121
 Eigentümerwohnungen,8.78290699999999,75.8027933999999,86.3071798437579,1.80834500467784,47.7271646840056
 Mietwohnungen,159.453779000003,1069.81141670002,67.0922585472245,1.91253789601312,35.0802243903691

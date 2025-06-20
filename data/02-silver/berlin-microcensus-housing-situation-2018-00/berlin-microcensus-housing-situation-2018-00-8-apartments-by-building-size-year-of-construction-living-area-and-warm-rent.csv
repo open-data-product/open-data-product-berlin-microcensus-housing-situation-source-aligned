@@ -1,4 +1,4 @@
-type,apartments,below_300_euros,between_300_and_400_euros,between_400_and_500_euros,between_500_and_600_euros,between_600_and_700_euros,between_700_and_800_euros,more_than_800_euros
+type,total,below_300_euros,between_300_and_400_euros,between_400_and_500_euros,between_500_and_600_euros,between_600_and_700_euros,between_700_and_800_euros,more_than_800_euros
 Insgesamt,1390.92266099991,177.176421000001,279.877450000002,288.652454000001,210.074171000001,143.797947,95.3588999999999,195.985318
 1 Wohnung,15.5745950000001,/,/,/,/,/,/,9.66699000000001
 2 Wohnungen,10.502788,/,/,/,/,/,/,/

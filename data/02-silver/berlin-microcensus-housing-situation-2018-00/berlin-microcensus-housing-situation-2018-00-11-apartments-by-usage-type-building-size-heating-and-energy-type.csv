@@ -1,4 +1,4 @@
-type,apartments,collective_heating,district_heating,central_heating,floor_heating,single_or_more_space_ovens
+type,total,collective_heating,district_heating,central_heating,floor_heating,single_or_more_space_ovens
 Insgesamt,1751.1190629998,1725.6141819998,756.563411,711.090034999997,258.722989000002,29.48374
 1 Wohnung,160.257212000003,155.745950000002,7.51877,101.933038999999,46.2941409999998,/
 2 Wohnungen,31.0924120000001,30.2605080000001,/,20.589624,8.63100400000001,/

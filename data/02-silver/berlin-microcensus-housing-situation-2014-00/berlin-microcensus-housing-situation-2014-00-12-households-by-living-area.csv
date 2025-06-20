@@ -1,4 +1,4 @@
-household_structure,households,living_area_below_40sqm,living_area_between_40_and_60sqm,living_area_between_60_and_80sqm,living_area_between_80_and_100sqm,living_area_between_100_and_120sqm,living_area_more_than_120sqm,living_area_average
+household_structure,total,living_area_below_40sqm,living_area_between_40_and_60sqm,living_area_between_60_and_80sqm,living_area_between_80_and_100sqm,living_area_between_100_and_120sqm,living_area_more_than_120sqm,living_area_average
 Haushalte,1769.213855,153.675324,495.899131,581.072676,250.670696,132.856575,155.039453,72.7652061338851
 mit 1 Person,908.064342,147.235654,382.254996,254.650784,64.488418,30.139262,29.295228,59.5516284406638
 darunter weiblich,466.279097,55.676233,192.972353,151.838933,34.292563,16.57334,14.925675,61.5049340459712

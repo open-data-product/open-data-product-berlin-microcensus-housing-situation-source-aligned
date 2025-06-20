@@ -1,4 +1,4 @@
-household_structure,households,with_1_room,with_2_rooms,with_3_rooms,with_4_rooms_or_more,total_rooms,rooms_per_apartment,rooms_per_person
+household_structure,total,with_1_room,with_2_rooms,with_3_rooms,with_4_rooms_or_more,total_rooms,rooms_per_apartment,rooms_per_person
 Eigentümerhaushalte,301,/,41,89,165,1146,3.8,2.1
 Mieterhaushalte,1586,226,600,525,233,3991,2.5,1.6
 mit 1 Person,904,213,426,199,64,1946,2.2,2.2

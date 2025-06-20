@@ -1,4 +1,4 @@
-id,apartments,inhabited_by_owner,rented_out_owner_is_private_person,rented_out_owner_is_private_organization,rented_out_owner_is_public_institution,rented_out_owner_is_housing_cooperative
+id,total,inhabited_by_owner,rented_out_owner_is_private_person,rented_out_owner_is_private_organization,rented_out_owner_is_public_institution,rented_out_owner_is_housing_cooperative
 01,195.0,17,58,66.0,20,34.0
 02,141.0,13,50,55.0,/,13.0
 03,206.0,29,67,58.0,10,42.0

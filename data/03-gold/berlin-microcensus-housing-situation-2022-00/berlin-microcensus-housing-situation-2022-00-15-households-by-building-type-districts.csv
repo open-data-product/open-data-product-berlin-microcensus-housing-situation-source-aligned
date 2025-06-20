@@ -1,4 +1,4 @@
-id,households,single_family_house_total,single_family_house_detached,single_family_house_semi_detached,single_family_house_terraced,multi_family_house_total,multi_family_house_detached,multi_family_house_terraced
+id,total,single_family_house_total,single_family_house_detached,single_family_house_semi_detached,single_family_house_terraced,multi_family_house_total,multi_family_house_detached,multi_family_house_terraced
 01,195,/,/,/,/,188.0,16.0,172.0
 02,141,/,/,/,/,140.0,13.0,127.0
 03,206,15,11,/,/,191.0,22.0,169.0

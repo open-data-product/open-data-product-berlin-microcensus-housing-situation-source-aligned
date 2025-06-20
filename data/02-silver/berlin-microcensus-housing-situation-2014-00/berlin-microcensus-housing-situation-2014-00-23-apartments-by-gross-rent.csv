@@ -1,4 +1,4 @@
-district_name,apartments,gross_rent_below_300_euros,gross_rent_between_300_and_400_euros,gross_rent_between_400_and_500_euros,gross_rent_between_500_and_600_euros,gross_rent_above_600_euros,gross_rent_average
+district_name,total,gross_rent_below_300_euros,gross_rent_between_300_and_400_euros,gross_rent_between_400_and_500_euros,gross_rent_between_500_and_600_euros,gross_rent_above_600_euros,gross_rent_average
 Mitte,149.697331,12.343339,34.7063290000001,40.188314,25.0112490000001,37.4481000000001,515.246988044162
 Friedrichshain-Kreuzberg,118.739345,10.13746,26.1586269999999,29.0208299999999,21.334945,32.0874829999998,510.89851459093
 Pankow,163.173708,14.19336,49.2647219999998,50.1813989999998,22.110687,27.42354,469.634036005359

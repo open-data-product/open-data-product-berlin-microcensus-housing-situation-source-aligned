@@ -1,4 +1,4 @@
-type,apartments,below_6_euros,between_6_and_7_euros,between_7_and_8_euros,between_8_and_9_euros,between_9_and_10_euros,more_than_10_euros,average
+type,total,below_6_euros,between_6_and_7_euros,between_7_and_8_euros,between_8_and_9_euros,between_9_and_10_euros,more_than_10_euros,average
 Insgesamt,1390.48671099991,112.451655,181.414667000001,305.391627000001,276.412898000001,202.798285,312.017579000003,8.71192665891997
 1 Wohnung,15.5745950000001,/,/,/,/,/,5.477961,8.51118190415347
 2 Wohnungen,10.502788,/,/,/,/,/,/,7.60792346451199

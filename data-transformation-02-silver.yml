@@ -9,7 +9,7 @@ input_ports:
             sheet_name: "Tab 1"
             names:
               - name: type
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: inhabited_by_owner, type: float }
               - { name: inhabited_by_owner_percentage, type: float }
               - { name: rented_out, type: float }
@@ -22,7 +22,7 @@ input_ports:
             sheet_name: "Tab 2"
             names:
               - name: type
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: condominium, type: float }
               - { name: condominium_percentage, type: float }
               - { name: rented_apartments, type: float }
@@ -33,7 +33,7 @@ input_ports:
             sheet_name: "Tab 3"
             names:
               - name: type
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: living_area, type: float }
               - { name: living_area_per_apartment, type: float }
               - { name: persons_per_apartment, type: float }
@@ -44,7 +44,7 @@ input_ports:
             sheet_name: "Tab 4"
             names:
               - name: type
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: below_40sqm, type: float }
               - { name: between_40_and_60sqm, type: float }
               - { name: between_60_and_80sqm, type: float }
@@ -57,7 +57,7 @@ input_ports:
             sheet_name: "Tab 5"
             names:
               - name: type
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: below_6_euros, type: float }
               - { name: between_6_and_7_euros, type: float }
               - { name: between_7_and_8_euros, type: float }
@@ -71,7 +71,7 @@ input_ports:
             sheet_name: "Tab 6"
             names:
               - name: type
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: below_300_euros, type: float }
               - { name: between_300_and_400_euros, type: float }
               - { name: between_400_and_500_euros, type: float }
@@ -85,7 +85,7 @@ input_ports:
             sheet_name: "Tab 7"
             names:
               - name: type
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: district_heating, type: float }
               - { name: gas, type: float }
               - { name: electricity, type: float }
@@ -98,7 +98,7 @@ input_ports:
             sheet_name: "Tab 8"
             names:
               - name: type
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: collective_heating, type: float }
               - { name: district_heating, type: float }
               - { name: gas, type: float }
@@ -112,7 +112,7 @@ input_ports:
             sheet_name: "Tab 9"
             names:
               - name: type
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: collective_heating, type: float }
               - { name: district_heating, type: float }
               - { name: central_heating, type: float }
@@ -124,7 +124,7 @@ input_ports:
             sheet_name: "Tab 10"
             names:
               - name: household_structure
-              - { name: households, type: float }
+              - { name: total, type: float }
               - { name: owners, type: float }
               - { name: owners_percentage, type: float }
               - { name: main_tenants, type: float }
@@ -137,7 +137,7 @@ input_ports:
             sheet_name: "Tab 11"
             names:
               - name: household_structure
-              - { name: households, type: float }
+              - { name: total, type: float }
               - { name: residential_buildings_with_1_apartment, type: float }
               - { name: residential_buildings_with_2_apartments, type: float }
               - { name: residential_buildings_with_3_apartments_or_more, type: float }
@@ -147,7 +147,7 @@ input_ports:
             sheet_name: "Tab 12"
             names:
               - name: household_structure
-              - { name: households, type: float }
+              - { name: total, type: float }
               - { name: living_area_below_40sqm, type: float }
               - { name: living_area_between_40_and_60sqm, type: float }
               - { name: living_area_between_60_and_80sqm, type: float }
@@ -161,7 +161,7 @@ input_ports:
             sheet_name: "Tab 13"
             names:
               - name: household_structure
-              - { name: households, type: float }
+              - { name: total, type: float }
               - { name: gross_rent_below_300_euros, type: float }
               - { name: gross_rent_between_300_and_400_euros, type: float }
               - { name: gross_rent_between_400_and_500_euros, type: float }
@@ -176,7 +176,7 @@ input_ports:
             sheet_name: "Tab 14"
             names:
               - name: household_structure
-              - { name: households, type: float }
+              - { name: total, type: float }
               - { name: gross_rent_per_sqm_below_6_euros, type: float }
               - { name: gross_rent_per_sqm_between_6_and_7_euros, type: float }
               - { name: gross_rent_per_sqm_between_7_and_8_euros, type: float }
@@ -190,7 +190,7 @@ input_ports:
             sheet_name: "Tab 15"
             names:
               - name: household_structure
-              - { name: households, type: float }
+              - { name: total, type: float }
               - { name: percentage_of_household_net_income_below_15%, type: float }
               - { name: percentage_of_household_net_income_between_15_and_20%, type: float }
               - { name: percentage_of_household_net_income_between_20_and_25%, type: float }
@@ -206,7 +206,7 @@ input_ports:
             sheet_name: "Tab 16"
             names:
               - name: family_structure
-              - { name: households, type: float }
+              - { name: total, type: float }
               - { name: owners, type: float }
               - { name: owners_percentage, type: float }
               - { name: main_tenants, type: float }
@@ -217,7 +217,7 @@ input_ports:
             sheet_name: "Tab 17"
             names:
               - name: family_structure
-              - { name: households, type: float }
+              - { name: total, type: float }
               - { name: residential_buildings_with_1_apartment, type: float }
               - { name: residential_buildings_with_2_apartments, type: float }
               - { name: residential_buildings_with_3_apartments_or_more, type: float }
@@ -227,7 +227,7 @@ input_ports:
             sheet_name: "Tab 18"
             names:
               - name: family_structure
-              - { name: households, type: float }
+              - { name: total, type: float }
               - { name: living_area_below_60sqm, type: float }
               - { name: living_area_between_60_and_80sqm, type: float }
               - { name: living_area_between_80_and_100sqm, type: float }
@@ -238,7 +238,7 @@ input_ports:
             sheet_name: "Tab 19"
             names:
               - name: district_name
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: uninhabited_apartments, type: float }
               - { name: inhabited_apartments, type: float }
               - { name: inhabited_apartments_living_area, type: float }
@@ -252,7 +252,7 @@ input_ports:
             sheet_name: "Tab 20"
             names:
               - name: type
-              - { name: apartments, type; float }
+              - { name: total, type; float }
               - { name: inhabited_by_owner, type; float }
               - { name: inhabited_by_owner_percentage, type; float }
               - { name: rented_out, type; float }
@@ -263,7 +263,7 @@ input_ports:
             sheet_name: "Tab 21"
             names:
               - name: type
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: living_area, type: float }
               - { name: living_area_per_apartment, type: float }
               - { name: persons_per_apartment, type: float }
@@ -274,7 +274,7 @@ input_ports:
             sheet_name: "Tab 22-23"
             names:
               - name: district_name
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: living_area_below_40sqm, type: float }
               - { name: living_area_between_40_and_60sqm, type: float }
               - { name: living_area_between_60_and_80sqm, type: float }
@@ -288,7 +288,7 @@ input_ports:
             sheet_name: "Tab 22-23"
             names:
               - name: district_name
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: gross_rent_below_300_euros, type: float }
               - { name: gross_rent_between_300_and_400_euros, type: float }
               - { name: gross_rent_between_400_and_500_euros, type: float }
@@ -302,7 +302,7 @@ input_ports:
             sheet_name: "Tab 24"
             names:
               - name: district_name
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: gross_rent_per_sqm_below_6_euros, type: float }
               - { name: gross_rent_per_sqm_between_6_and_7_euros, type: float }
               - { name: gross_rent_per_sqm_between_7_and_8_euros, type: float }
@@ -316,7 +316,7 @@ input_ports:
             sheet_name: "Tab 25"
             names:
               - name: district_name
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: percentage_of_household_net_income_below_15%, type: float }
               - { name: percentage_of_household_net_income_between_15_and_25%, type: float }
               - { name: percentage_of_household_net_income_between_25_and_35%, type: float }
@@ -335,7 +335,7 @@ input_ports:
             sheet_name: "Tab 1"
             names:
               - name: type
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: inhabited_by_owner, type: float }
               - { name: inhabited_by_owner_percentage, type: float }
               - { name: rented_out, type: float }
@@ -348,7 +348,7 @@ input_ports:
             sheet_name: "Tab 2"
             names:
               - name: type
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: condominium, type: float }
               - { name: condominium_percentage, type: float }
               - { name: rented_apartments, type: float }
@@ -359,7 +359,7 @@ input_ports:
             sheet_name: "Tab 3"
             names:
               - name: type
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: living_area, type: float }
               - { name: living_area_per_apartment, type: float }
               - { name: persons_per_apartment, type: float }
@@ -370,7 +370,7 @@ input_ports:
             sheet_name: "Tab 4"
             names:
               - name: type
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: below_40sqm, type: float }
               - { name: between_40_and_60sqm, type: float }
               - { name: between_60_and_80sqm, type: float }
@@ -383,7 +383,7 @@ input_ports:
             sheet_name: "Tab 5"
             names:
               - name: type
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: with_1_room, type: float }
               - { name: with_2_rooms, type: float }
               - { name: with_3_rooms, type: float }
@@ -397,7 +397,7 @@ input_ports:
             sheet_name: "Tab 6"
             names:
               - name: type
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: below_6_euros, type: float }
               - { name: between_6_and_7_euros, type: float }
               - { name: between_7_and_8_euros, type: float }
@@ -411,7 +411,7 @@ input_ports:
             sheet_name: "Tab 7"
             names:
               - name: type
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: below_300_euros, type: float }
               - { name: between_300_and_400_euros, type: float }
               - { name: between_400_and_500_euros, type: float }
@@ -425,7 +425,7 @@ input_ports:
             sheet_name: "Tab 8"
             names:
               - name: type
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: below_300_euros, type: float }
               - { name: between_300_and_400_euros, type: float }
               - { name: between_400_and_500_euros, type: float }
@@ -439,7 +439,7 @@ input_ports:
             sheet_name: "Tab 9"
             names:
               - name: type
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: district_heating, type: float }
               - { name: gas, type: float }
               - { name: electricity, type: float }
@@ -452,7 +452,7 @@ input_ports:
             sheet_name: "Tab 10"
             names:
               - name: type
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: collective_heating, type: float }
               - { name: district_heating, type: float }
               - { name: gas, type: float }
@@ -466,7 +466,7 @@ input_ports:
             sheet_name: "Tab 11"
             names:
               - name: type
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: collective_heating, type: float }
               - { name: district_heating, type: float }
               - { name: central_heating, type: float }
@@ -478,7 +478,7 @@ input_ports:
             sheet_name: "Tab 12"
             names:
               - name: feature
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: constructed_before_1918, type: float }
               - { name: constructed_between_1919_and_1948, type: float }
               - { name: constructed_between_1949_and_1978, type: float }
@@ -491,7 +491,7 @@ input_ports:
             sheet_name: "Tab 13"
             names:
               - name: household_structure
-              - { name: households, type: float }
+              - { name: total, type: float }
               - { name: inhabited_by_owner, type: float }
               - { name: inhabited_by_owner_percentage, type: float }
               - { name: inhabited_by_owner_with_open_credits, type: float }
@@ -505,7 +505,7 @@ input_ports:
             sheet_name: "Tab 14"
             names:
               - name: household_structure
-              - { name: households, type: float }
+              - { name: total, type: float }
               - { name: single_family_house_total, type: float }
               - { name: single_family_house_detached, type: float }
               - { name: single_family_house_semi_detached, type: float }
@@ -519,7 +519,7 @@ input_ports:
             sheet_name: "Tab 15"
             names:
               - name: household_structure
-              - { name: households, type: float }
+              - { name: total, type: float }
               - { name: living_area_below_40sqm, type: float }
               - { name: living_area_between_40_and_60sqm, type: float }
               - { name: living_area_between_60_and_80sqm, type: float }
@@ -533,7 +533,7 @@ input_ports:
             sheet_name: "Tab 16"
             names:
               - name: household_structure
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: with_1_room, type: float }
               - { name: with_2_rooms, type: float }
               - { name: with_3_rooms, type: float }
@@ -547,7 +547,7 @@ input_ports:
             sheet_name: "Tab 17"
             names:
               - name: household_structure
-              - { name: households, type: float }
+              - { name: total, type: float }
               - { name: gross_rent_below_300_euros, type: float }
               - { name: gross_rent_between_300_and_400_euros, type: float }
               - { name: gross_rent_between_400_and_500_euros, type: float }
@@ -562,7 +562,7 @@ input_ports:
             sheet_name: "Tab 18"
             names:
               - name: household_structure
-              - { name: households, type: float }
+              - { name: total, type: float }
               - { name: gross_rent_per_sqm_below_6_euros, type: float }
               - { name: gross_rent_per_sqm_between_6_and_7_euros, type: float }
               - { name: gross_rent_per_sqm_between_7_and_8_euros, type: float }
@@ -576,7 +576,7 @@ input_ports:
             sheet_name: "Tab 19"
             names:
               - name: household_structure
-              - { name: households, type: float }
+              - { name: total, type: float }
               - { name: percentage_of_household_net_income_below_15%, type: float }
               - { name: percentage_of_household_net_income_between_15_and_20%, type: float }
               - { name: percentage_of_household_net_income_between_20_and_25%, type: float }
@@ -592,7 +592,7 @@ input_ports:
             sheet_name: "Tab 20"
             names:
               - name: family_structure
-              - { name: households, type: float }
+              - { name: total, type: float }
               - { name: condominium, type: float }
               - { name: condominium_percentage, type: float }
               - { name: rented_out, type: float }
@@ -601,7 +601,7 @@ input_ports:
             sheet_name: "Tab 21"
             names:
               - name: family_structure
-              - { name: households, type: float }
+              - { name: total, type: float }
               - { name: living_area_below_60sqm, type: float }
               - { name: living_area_between_60_and_80sqm, type: float }
               - { name: living_area_between_80_and_100sqm, type: float }
@@ -612,7 +612,7 @@ input_ports:
             sheet_name: "Tab 22"
             names:
               - name: family_structure
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: with_1_room, type: float }
               - { name: with_2_rooms, type: float }
               - { name: with_3_rooms, type: float }
@@ -626,7 +626,7 @@ input_ports:
             sheet_name: "Tab 23"
             names:
               - name: district_name
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: uninhabited_apartments, type: float }
               - { name: inhabited_apartments, type: float }
               - { name: inhabited_apartments_living_area, type: float }
@@ -640,7 +640,7 @@ input_ports:
             sheet_name: "Tab 24"
             names:
               - name: type
-              - { name: apartments, type; float }
+              - { name: total, type; float }
               - { name: inhabited_by_owner, type; float }
               - { name: inhabited_by_owner_percentage, type; float }
               - { name: rented_out, type; float }
@@ -651,7 +651,7 @@ input_ports:
             sheet_name: "Tab 25"
             names:
               - name: type
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: living_area, type: float }
               - { name: living_area_per_apartment, type: float }
               - { name: persons_per_apartment, type: float }
@@ -662,7 +662,7 @@ input_ports:
             sheet_name: "Tab 26-27"
             names:
               - name: district_name
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: single_family_house_total, type: float }
               - { name: single_family_house_detached, type: float }
               - { name: single_family_house_semi_detached, type: float }
@@ -677,7 +677,7 @@ input_ports:
             sheet_name: "Tab 26-27"
             names:
               - name: district_name
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: inhabited_by_owner, type: float }
               - { name: rented_out_owner_is_private_person, type: float }
               - { name: rented_out_owner_is_private_organization, type: float }
@@ -690,7 +690,7 @@ input_ports:
             sheet_name: "Tab 28-29"
             names:
               - name: district_name
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: living_area_below_40sqm, type: float }
               - { name: living_area_between_40_and_60sqm, type: float }
               - { name: living_area_between_60_and_80sqm, type: float }
@@ -704,7 +704,7 @@ input_ports:
             sheet_name: "Tab 28-29"
             names:
               - name: district_name
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: gross_rent_below_300_euros, type: float }
               - { name: gross_rent_between_300_and_400_euros, type: float }
               - { name: gross_rent_between_400_and_500_euros, type: float }
@@ -718,7 +718,7 @@ input_ports:
             sheet_name: "Tab 30"
             names:
               - name: district_name
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: gross_rent_per_sqm_below_6_euros, type: float }
               - { name: gross_rent_per_sqm_between_6_and_7_euros, type: float }
               - { name: gross_rent_per_sqm_between_7_and_8_euros, type: float }
@@ -732,7 +732,7 @@ input_ports:
             sheet_name: "Tab 31"
             names:
               - name: district_name
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: percentage_of_household_net_income_below_15%, type: float }
               - { name: percentage_of_household_net_income_between_15_and_25%, type: float }
               - { name: percentage_of_household_net_income_between_25_and_35%, type: float }
@@ -751,7 +751,7 @@ input_ports:
             sheet_name: "Tab 1"
             names:
               - name: household_structure
-              - { name: households, type: float }
+              - { name: total, type: float }
               - { name: inhabited_by_owner, type: float }
               - { name: inhabited_by_owner_percentage, type: float }
               - { name: inhabited_by_owner_with_open_credits, type: float }
@@ -765,7 +765,7 @@ input_ports:
             sheet_name: "Tab 2"
             names:
               - name: household_structure
-              - { name: households, type: float }
+              - { name: total, type: float }
               - { name: single_family_house_total, type: float }
               - { name: single_family_house_detached, type: float }
               - { name: single_family_house_semi_detached, type: float }
@@ -779,7 +779,7 @@ input_ports:
             sheet_name: "Tab 3"
             names:
               - name: household_structure
-              - { name: households, type: float }
+              - { name: total, type: float }
               - { name: below_40sqm, type: float }
               - { name: between_40_and_60sqm, type: float }
               - { name: between_60_and_80sqm, type: float }
@@ -792,7 +792,7 @@ input_ports:
             sheet_name: "Tab 4"
             names:
               - name: household_structure
-              - { name: households, type: float }
+              - { name: total, type: float }
               - { name: with_1_room, type: float }
               - { name: with_2_rooms, type: float }
               - { name: with_3_rooms, type: float }
@@ -806,7 +806,7 @@ input_ports:
             sheet_name: "Tab 5"
             names:
               - name: household_structure
-              - { name: households, type: float }
+              - { name: total, type: float }
               - { name: below_300_euros, type: float }
               - { name: between_300_and_400_euros, type: float }
               - { name: between_400_and_500_euros, type: float }
@@ -820,7 +820,7 @@ input_ports:
             sheet_name: "Tab 6"
             names:
               - name: household_structure
-              - { name: households, type: float }
+              - { name: total, type: float }
               - { name: below_6_euros, type: float }
               - { name: between_6_and_7_euros, type: float }
               - { name: between_7_and_8_euros, type: float }
@@ -834,7 +834,7 @@ input_ports:
             sheet_name: "Tab 7"
             names:
               - name: household_structure
-              - { name: households, type: float }
+              - { name: total, type: float }
               - { name: percentage_of_household_net_income_below_15%, type: float }
               - { name: percentage_of_household_net_income_between_15_and_20%, type: float }
               - { name: percentage_of_household_net_income_between_20_and_25%, type: float }
@@ -850,7 +850,7 @@ input_ports:
             sheet_name: "Tab 8"
             names:
               - name: household_structure
-              - { name: households, type: int }
+              - { name: total, type: int }
               - { name: below_300_euros, type: int }
               - { name: between_300_and_400_euros, type: int }
               - { name: between_400_and_500_euros, type: int }
@@ -864,7 +864,7 @@ input_ports:
             sheet_name: "Tab 9"
             names:
               - name: type
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: district_heating, type: float }
               - { name: gas, type: float }
               - { name: electricity, type: float }
@@ -877,7 +877,7 @@ input_ports:
             sheet_name: "Tab 10"
             names:
               - name: type
-              - { name: households, type: int }
+              - { name: total, type: int }
               - { name: collective_heating, type: int }
               - { name: district_heating, type: int }
               - { name: gas, type: int }
@@ -891,7 +891,7 @@ input_ports:
             sheet_name: "Tab 11"
             names:
               - name: type
-              - { name: households, type: int }
+              - { name: total, type: int }
               - { name: collective_heating, type: int }
               - { name: district_heating, type: int }
               - { name: central_heating, type: int }
@@ -903,7 +903,7 @@ input_ports:
             sheet_name: "Tab 12"
             names:
               - name: feature
-              - { name: households, type: int }
+              - { name: total, type: int }
               - { name: constructed_before_1918, type: int }
               - { name: constructed_between_1919_and_1948, type: int }
               - { name: constructed_between_1949_and_1978, type: int }
@@ -916,7 +916,7 @@ input_ports:
             sheet_name: "Tab 13"
             names:
               - name: feature
-              - { name: households, type: int }
+              - { name: total, type: int }
               - { name: owner_households, type: int }
               - { name: owner_households_percentage, type: float }
               - { name: tenant_households, type: int }
@@ -927,7 +927,7 @@ input_ports:
             sheet_name: "Tab 14"
             names:
               - name: type
-              - { name: households, type: float }
+              - { name: total, type: float }
               - { name: living_area, type: float }
               - { name: living_area_per_apartment, type: float }
               - { name: persons_per_apartment, type: float }
@@ -938,7 +938,7 @@ input_ports:
             sheet_name: "Tab 15-16"
             names:
               - name: district_name
-              - { name: households, type: int }
+              - { name: total, type: int }
               - { name: single_family_house_total, type: float }
               - { name: single_family_house_detached, type: float }
               - { name: single_family_house_semi_detached, type: float }
@@ -953,7 +953,7 @@ input_ports:
             sheet_name: "Tab 15-16"
             names:
               - name: district_name
-              - { name: apartments, type: float }
+              - { name: total, type: float }
               - { name: inhabited_by_owner, type: float }
               - { name: rented_out_owner_is_private_person, type: float }
               - { name: rented_out_owner_is_private_organization, type: float }
@@ -966,7 +966,7 @@ input_ports:
             sheet_name: "Tab 17-18"
             names:
               - name: district_name
-              - { name: apartments, type: int }
+              - { name: total, type: int }
               - { name: living_area_below_40sqm, type: int }
               - { name: living_area_between_40_and_60sqm, type: int }
               - { name: living_area_between_60_and_80sqm, type: int }
@@ -980,7 +980,7 @@ input_ports:
             sheet_name: "Tab 17-18"
             names:
               - name: district_name
-              - { name: households, type: float }
+              - { name: total, type: float }
               - { name: gross_rent_below_400_euros, type: float }
               - { name: gross_rent_between_400_and_500_euros, type: float }
               - { name: gross_rent_between_500_and_600_euros, type: float }
@@ -995,7 +995,7 @@ input_ports:
             sheet_name: "Tab 19"
             names:
               - name: household_structure
-              - { name: households, type: float }
+              - { name: total, type: float }
               - { name: gross_rent_per_sqm_below_6_euros, type: float }
               - { name: gross_rent_per_sqm_between_6_and_7_euros, type: float }
               - { name: gross_rent_per_sqm_between_7_and_8_euros, type: float }
@@ -1010,7 +1010,7 @@ input_ports:
             sheet_name: "Tab 20"
             names:
               - name: household_structure
-              - { name: households, type: float }
+              - { name: total, type: float }
               - { name: percentage_of_household_net_income_below_15%, type: float }
               - { name: percentage_of_household_net_income_between_15_and_25%, type: float }
               - { name: percentage_of_household_net_income_between_25_and_35%, type: float }

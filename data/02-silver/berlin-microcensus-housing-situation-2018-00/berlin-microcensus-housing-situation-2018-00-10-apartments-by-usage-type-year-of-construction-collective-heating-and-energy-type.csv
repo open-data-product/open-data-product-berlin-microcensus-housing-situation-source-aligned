@@ -1,4 +1,4 @@
-type,apartments,collective_heating,district_heating,gas,electricity,heating_oil,briquettes_lignite_coal_coke_hard_coal,wood_or_other_renewable_energies
+type,total,collective_heating,district_heating,gas,electricity,heating_oil,briquettes_lignite_coal_coke_hard_coal,wood_or_other_renewable_energies
 Insgesamt,1751.1190629998,1725.6141819998,755.341045,651.917786000003,21.844861,278.61889,/,16.029916
 bis 1918,413.27804600001,405.036338000009,95.4849849999998,246.894000000001,/,52.8393399999999,/,/
 1919 – 1948,285.102711000003,280.152592000003,86.4495989999993,146.765931,/,41.8687759999999,/,/

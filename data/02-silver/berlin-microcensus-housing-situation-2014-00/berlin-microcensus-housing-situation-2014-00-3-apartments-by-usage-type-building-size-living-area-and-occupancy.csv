@@ -1,4 +1,4 @@
-type,apartments,living_area,living_area_per_apartment,persons_per_apartment,living_area_per_person
+type,total,living_area,living_area_per_apartment,persons_per_apartment,living_area_per_person
 Insgesamt,1711.32630200005,12253.7526371004,71.6038351235487,1.8271231128428,39.1893871957763
 1 Wohnung,149.151791,1733.793153,116.243535620702,2.31532122869379,50.2062237326272
 2 Wohnungen,30.6576809999998,271.236368199998,88.4725652276179,1.97273410862354,44.8476887183488

@@ -1,4 +1,4 @@
-type,apartments,inhabited_by_owner,inhabited_by_owner_percentage,rented_out,rented_out_percentage
+type,total,inhabited_by_owner,inhabited_by_owner_percentage,rented_out,rented_out_percentage
 Mitte,181.449528000001,8.78290699999999,4.8404132525492,159.453779000001,87.877759042724
 bis 1948,79.0748329999998,/,/,66.5411509999998,84.1495940939894
 1949 und später,102.374695000001,5.051228,4.93405914420547,92.9126280000008,90.7574161759408
