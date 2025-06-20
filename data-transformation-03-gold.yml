@@ -2,8 +2,8 @@
 input_ports:
   - id: berlin-microcensus-housing-situation-2014-00
     files:
-      - source_file_name: berlin-microcensus-housing-situation-2014-00-19-apartments-by-district-occupancy-and-living-area.csv
-        target_file_name: berlin-microcensus-housing-situation-2014-00-19-apartments-by-district-occupancy-and-living-area-districts.csv
+      - source_file_name: berlin-microcensus-housing-situation-2014-00-19-apartments-by-occupancy-and-living-area.csv
+        target_file_name: berlin-microcensus-housing-situation-2014-00-19-apartments-by-occupancy-and-living-area-districts.csv
         names:
           - name: id
             key: "district_name"
@@ -28,8 +28,8 @@ input_ports:
           - name: inhabited_apartments_living_area_per_apartment
           - name: inhabited_apartments_living_area_per_person
           - name: inhabited_apartments_persons_per_apartment
-      - source_file_name: berlin-microcensus-housing-situation-2014-00-19-apartments-by-district-occupancy-and-living-area.csv
-        target_file_name: berlin-microcensus-housing-situation-2014-00-19-apartments-by-district-occupancy-and-living-area-city.csv
+      - source_file_name: berlin-microcensus-housing-situation-2014-00-19-apartments-by-occupancy-and-living-area.csv
+        target_file_name: berlin-microcensus-housing-situation-2014-00-19-apartments-by-occupancy-and-living-area-city.csv
         aggregate_by: "total"
         names:
           - name: id
@@ -41,8 +41,8 @@ input_ports:
           - name: inhabited_apartments_living_area_per_apartment
           - name: inhabited_apartments_living_area_per_person
           - name: inhabited_apartments_persons_per_apartment
-      - source_file_name: berlin-microcensus-housing-situation-2014-00-22-apartments-by-district-and-living-area.csv
-        target_file_name: berlin-microcensus-housing-situation-2014-00-22-apartments-by-district-and-living-area-districts.csv
+      - source_file_name: berlin-microcensus-housing-situation-2014-00-22-apartments-by-living-area.csv
+        target_file_name: berlin-microcensus-housing-situation-2014-00-22-apartments-by-living-area-districts.csv
         names:
           - name: id
             key: "district_name"
@@ -67,8 +67,8 @@ input_ports:
           - name: living_area_between_80_and_100sqm
           - name: living_area_between_100_and_120sqm
           - name: living_area_above_120sqm
-      - source_file_name: berlin-microcensus-housing-situation-2014-00-22-apartments-by-district-and-living-area.csv
-        target_file_name: berlin-microcensus-housing-situation-2014-00-22-apartments-by-district-and-living-area-city.csv
+      - source_file_name: berlin-microcensus-housing-situation-2014-00-22-apartments-by-living-area.csv
+        target_file_name: berlin-microcensus-housing-situation-2014-00-22-apartments-by-living-area-city.csv
         aggregate_by: "total"
         names:
           - name: id
@@ -80,8 +80,8 @@ input_ports:
           - name: living_area_between_80_and_100sqm
           - name: living_area_between_100_and_120sqm
           - name: living_area_above_120sqm
-      - source_file_name: berlin-microcensus-housing-situation-2014-00-23-apartments-by-district-and-gross-rent.csv
-        target_file_name: berlin-microcensus-housing-situation-2014-00-23-apartments-by-district-and-gross-rent-districts.csv
+      - source_file_name: berlin-microcensus-housing-situation-2014-00-23-apartments-by-gross-rent.csv
+        target_file_name: berlin-microcensus-housing-situation-2014-00-23-apartments-by-gross-rent-districts.csv
         names:
           - name: id
             key: "district_name"
@@ -106,8 +106,8 @@ input_ports:
           - name: gross_rent_between_500_and_600_euros
           - name: gross_rent_above_600_euros
           - name: gross_rent_average
-      - source_file_name: berlin-microcensus-housing-situation-2014-00-23-apartments-by-district-and-gross-rent.csv
-        target_file_name: berlin-microcensus-housing-situation-2014-00-23-apartments-by-district-and-gross-rent-city.csv
+      - source_file_name: berlin-microcensus-housing-situation-2014-00-23-apartments-by-gross-rent.csv
+        target_file_name: berlin-microcensus-housing-situation-2014-00-23-apartments-by-gross-rent-city.csv
         aggregate_by: "total"
         names:
           - name: id
@@ -118,8 +118,8 @@ input_ports:
           - name: gross_rent_between_500_and_600_euros
           - name: gross_rent_above_600_euros
           - name: gross_rent_average
-      - source_file_name: berlin-microcensus-housing-situation-2014-00-24-apartments-by-district-and-gross-rent-per-sqm.csv
-        target_file_name: berlin-microcensus-housing-situation-2014-00-24-apartments-by-district-and-gross-rent-per-sqm-districts.csv
+      - source_file_name: berlin-microcensus-housing-situation-2014-00-24-apartments-by-gross-rent-per-sqm.csv
+        target_file_name: berlin-microcensus-housing-situation-2014-00-24-apartments-by-gross-rent-per-sqm-districts.csv
         names:
           - name: id
             key: "district_name"
@@ -144,8 +144,8 @@ input_ports:
           - name: gross_rent_per_sqm_between_8_and_9_euros
           - name: gross_rent_per_sqm_above_9_euros
           - name: gross_rent_per_sqm_average
-      - source_file_name: berlin-microcensus-housing-situation-2014-00-24-apartments-by-district-and-gross-rent-per-sqm.csv
-        target_file_name: berlin-microcensus-housing-situation-2014-00-24-apartments-by-district-and-gross-rent-per-sqm-city.csv
+      - source_file_name: berlin-microcensus-housing-situation-2014-00-24-apartments-by-gross-rent-per-sqm.csv
+        target_file_name: berlin-microcensus-housing-situation-2014-00-24-apartments-by-gross-rent-per-sqm-city.csv
         aggregate_by: "total"
         names:
           - name: id
@@ -195,8 +195,8 @@ input_ports:
           - name: percentage_of_household_net_income_average
   - id: berlin-microcensus-housing-situation-2018-00
     files:
-      - source_file_name: berlin-microcensus-housing-situation-2018-00-23-apartments-by-district-occupancy-and-living-area.csv
-        target_file_name: berlin-microcensus-housing-situation-2018-00-23-apartments-by-district-occupancy-and-living-area-districts.csv
+      - source_file_name: berlin-microcensus-housing-situation-2018-00-23-apartments-by-occupancy-and-living-area.csv
+        target_file_name: berlin-microcensus-housing-situation-2018-00-23-apartments-by-occupancy-and-living-area-districts.csv
         names:
           - name: id
             key: "district_name"
@@ -221,8 +221,8 @@ input_ports:
           - name: inhabited_apartments_living_area_per_apartment
           - name: inhabited_apartments_living_area_per_person
           - name: inhabited_apartments_persons_per_apartment
-      - source_file_name: berlin-microcensus-housing-situation-2018-00-23-apartments-by-district-occupancy-and-living-area.csv
-        target_file_name: berlin-microcensus-housing-situation-2018-00-23-apartments-by-district-occupancy-and-living-area-city.csv
+      - source_file_name: berlin-microcensus-housing-situation-2018-00-23-apartments-by-occupancy-and-living-area.csv
+        target_file_name: berlin-microcensus-housing-situation-2018-00-23-apartments-by-occupancy-and-living-area-city.csv
         aggregate_by: "total"
         names:
           - name: id
@@ -234,8 +234,8 @@ input_ports:
           - name: inhabited_apartments_living_area_per_apartment
           - name: inhabited_apartments_living_area_per_person
           - name: inhabited_apartments_persons_per_apartment
-      - source_file_name: berlin-microcensus-housing-situation-2018-00-26-apartments-by-district-and-building-type.csv
-        target_file_name: berlin-microcensus-housing-situation-2018-00-26-apartments-by-district-and-building-type-districts.csv
+      - source_file_name: berlin-microcensus-housing-situation-2018-00-26-apartments-by-building-type.csv
+        target_file_name: berlin-microcensus-housing-situation-2018-00-26-apartments-by-building-type-districts.csv
         names:
           - name: id
             key: "district_name"
@@ -261,8 +261,8 @@ input_ports:
           - name: multi_family_house_total
           - name: multi_family_house_detached
           - name: multi_family_house_terraced
-      - source_file_name: berlin-microcensus-housing-situation-2018-00-26-apartments-by-district-and-building-type.csv
-        target_file_name: berlin-microcensus-housing-situation-2018-00-26-apartments-by-district-and-building-type-city.csv
+      - source_file_name: berlin-microcensus-housing-situation-2018-00-26-apartments-by-building-type.csv
+        target_file_name: berlin-microcensus-housing-situation-2018-00-26-apartments-by-building-type-city.csv
         aggregate_by: "total"
         names:
           - name: id
@@ -275,8 +275,8 @@ input_ports:
           - name: multi_family_house_total
           - name: multi_family_house_detached
           - name: multi_family_house_terraced
-      - source_file_name: berlin-microcensus-housing-situation-2018-00-27-apartments-by-district-and-owner.csv
-        target_file_name: berlin-microcensus-housing-situation-2018-00-27-apartments-by-district-and-owner-districts.csv
+      - source_file_name: berlin-microcensus-housing-situation-2018-00-27-apartments-by-owner.csv
+        target_file_name: berlin-microcensus-housing-situation-2018-00-27-apartments-by-owner-districts.csv
         names:
           - name: id
             key: "district_name"
@@ -300,8 +300,8 @@ input_ports:
           - name: rented_out_owner_is_private_organization
           - name: rented_out_owner_is_public_institution
           - name: rented_out_owner_is_housing_cooperative
-      - source_file_name: berlin-microcensus-housing-situation-2018-00-27-apartments-by-district-and-owner.csv
-        target_file_name: berlin-microcensus-housing-situation-2018-00-27-apartments-by-district-and-owner-city.csv
+      - source_file_name: berlin-microcensus-housing-situation-2018-00-27-apartments-by-owner.csv
+        target_file_name: berlin-microcensus-housing-situation-2018-00-27-apartments-by-owner-city.csv
         aggregate_by: "total"
         names:
           - name: id
@@ -312,8 +312,8 @@ input_ports:
           - name: rented_out_owner_is_private_organization
           - name: rented_out_owner_is_public_institution
           - name: rented_out_owner_is_housing_cooperative
-      - source_file_name: berlin-microcensus-housing-situation-2018-00-28-apartments-by-district-and-living-area.csv
-        target_file_name: berlin-microcensus-housing-situation-2018-00-28-apartments-by-district-and-living-area-districts.csv
+      - source_file_name: berlin-microcensus-housing-situation-2018-00-28-apartments-by-living-area.csv
+        target_file_name: berlin-microcensus-housing-situation-2018-00-28-apartments-by-living-area-districts.csv
         names:
           - name: id
             key: "district_name"
@@ -338,8 +338,8 @@ input_ports:
           - name: living_area_between_80_and_100sqm
           - name: living_area_between_100_and_120sqm
           - name: living_area_above_120sqm
-      - source_file_name: berlin-microcensus-housing-situation-2018-00-28-apartments-by-district-and-living-area.csv
-        target_file_name: berlin-microcensus-housing-situation-2018-00-28-apartments-by-district-and-living-area-city.csv
+      - source_file_name: berlin-microcensus-housing-situation-2018-00-28-apartments-by-living-area.csv
+        target_file_name: berlin-microcensus-housing-situation-2018-00-28-apartments-by-living-area-city.csv
         aggregate_by: "total"
         names:
           - name: id
@@ -351,8 +351,8 @@ input_ports:
           - name: living_area_between_80_and_100sqm
           - name: living_area_between_100_and_120sqm
           - name: living_area_above_120sqm
-      - source_file_name: berlin-microcensus-housing-situation-2018-00-29-apartments-by-district-and-gross-rent.csv
-        target_file_name: berlin-microcensus-housing-situation-2018-00-29-apartments-by-district-and-gross-rent-districts.csv
+      - source_file_name: berlin-microcensus-housing-situation-2018-00-29-apartments-by-gross-rent.csv
+        target_file_name: berlin-microcensus-housing-situation-2018-00-29-apartments-by-gross-rent-districts.csv
         names:
           - name: id
             key: "district_name"
@@ -377,8 +377,8 @@ input_ports:
           - name: gross_rent_between_500_and_600_euros
           - name: gross_rent_above_600_euros
           - name: gross_rent_average
-      - source_file_name: berlin-microcensus-housing-situation-2018-00-29-apartments-by-district-and-gross-rent.csv
-        target_file_name: berlin-microcensus-housing-situation-2018-00-29-apartments-by-district-and-gross-rent-city.csv
+      - source_file_name: berlin-microcensus-housing-situation-2018-00-29-apartments-by-gross-rent.csv
+        target_file_name: berlin-microcensus-housing-situation-2018-00-29-apartments-by-gross-rent-city.csv
         aggregate_by: "total"
         names:
           - name: id
@@ -390,8 +390,8 @@ input_ports:
           - name: gross_rent_between_500_and_600_euros
           - name: gross_rent_above_600_euros
           - name: gross_rent_average
-      - source_file_name: berlin-microcensus-housing-situation-2018-00-30-apartments-by-district-and-gross-rent-per-sqm.csv
-        target_file_name: berlin-microcensus-housing-situation-2018-00-30-apartments-by-district-and-gross-rent-per-sqm-districts.csv
+      - source_file_name: berlin-microcensus-housing-situation-2018-00-30-apartments-by-gross-rent-per-sqm.csv
+        target_file_name: berlin-microcensus-housing-situation-2018-00-30-apartments-by-gross-rent-per-sqm-districts.csv
         names:
           - name: id
             key: "district_name"
@@ -416,8 +416,8 @@ input_ports:
           - name: gross_rent_per_sqm_between_8_and_9_euros
           - name: gross_rent_per_sqm_above_9_euros
           - name: gross_rent_per_sqm_average
-      - source_file_name: berlin-microcensus-housing-situation-2018-00-30-apartments-by-district-and-gross-rent-per-sqm.csv
-        target_file_name: berlin-microcensus-housing-situation-2018-00-30-apartments-by-district-and-gross-rent-per-sqm-city.csv
+      - source_file_name: berlin-microcensus-housing-situation-2018-00-30-apartments-by-gross-rent-per-sqm.csv
+        target_file_name: berlin-microcensus-housing-situation-2018-00-30-apartments-by-gross-rent-per-sqm-city.csv
         aggregate_by: "total"
         names:
           - name: id
@@ -429,8 +429,8 @@ input_ports:
           - name: gross_rent_per_sqm_between_8_and_9_euros
           - name: gross_rent_per_sqm_above_9_euros
           - name: gross_rent_per_sqm_average
-      - source_file_name: berlin-microcensus-housing-situation-2018-00-31-households-by-district-and-percentage-of-household-net-income.csv
-        target_file_name: berlin-microcensus-housing-situation-2018-00-31-households-by-district-and-percentage-of-household-net-income-districts.csv
+      - source_file_name: berlin-microcensus-housing-situation-2018-00-31-households-by-percentage-of-household-net-income.csv
+        target_file_name: berlin-microcensus-housing-situation-2018-00-31-households-by-percentage-of-household-net-income-districts.csv
         names:
           - name: id
             key: "district_name"
@@ -455,8 +455,8 @@ input_ports:
           - name: percentage_of_household_net_income_between_35_and_45
           - name: percentage_of_household_net_income_above_45
           - name: percentage_of_household_net_income_average
-      - source_file_name: berlin-microcensus-housing-situation-2018-00-31-households-by-district-and-percentage-of-household-net-income.csv
-        target_file_name: berlin-microcensus-housing-situation-2018-00-31-households-by-district-and-percentage-of-household-net-income-city.csv
+      - source_file_name: berlin-microcensus-housing-situation-2018-00-31-households-by-percentage-of-household-net-income.csv
+        target_file_name: berlin-microcensus-housing-situation-2018-00-31-households-by-percentage-of-household-net-income-city.csv
         aggregate_by: "total"
         names:
           - name: id
@@ -470,8 +470,8 @@ input_ports:
           - name: percentage_of_household_net_income_average
   - id: berlin-microcensus-housing-situation-2022-00
     files:
-      - source_file_name: berlin-microcensus-housing-situation-2022-00-15-households-by-district-and-building-type.csv
-        target_file_name: berlin-microcensus-housing-situation-2022-00-15-households-by-district-and-building-type-districts.csv
+      - source_file_name: berlin-microcensus-housing-situation-2022-00-15-households-by-building-type.csv
+        target_file_name: berlin-microcensus-housing-situation-2022-00-15-households-by-building-type-districts.csv
         names:
           - name: id
             key: "district_name"
@@ -497,8 +497,8 @@ input_ports:
           - name: multi_family_house_total
           - name: multi_family_house_detached
           - name: multi_family_house_terraced
-      - source_file_name: berlin-microcensus-housing-situation-2022-00-15-households-by-district-and-building-type.csv
-        target_file_name: berlin-microcensus-housing-situation-2022-00-15-households-by-district-and-building-type-city.csv
+      - source_file_name: berlin-microcensus-housing-situation-2022-00-15-households-by-building-type.csv
+        target_file_name: berlin-microcensus-housing-situation-2022-00-15-households-by-building-type-city.csv
         aggregate_by: "total"
         names:
           - name: id
@@ -511,8 +511,8 @@ input_ports:
           - name: multi_family_house_total
           - name: multi_family_house_detached
           - name: multi_family_house_terraced
-      - source_file_name: berlin-microcensus-housing-situation-2022-00-16-apartments-by-district-and-owner.csv
-        target_file_name: berlin-microcensus-housing-situation-2022-00-16-apartments-by-district-and-owner-districts.csv
+      - source_file_name: berlin-microcensus-housing-situation-2022-00-16-apartments-by-owner.csv
+        target_file_name: berlin-microcensus-housing-situation-2022-00-16-apartments-by-owner-districts.csv
         names:
           - name: id
             key: "district_name"
@@ -536,8 +536,8 @@ input_ports:
           - name: rented_out_owner_is_private_organization
           - name: rented_out_owner_is_public_institution
           - name: rented_out_owner_is_housing_cooperative
-      - source_file_name: berlin-microcensus-housing-situation-2022-00-16-apartments-by-district-and-owner.csv
-        target_file_name: berlin-microcensus-housing-situation-2022-00-16-apartments-by-district-and-owner-city.csv
+      - source_file_name: berlin-microcensus-housing-situation-2022-00-16-apartments-by-owner.csv
+        target_file_name: berlin-microcensus-housing-situation-2022-00-16-apartments-by-owner-city.csv
         aggregate_by: "total"
         names:
           - name: id
@@ -548,8 +548,8 @@ input_ports:
           - name: rented_out_owner_is_private_organization
           - name: rented_out_owner_is_public_institution
           - name: rented_out_owner_is_housing_cooperative
-      - source_file_name: berlin-microcensus-housing-situation-2022-00-17-apartments-by-district-and-living-area.csv
-        target_file_name: berlin-microcensus-housing-situation-2022-00-17-apartments-by-district-and-living-area-districts.csv
+      - source_file_name: berlin-microcensus-housing-situation-2022-00-17-apartments-by-living-area.csv
+        target_file_name: berlin-microcensus-housing-situation-2022-00-17-apartments-by-living-area-districts.csv
         names:
           - name: id
             key: "district_name"
@@ -574,8 +574,8 @@ input_ports:
           - name: living_area_between_80_and_100sqm
           - name: living_area_between_100_and_120sqm
           - name: living_area_above_120sqm
-      - source_file_name: berlin-microcensus-housing-situation-2022-00-17-apartments-by-district-and-living-area.csv
-        target_file_name: berlin-microcensus-housing-situation-2022-00-17-apartments-by-district-and-living-area-city.csv
+      - source_file_name: berlin-microcensus-housing-situation-2022-00-17-apartments-by-living-area.csv
+        target_file_name: berlin-microcensus-housing-situation-2022-00-17-apartments-by-living-area-city.csv
         aggregate_by: "total"
         names:
           - name: id
@@ -587,8 +587,8 @@ input_ports:
           - name: living_area_between_80_and_100sqm
           - name: living_area_between_100_and_120sqm
           - name: living_area_above_120sqm
-      - source_file_name: berlin-microcensus-housing-situation-2022-00-18-households-by-district-and-gross-rent.csv
-        target_file_name: berlin-microcensus-housing-situation-2022-00-18-households-by-district-and-gross-rent-districts.csv
+      - source_file_name: berlin-microcensus-housing-situation-2022-00-18-households-by-gross-rent.csv
+        target_file_name: berlin-microcensus-housing-situation-2022-00-18-households-by-gross-rent-districts.csv
         names:
           - name: id
             key: "district_name"
@@ -614,8 +614,8 @@ input_ports:
           - name: gross_rent_between_700_and_800_euros
           - name: gross_rent_more_than_800_euros
           - name: gross_rent_average
-      - source_file_name: berlin-microcensus-housing-situation-2022-00-18-households-by-district-and-gross-rent.csv
-        target_file_name: berlin-microcensus-housing-situation-2022-00-18-households-by-district-and-gross-rent-city.csv
+      - source_file_name: berlin-microcensus-housing-situation-2022-00-18-households-by-gross-rent.csv
+        target_file_name: berlin-microcensus-housing-situation-2022-00-18-households-by-gross-rent-city.csv
         aggregate_by: "total"
         names:
           - name: id
