@@ -1,0 +1,142 @@
+---
+dataProductDescriptor: data-product-descriptor
+info:
+  fullyQualifiedName: urn:dpds:opendataproduct:dataproducts:berlin-microcensus-housing-situation-source-aligned:1.0
+  name: Berlin Microcensus Housing Situation (source-aligned)
+  version: '1.0'
+  domain: domain
+  owner:
+    id: Open Data product
+    name: Open Data product
+  id: berlin-microcensus-housing-situation-source-aligned
+  entityType:
+  displayName: Berlin Microcensus Housing Situation (source-aligned)
+  description: Source-aligned data product providing Berlin microcensus housing situation data
+  contactPoints:
+interfaceComponents:
+  outputPorts:
+    - promises:
+      expectations:
+      obligations:
+      id: berlin-microcensus-housing-situation-2014-00-csv
+      fullyQualifiedName: berlin-microcensus-housing-situation-2014-00-csv
+      entityType:
+      name: ''
+      version:
+      displayName:
+      description:
+      componentGroup:
+      tags:
+      externalDocs:
+    - promises:
+      expectations:
+      obligations:
+      id: berlin-microcensus-housing-situation-2014-00-parquet
+      fullyQualifiedName: berlin-microcensus-housing-situation-2014-00-parquet
+      entityType:
+      name: ''
+      version:
+      displayName:
+      description:
+      componentGroup:
+      tags:
+      externalDocs:
+    - promises:
+      expectations:
+      obligations:
+      id: berlin-microcensus-housing-situation-2018-00-csv
+      fullyQualifiedName: berlin-microcensus-housing-situation-2018-00-csv
+      entityType:
+      name: ''
+      version:
+      displayName:
+      description:
+      componentGroup:
+      tags:
+      externalDocs:
+    - promises:
+      expectations:
+      obligations:
+      id: berlin-microcensus-housing-situation-2018-00-parquet
+      fullyQualifiedName: berlin-microcensus-housing-situation-2018-00-parquet
+      entityType:
+      name: ''
+      version:
+      displayName:
+      description:
+      componentGroup:
+      tags:
+      externalDocs:
+    - promises:
+      expectations:
+      obligations:
+      id: berlin-microcensus-housing-situation-2022-00-csv
+      fullyQualifiedName: berlin-microcensus-housing-situation-2022-00-csv
+      entityType:
+      name: ''
+      version:
+      displayName:
+      description:
+      componentGroup:
+      tags:
+      externalDocs:
+    - promises:
+      expectations:
+      obligations:
+      id: berlin-microcensus-housing-situation-2022-00-parquet
+      fullyQualifiedName: berlin-microcensus-housing-situation-2022-00-parquet
+      entityType:
+      name: ''
+      version:
+      displayName:
+      description:
+      componentGroup:
+      tags:
+      externalDocs:
+  inputPorts:
+    - promises:
+      expectations:
+      obligations:
+      id: berlin-microcensus-housing-situation-2014-00
+      fullyQualifiedName: berlin-microcensus-housing-situation-2014-00
+      entityType:
+      name: ''
+      version:
+      displayName:
+      description:
+      componentGroup:
+      tags:
+      externalDocs:
+    - promises:
+      expectations:
+      obligations:
+      id: berlin-microcensus-housing-situation-2018-00
+      fullyQualifiedName: berlin-microcensus-housing-situation-2018-00
+      entityType:
+      name: ''
+      version:
+      displayName:
+      description:
+      componentGroup:
+      tags:
+      externalDocs:
+    - promises:
+      expectations:
+      obligations:
+      id: berlin-microcensus-housing-situation-2022-00
+      fullyQualifiedName: berlin-microcensus-housing-situation-2022-00
+      entityType:
+      name: ''
+      version:
+      displayName:
+      description:
+      componentGroup:
+      tags:
+      externalDocs:
+  discoveryPorts:
+  observabilityPorts:
+  controlPorts:
+internalComponents:
+components:
+tags:
+externalDocs:

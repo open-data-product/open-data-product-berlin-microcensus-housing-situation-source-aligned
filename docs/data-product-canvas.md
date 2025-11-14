@@ -5,7 +5,7 @@
 
 * owner: Open Data Product
 * description: Source-aligned data product providing Berlin microcensus housing situation data
-* updated: 2025-10-27
+* updated: 2025-10-28
 
 ## Input Ports
 
@@ -55,7 +55,7 @@
 
 * owner: Open Data Product
 * url: https://github.com/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned/tree/main/data/03-gold/berlin-microcensus-housing-situation-2014-00-csv
-* updated: 2025-10-27
+* updated: 2025-10-28
 
 **Files**
 
@@ -74,7 +74,7 @@
 
 * owner: Open Data Product
 * url: https://github.com/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned/tree/main/data/03-gold/berlin-microcensus-housing-situation-2014-00-parquet
-* updated: 2025-10-27
+* updated: 2025-10-28
 
 **Files**
 
@@ -93,7 +93,7 @@
 
 * owner: Open Data Product
 * url: https://github.com/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned/tree/main/data/03-gold/berlin-microcensus-housing-situation-2018-00-csv
-* updated: 2025-10-27
+* updated: 2025-10-28
 
 **Files**
 
@@ -116,7 +116,7 @@
 
 * owner: Open Data Product
 * url: https://github.com/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned/tree/main/data/03-gold/berlin-microcensus-housing-situation-2018-00-parquet
-* updated: 2025-10-27
+* updated: 2025-10-28
 
 **Files**
 
@@ -139,7 +139,7 @@
 
 * owner: Open Data Product
 * url: https://github.com/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned/tree/main/data/03-gold/berlin-microcensus-housing-situation-2022-00-csv
-* updated: 2025-10-27
+* updated: 2025-10-28
 
 **Files**
 
@@ -156,7 +156,7 @@
 
 * owner: Open Data Product
 * url: https://github.com/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned/tree/main/data/03-gold/berlin-microcensus-housing-situation-2022-00-parquet
-* updated: 2025-10-27
+* updated: 2025-10-28
 
 **Files**
 

@@ -1,19 +1,18 @@
 
-# Open Data Product Specification (ODPS) Canvas - Berlin Microcensus Housing Situation source-aligned
+# Open Data Product Specification (ODPS) Canvas - Berlin Microcensus Housing Situation (source-aligned)
 
 * schema version: 3.1
 ## Product
 
 ### Basic Information
 
-* output file formats: csv
 * categories: timeseries
-* description: Data product providing Berlin microcensus housing situation data
-* logo URL: https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned/refs/heads/main/logo-with-text.png
+* description: Source-aligned data product providing Berlin microcensus housing situation data
+* logo URL: https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-lor-population-source-aligned/refs/heads/main/logo-with-text.png
 * product ID: berlin-microcensus-housing-situation-source-aligned
 * product series: Berlin Timeseries Series
 * status: active
-* tags: Berlin, housing
+* tags: berlin, building, housing
 * type: source-aligned
 * value proposition: Providing Berlin microcensus housing situation data
 * version: 1.0

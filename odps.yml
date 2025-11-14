@@ -1,24 +1,51 @@
 ---
 schema: https://opendataproducts.org/v3.1/schema/odps.yaml
-version: 3.1
+version: '3.1'
 product:
-  dataHolder:
-    URL: "https://opendataproduct.de"
   en:
-    name: "Berlin Microcensus Housing Situation source-aligned"
-    productID: "berlin-microcensus-housing-situation-source-aligned"
-    valueProposition: "Providing Berlin microcensus housing situation data"
-    description: "Data product providing Berlin microcensus housing situation data"
-    productSeries: "Berlin Timeseries Series"
-    visibility: "public"
-    status: "active"
-    version: "1.0"
+    name: Berlin Microcensus Housing Situation (source-aligned)
+    productID: berlin-microcensus-housing-situation-source-aligned
+    status: active
+    type: source-aligned
+    visibility: public
+    OutputFileFormats: []
+    brandSlogan:
     categories:
       - timeseries
+    description: Source-aligned data product providing Berlin microcensus housing situation data
+    logoURL: https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-lor-population-source-aligned/refs/heads/main/logo-with-text.png
+    productSeries: Berlin Timeseries Series
+    standards: []
     tags:
-      - Berlin
+      - berlin
+      - building
       - housing
-    type: "source-aligned"
-    logoURL: "https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-microcensus-housing-situation-source-aligned/refs/heads/main/logo-with-text.png"
-    OutputFileFormats:
-      - csv
+    useCases: []
+    valueProposition: Providing Berlin microcensus housing situation data
+    version: '1.0'
+  sla: []
+  dataAccess:
+  dataHolder:
+    URL: https://opendataproduct.de
+    addressCountry:
+    addressLocality:
+    addressRegion:
+    streetAddress:
+    postalCode:
+    telephone:
+    aggregateRating:
+    businessDomain:
+    description:
+    logoURL:
+    parentOrganization:
+    ratingCount:
+    slogan:
+    taxID:
+    vatID:
+  dataOps:
+  dataQuality: []
+  license:
+  pricingPlans:
+  support:
+  recommendedDataProducts: []
+details:
